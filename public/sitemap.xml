@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://wildragons.game/</loc>
+    <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+    <lastmod>2025-09-14T00:00:00+00:00</lastmod>
+    <image:image>
+      <image:loc>https://wildragons.game/icons/og-image.png</image:loc>
+      <image:title>Wild Dragons - Epic Dragon Battle Game</image:title>
+      <image:caption>Enter the realm of legendary dragons and epic adventures</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Game Arena -->
+  <url>
+    <loc>https://wildragons.game/play</loc>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+    <lastmod>2025-09-14T00:00:00+00:00</lastmod>
+    <image:image>
+      <image:loc>https://wildragons.game/icons/play-screenshot.png</image:loc>
+      <image:title>Dragon Battle Arena</image:title>
+      <image:caption>Battle fierce dragons and collect legendary loot</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Player Profile -->
+  <url>
+    <loc>https://wildragons.game/profile</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-09-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <!-- Authentication -->
+  <url>
+    <loc>https://wildragons.game/auth</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2025-09-14T00:00:00+00:00</lastmod>
+  </url>
+  
+</urlset>
