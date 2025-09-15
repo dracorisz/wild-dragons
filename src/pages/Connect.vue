@@ -91,7 +91,7 @@ async function handleSignIn() {
     ) {
       // Call backend API to check if user exists and is a social login
       try {
-        const res = await fetch('/api/check-user?email=' + encodeURIComponent(email.value));
+        const res = await fetch('https://wild-dragons.vercel.app/api/check-user?email=' + encodeURIComponent(email.value));
         if (res.ok) {
           const { user } = await res.json();
           console.log('user check', user);
