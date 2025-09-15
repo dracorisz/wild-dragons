@@ -19,7 +19,7 @@
 
 ### 3. Repository & Version Control
 - [x] Create GitHub repository
-- [ ] Push code to GitHub: `git init`, `git add .`, `git commit -m "Initial commit"`, `git push`
+- [x] Push code to GitHub: `git init`, `git add .`, `git commit -m "Initial commit"`, `git push`
 - [ ] Set up branch protection rules on main branch
 - [ ] Add GitHub secrets for CI/CD (if using automated deployment)
 
@@ -39,7 +39,7 @@
 **Option C: Traditional Hosting**
 - [ ] Build project: `npm run build`
 - [ ] Upload `dist` contents via FTP/cPanel
-- [ ] Add `.htaccess` for SPA routing (see `DEPLOYMENT.md`)
+- [ ] Add `.htaccess` for SPA routing (see `docs/DEPLOYMENT.md`)
 
 ### 5. Domain & SSL
 - [ ] Purchase domain name (optional)
@@ -49,7 +49,7 @@
 ## 🎮 Game Configuration
 
 ### 7. Game Content
-- [ ] Review enemy configurations in `src/data/enemies.json`
+- [ ] Review enemy configurations in `src/data/themes.json`
 - [ ] Adjust XP/points scaling if needed
 - [ ] Add placeholder dragon images to `src/assets/`
 - [ ] Test battle system thoroughly

@@ -21,7 +21,7 @@
 - **Action**: Always use or create corresponding UI components
 - **Exception**: None - this rule has no exceptions
 
-### 4. COMPONENT SCANNING REQUIREMENT
+### 4. COMPONENT/PAGES/FILES SCANNING REQUIREMENT
 - **Rule**: ALWAYS scan ALL files for consistency issues before task completion
 - **Tools**: Use grep_search and file_search to find ALL instances
 - **Action**: Update ALL found instances, not just current file
@@ -31,7 +31,7 @@
 2. **Wait for Approval** - Get explicit user confirmation before starting
 3. **Scan for Inconsistencies** - Find ALL instances of relevant components/patterns
 4. **Fix Project-Wide** - Update ALL files to maintain consistency
-5. **Complete Implementation** - Build/fix all components properly
+5. **Complete Implementation** - Rescan codebase and build/fix all relavant components/pages/files properly
 6. **Final Scan** - Verify no inconsistencies remain
 
 ## 🔧 TECHNICAL STANDARDS
