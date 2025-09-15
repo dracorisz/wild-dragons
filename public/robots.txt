@@ -3,8 +3,7 @@ Allow: /
 
 # Priority pages for crawling
 Allow: /play
-Allow: /profile
-Allow: /auth
+Allow: /academy
 
 # Sitemap location
 Sitemap: https://wildragons.game/sitemap.xml
@@ -13,9 +12,7 @@ Sitemap: https://wildragons.game/sitemap.xml
 Crawl-delay: 1
 
 # Block admin areas and API endpoints
-Disallow: /admin/
 Disallow: /api/
-Disallow: /private/
 
 # Allow important static assets
 Allow: /icons/

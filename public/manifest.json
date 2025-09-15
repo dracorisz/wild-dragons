@@ -53,18 +53,11 @@
   "categories": ["games", "entertainment"],
   "shortcuts": [
     {
-      "name": "Play Game",
+      "name": "Play",
       "short_name": "Play",
       "description": "Start playing Wild Dragons",
       "url": "/play",
-      "icons": [{ "src": "/icons/play-96x96.png", "sizes": "96x96" }]
-    },
-    {
-      "name": "Profile",
-      "short_name": "Profile", 
-      "description": "View your dragon profile",
-      "url": "/profile",
-      "icons": [{ "src": "/icons/profile-96x96.png", "sizes": "96x96" }]
+      "icons": [{ "src": "/icons/icon-96x96.png", "sizes": "96x96" }]
     }
   ],
   "related_applications": [],

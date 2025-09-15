@@ -1,11 +1,17 @@
-<script setup>
-// The router-view will handle all routing
-</script>
 
 <template>
-  <router-view />
+  <DefaultLayout ref="layoutRef">
+    <router-view @auth-change="onAuthChange" />
+  </DefaultLayout>
 </template>
 
-<style>
-/* Global styles are handled in style.css */
-</style>
+<script setup>
+import { ref } from 'vue';
+import DefaultLayout from './components/DefaultLayout.vue';
+const layoutRef = ref();
+function onAuthChange() {
+  if (layoutRef.value && layoutRef.value.fetchUser) {
+    layoutRef.value.fetchUser();
+  }
+}
+</script>

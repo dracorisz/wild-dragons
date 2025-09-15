@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #fead1a;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+body {
+  @apply sticky m-0 bg-white p-0 font-sans text-black;
+  text-rendering: optimizeLegibility;
+}
+
+nav {
+  @apply fixed top-0 z-100 flex w-full justify-center gap-4 bg-black p-2 text-white;
+}
+
+nav a {
+  @apply px-3 text-white transition-colors no-underline;
+}
+
+nav .router-link-exact-active {
+  color: var(--color-primary);
+}
+
+h2 {
+  @apply text-2xl font-bold mb-4;
+}
+
+form {
+  @apply flex flex-col items-center gap-2 max-w-md my-5;
+}
+
+button {
+  @apply bg-black text-white px-4 py-2 w-full cursor-pointer rounded-none;
+}
+
+input {
+  @apply border border-gray-300 rounded-none px-3 py-2 w-full ring-0 outline-none focus:border-black;
+}
+
+.page {
+  @apply pr-5 pl-3 mt-[40px] min-h-[calc(100vh-40px)] text-center;
+}
+
+.toast {
+  @apply fixed top-16 right-4 bg-black text-white px-4 py-2 rounded shadow-lg z-50;
+}

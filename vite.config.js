@@ -2,13 +2,12 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { VitePWA } from 'vite-plugin-pwa'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
     VitePWA({
       registerType: 'prompt',
-      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
+      includeAssets: ['icon.ico'],
       manifest: {
         name: 'Wild Dragons',
         short_name: 'WildDragons',
