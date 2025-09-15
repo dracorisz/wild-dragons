@@ -83,7 +83,7 @@ npm run preview  # Preview production build
 // Available UI Components
 import { 
   Button,    // 5 variants, 5 sizes, accessibility
-  Card,      // 4 variants, hover states, clickable
+  Card,      // 4 variants, hover states, clickable 
   Typography, // Semantic HTML, responsive sizing
   ProgressBar, // Multiple variants, animations
   Input,     // Form input with error states
