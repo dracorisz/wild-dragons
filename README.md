@@ -31,8 +31,9 @@ A modern, component-based dragon battle game template with advanced game mechani
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js 24+
+- Node.js 22+
 - Supabase account
+- Vercel account
 
 ### Setup
 1. **Install dependencies**

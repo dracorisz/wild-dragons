@@ -1,100 +1,45 @@
 <template>
-  <div class="space-y-6 border p-6 rounded-lg bg-popover">
-    <div class="text-center mb-8">
-      <Typography tag="h2" variant="title" size="3xl" class="mb-2">
-        {{ gameIcon }} {{ gameTitle }}
-      </Typography>
-      <Typography variant="body" size="md" class="text-muted-foreground">
-        {{ gameSubtitle }}
-      </Typography>
+  <div class="bg-popover space-y-6 rounded-lg border p-6 w-[320px] sm:w-[400px] md:w-[450px] lg:w-[500px] xl:w-[550px] 2xl:w-[600px]">
+    <div class="mb-8 text-center">
+      <Typography tag="h2" variant="title" size="3xl" class="mb-2"> {{ gameIcon }} {{ gameTitle }} </Typography>
     </div>
-    
+
     <!-- Auth Mode Toggle -->
-    <div class="flex space-x-2 mb-6">
-      <Button
-        @click="authMode = 'signin'"
-        :variant="authMode === 'signin' ? 'primary' : 'secondary'"
-        size="md"
-        class="flex-1"
-      >
+    <div class="mb-6 flex space-x-2">
+      <Button @click="authMode = 'signin'" :variant="authMode === 'signin' ? 'primary' : 'secondary'" size="md" class="flex-1">
         {{ signInText }}
       </Button>
-      <Button
-        @click="authMode = 'signup'"
-        :variant="authMode === 'signup' ? 'primary' : 'secondary'"
-        size="md"
-        class="flex-1"
-      >
+      <Button @click="authMode = 'signup'" :variant="authMode === 'signup' ? 'primary' : 'secondary'" size="md" class="flex-1">
         {{ signUpText }}
       </Button>
     </div>
 
     <!-- Auth Form -->
     <form @submit.prevent="handleAuth" class="space-y-4">
-      <!-- Debug info -->
-      <div v-if="authMode === 'signup'" class="text-xs text-muted-foreground">
-        Form values: {{ JSON.stringify({ username: form.username, email: form.email }) }}
-      </div>
-      
       <!-- Username field for signup -->
       <div v-if="authMode === 'signup'">
-        <Input
-          v-model="form.username"
-          type="text"
-          :label="usernameText"
-          required
-          :placeholder="`Enter ${usernameText.toLowerCase()}`"
-        />
+        <Input v-model="form.username" type="text" :label="usernameText" required :placeholder="`Enter ${usernameText.toLowerCase()}`" />
       </div>
 
       <!-- Email field -->
       <div>
-        <Input
-          v-model="form.email"
-          type="email"
-          :label="emailText"
-          required
-          autocomplete="email"
-          :placeholder="`Enter ${emailText.toLowerCase()}`"
-        />
+        <Input v-model="form.email" type="email" :label="emailText" required autocomplete="email" :placeholder="`Enter ${emailText.toLowerCase()}`" />
       </div>
 
       <!-- Password field -->
       <div>
-        <Input
-          v-model="form.password"
-          type="password"
-          :label="passwordText"
-          required
-          autocomplete="current-password"
-          :placeholder="`Enter ${passwordText.toLowerCase()}`"
-        />
+        <Input v-model="form.password" type="password" :label="passwordText" required autocomplete="current-password" :placeholder="`Enter ${passwordText.toLowerCase()}`" />
       </div>
 
       <!-- Referral code field for signup -->
       <div v-if="authMode === 'signup'">
-        <Input
-          v-model="form.referralCode"
-          type="text"
-          :label="referralCodeText"
-          :helper="'(optional)'"
-          autocomplete="off"
-          :placeholder="`Enter ${referralCodeText.toLowerCase()}`"
-        />
+        <Input v-model="form.referralCode" type="text" :label="referralCodeText" :helper="'(optional)'" autocomplete="off" :placeholder="`Enter ${referralCodeText.toLowerCase()}`" />
       </div>
 
       <!-- Submit button -->
-      <Button
-        type="submit"
-        :disabled="authStore.loading"
-        variant="primary"
-        size="lg"
-        class="w-full"
-      >
+      <Button type="submit" :disabled="authStore.loading" variant="primary" size="lg" class="w-full">
         <span v-if="authStore.loading" class="flex items-center justify-center">
-          <span
-            class="animate-spin w-4 h-4 border-2 border-white border-t-transparent rounded-full mr-2"
-          ></span>
+          <span class="mr-2 h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent"></span>
           {{ loadingText }}
         </span>
         <span v-else>
@@ -105,7 +50,7 @@
 
     <!-- Success Message -->
     <div v-if="success" class="mt-4">
-      <Card variant="default" class="p-3 bg-green-50 border-green-200">
+      <Card variant="default" class="border-green-200 bg-green-50 p-3">
         <Typography variant="body" size="sm" class="text-green-800">
           {{ success }}
         </Typography>
@@ -114,7 +59,7 @@
 
     <!-- Error Message -->
     <div v-if="error" class="mt-4">
-      <Card variant="default" class="p-3 bg-red-50 border-red-200">
+      <Card variant="default" class="border-red-200 bg-red-50 p-3">
         <Typography variant="body" size="sm" class="text-red-800">
           {{ error }}
         </Typography>
@@ -161,9 +106,7 @@ const signUpText = computed(() => themeManager.getText("ui.auth_sign_up"));
 const emailText = computed(() => themeManager.getText("ui.auth_email"));
 const passwordText = computed(() => themeManager.getText("ui.auth_password"));
 const usernameText = computed(() => themeManager.getText("ui.auth_username"));
-const referralCodeText = computed(() =>
-  themeManager.getText("ui.auth_referral_code")
-);
+const referralCodeText = computed(() => themeManager.getText("ui.auth_referral_code"));
 const loadingText = computed(() => themeManager.getText("ui.auth_loading"));
 const backHomeText = computed(() => themeManager.getText("ui.auth_back_home"));
 
@@ -188,20 +131,15 @@ const handleAuth = async () => {
         error.value = "Username is required";
         return;
       }
-      
-      const result = await authStore.signUp(
-        form.email,
-        form.password,
-        form.username,
-        form.referralCode || null
-      );
-      
+
+      const result = await authStore.signUp(form.email, form.password, form.username, form.referralCode || null);
+
       // Check if email confirmation is needed
       if (result && result.needsEmailConfirmation) {
         success.value = "Account created successfully! Please check your email for a confirmation link.";
         return; // Don't redirect yet, wait for email confirmation
       }
-      
+
       // If no email confirmation needed, redirect immediately
       success.value = "Account created successfully!";
       setTimeout(() => {

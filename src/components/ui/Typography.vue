@@ -52,7 +52,6 @@ const props = defineProps({
 
 <style scoped>
 .typography {
-  margin: 0;
   color: var(--foreground);
 }
 

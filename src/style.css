@@ -112,7 +112,7 @@ body {
 
 /* Typography Component Classes */
 .typography {
-  margin: 0;
+  margin: 10px 0;
 }
 
 /* Typography Variants */
@@ -301,6 +301,7 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+  margin-top: 20px;
 }
 
 .card-outlined {
@@ -538,6 +539,7 @@ body {
 .btn-content {
   display: inline-flex;
   align-items: center;
+  margin: 0 !important;
 }
 
 .btn-disabled {
@@ -550,7 +552,7 @@ body {
    ========================================================================== */
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -559,7 +561,6 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--muted-foreground);
-  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {

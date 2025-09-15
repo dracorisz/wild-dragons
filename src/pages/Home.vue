@@ -7,27 +7,18 @@
           <Typography tag="h1" variant="display" size="7xl" weight="bold" class="mb-6 animate-hero-glow text-background">
             {{ gameIcon }} {{ gameTitle }}
           </Typography>
-          <Typography variant="body" size="2xl" class="mb-8 opacity-90 text-background">
+          <Typography variant="body" size="2xl" class="!my-20 text-background">
             {{ gameSubtitle }}
           </Typography>
           <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
-              as="router-link"
+              tag="router-link"
               to="/play"
               variant="secondary"
               size="lg"
               class="px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
             >
               🎮 Start Playing
-            </Button>
-            <Button
-              as="router-link"
-              to="/profile"
-              variant="outline"
-              size="lg"
-              class="px-8 py-4 text-lg font-semibold"
-            >
-              👤 View Profile
             </Button>
           </div>
         </div>
@@ -81,31 +72,31 @@
         <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <Card variant="default" class="p-8 hover:shadow-lg transition-shadow">
             <div class="text-5xl mb-4 text-center">📱</div>
-            <Typography tag="h3" variant="title" size="xl" weight="semibold" class="mb-4 text-center">
+            <Typography tag="h3" variant="title" size="xl" weight="semibold" class="text-center">
               Progressive Web App
             </Typography>
-            <Typography variant="body" size="md" class="text-muted-foreground text-center mb-4">
+            <Typography variant="body" size="md" class="text-muted-foreground text-center">
               Install {{ gameTitle }} on your device for a native app experience. Quick access from your home screen!
             </Typography>
-            <div class="flex flex-wrap gap-2 justify-center">
-              <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm">📲 Installable</span>
-              <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm">⚡ Fast Loading</span>
-              <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm">🔄 Auto Updates</span>
+            <div class="grid grid-cols-1 gap-2 justify-center items-center text-center w-full">
+              <span class="text-sm rounded-full border py-1">📲 Installable</span>
+              <span class="text-sm rounded-full border py-1">⚡ Fast Loading</span>
+              <span class="text-sm rounded-full border py-1">🔄 Auto Updates</span>
             </div>
           </Card>
           
           <Card variant="default" class="p-8 hover:shadow-lg transition-shadow">
             <div class="text-5xl mb-4 text-center">🌐</div>
-            <Typography tag="h3" variant="title" size="xl" weight="semibold" class="mb-4 text-center">
+            <Typography tag="h3" variant="title" size="xl" weight="semibold" class="text-center">
               Offline Gaming
             </Typography>
-            <Typography variant="body" size="md" class="text-muted-foreground text-center mb-4">
+            <Typography variant="body" size="md" class="text-muted-foreground text-center">
               Keep playing even without internet! Your battles are saved locally and synced when you're back online.
             </Typography>
-            <div class="flex flex-wrap gap-2 justify-center">
-              <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm">🎮 Offline Battles</span>
-              <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm">💾 Auto Sync</span>
-              <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm">📊 Progress Saved</span>
+            <div class="grid grid-cols-1 gap-2 justify-center items-center text-center w-full">
+              <span class="text-sm rounded-full border py-1">💾 Auto Sync</span>
+              <span class="text-sm rounded-full border py-1">📊 Progress Saved</span>
+              <span class="text-sm rounded-full border py-1">🎮 Offline Battles</span>
             </div>
           </Card>
         </div>

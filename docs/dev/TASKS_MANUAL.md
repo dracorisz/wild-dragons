@@ -7,7 +7,7 @@
 - [x] Create new project
 - [x] Run SQL from `database/schema.sql` in Supabase SQL Editor
 - [x] Copy project URL and anon key to `.env` file
-- [ ] Test database connection from application
+- [x] Test database connection from application
 
 ### 2. Environment Configuration
 - [x] Copy `.env.example` to `.env`
@@ -20,26 +20,26 @@
 ### 3. Repository & Version Control
 - [x] Create GitHub repository
 - [x] Push code to GitHub: `git init`, `git add .`, `git commit -m "Initial commit"`, `git push`
-- [ ] Set up branch protection rules on main branch
-- [ ] Add GitHub secrets for CI/CD (if using automated deployment)
+- [X] Set up branch protection rules on main branch
+- [x] Add GitHub secrets for CI/CD (if using automated deployment)
 
 ## 🚀 Deployment Tasks
 
 ### 4. Choose Hosting Platform
 **Option A: Vercel (Recommended)**
-- [ ] Connect GitHub repository to Vercel
-- [ ] Add environment variables in Vercel dashboard
+- [x] Connect GitHub repository to Vercel
+- [x] Add environment variables in Vercel dashboard
 - [ ] Deploy automatically
 
 **Option B: Netlify**
-- [ ] Build project locally: `npm run build`
-- [ ] Upload `dist` folder to Netlify
-- [ ] Configure environment variables
+- [-] Build project locally: `npm run build`
+- [-] Upload `dist` folder to Netlify
+- [-] Configure environment variables
 
 **Option C: Traditional Hosting**
-- [ ] Build project: `npm run build`
-- [ ] Upload `dist` contents via FTP/cPanel
-- [ ] Add `.htaccess` for SPA routing (see `docs/DEPLOYMENT.md`)
+- [-] Build project: `npm run build`
+- [-] Upload `dist` contents via FTP/cPanel
+- [-] Add `.htaccess` for SPA routing (see `docs/DEPLOYMENT.md`)
 
 ### 5. Domain & SSL
 - [ ] Purchase domain name (optional)

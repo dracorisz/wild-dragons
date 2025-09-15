@@ -3,6 +3,14 @@
     <label v-if="label" :for="id" class="input-label">
       <Typography variant="label" size="sm">{{ label }}</Typography>
       <span v-if="required" class="input-required">*</span>
+      <Typography 
+        v-else-if="helper" 
+        variant="caption" 
+        size="sm"
+        class="input-helper-text"
+      >
+        {{ helper }}
+      </Typography>
     </label>
     
     <div class="input-wrapper">
@@ -43,14 +51,6 @@
         class="input-error-text"
       >
         {{ error }}
-      </Typography>
-      <Typography 
-        v-else-if="helper" 
-        variant="caption" 
-        size="sm"
-        class="input-helper-text"
-      >
-        {{ helper }}
       </Typography>
     </div>
   </div>
@@ -140,7 +140,7 @@ const handleInput = (event) => {
 .input-label {
   display: flex;
   align-items: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: -0.25rem;
   color: var(--foreground);
 }
 
@@ -236,6 +236,8 @@ const handleInput = (event) => {
 
 .input-helper-text {
   color: var(--muted-foreground);
+  text-transform: capitalize;
+  margin-left: 0.5rem;
 }
 
 textarea.input-field {
