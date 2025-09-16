@@ -10,6 +10,7 @@ lerna-debug.log*
 node_modules
 backup
 dist
+dev-assets
 dist-ssr
 *.local
 
