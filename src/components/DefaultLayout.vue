@@ -1,19 +1,22 @@
 <template>
   <nav>
-    <router-link to="/">Landing</router-link>
+    <router-link to="/" class="font-nav color-primary">Heroine's Dragons</router-link>
     <router-link to="/academy">Academy</router-link>
     <router-link to="/treasure">Treasure</router-link>
     <template v-if="userStore.user">
-      <router-link :to="'/game'">{{ userStore.user.username || userStore.user.email }}</router-link>
+      <router-link class="fixed top-20 left-10 bg-black" :to="'/game'">{{ userStore.user.username || userStore.user.email }}</router-link>
       <a class="cursor-pointer" @click="logout">Logout</a>
     </template>
     <template v-else>
       <router-link to="/connect">Connect</router-link>
     </template>
   </nav>
-  <main>
+  <main class="flex-grow">
     <slot />
   </main>
+  <footer class="bg-black">
+    <p class="mt-auto py-5 text-center text-xs text-gray-300">&copy; 2025 Wild Dragons. All rights reserved.</p>
+  </footer>
 </template>
 
 <script setup>
