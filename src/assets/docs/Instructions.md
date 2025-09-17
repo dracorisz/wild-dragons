@@ -6,9 +6,10 @@ This document defines the cooperation, workflow, and rules for collaboration bet
 ## Rules
 
 1. Never add any comments.
-2. Never add any styles or CSS unless explicitly requested.
+2. Never add any styles or CSS unless explicitly requested, this applies to file related <style> area, inline css or any inline styles.
 3. After completing a task or TODO, always ask for approval or testing before marking it complete and moving further. Use a systematic, step-by-step approach.
 4. When creating or editing files, if possible, use formatting predefined in `.prettierrc` and `.editorconfig`.
+5. Whenever making any changes make sure to rescan codebas and ensure the changes are applied to all relavent files.
 
 ## Workflow
 

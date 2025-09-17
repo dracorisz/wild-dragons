@@ -14,6 +14,10 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+main {
+  @apply flex-grow pt-[45px];
+}
+
 nav {
   @apply h-[45px] fixed shadow top-0 z-100 flex w-full items-center justify-center bg-black p-0 text-white;
 }
@@ -60,11 +64,11 @@ input {
 }
 
 #app {
-  @apply min-h-screen flex flex-col;
+  @apply min-h-screen h-screen flex flex-col;
 }
 
 .page {
-  @apply mt-[40px] flex flex-col text-center relative;
+  @apply flex flex-col text-center relative min-h-[calc(100vh-77px)];
 }
 
 .toast {

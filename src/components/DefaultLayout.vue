@@ -1,6 +1,7 @@
 <template>
   <nav>
     <router-link to="/" class="font-nav color-primary">Heroine's Dragons</router-link>
+    <router-link to="/hero">Hero</router-link>
     <router-link to="/academy">Academy</router-link>
     <router-link to="/treasure">Treasure</router-link>
     <template v-if="userStore.user">
@@ -11,11 +12,11 @@
       <router-link to="/connect">Connect</router-link>
     </template>
   </nav>
-  <main class="flex-grow">
+  <main>
     <slot />
   </main>
   <footer class="bg-black">
-    <p class="mt-auto py-5 text-center text-xs text-gray-300">&copy; 2025 Wild Dragons. All rights reserved.</p>
+    <p class="mt-auto py-2 text-center text-xs text-gray-300">&copy; 2025 Wild Dragons. All rights reserved.</p>
   </footer>
 </template>
 
