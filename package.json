@@ -1,7 +1,7 @@
 {
   "name": "wild-dragons",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.0.1",
   "type": "module",
   "description": "A re-themeable Play2Earn fantasy dragon game built with Vue 3",
   "scripts": {
@@ -15,6 +15,7 @@
     "@avaturn/sdk": "^1.1.4",
     "@supabase/supabase-js": "^2.57.4",
     "@tailwindcss/postcss": "^4.1.13",
+    "@tailwindcss/vite": "^4.1.13",
     "autoprefixer": "^10.4.21",
     "ethers": "^6.15.0",
     "pinia": "^3.0.3",

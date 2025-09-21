@@ -1,16 +1,215 @@
 @import "tailwindcss";
 
-:root {
+@layer utilities {
+  .ah-0 {
+    @apply h-0 max-h-0 min-h-0;
+  }
+  .aw-0 {
+    @apply w-0 max-w-0 min-w-0;
+  }
+  .ah-px {
+    @apply h-px max-h-px min-h-px;
+  }
+  .aw-px {
+    @apply w-px max-w-px min-w-px;
+  }
+  .ah-1 {
+    @apply h-1 max-h-1 min-h-1;
+  }
+  .aw-1 {
+    @apply w-1 max-w-1 min-w-1;
+  }
+  .ah-2 {
+    @apply h-2 max-h-2 min-h-2;
+  }
+  .aw-2 {
+    @apply w-2 max-w-2 min-w-2;
+  }
+  .ah-3 {
+    @apply h-3 max-h-3 min-h-3;
+  }
+  .aw-3 {
+    @apply w-3 max-w-3 min-w-3;
+  }
+  .ah-4 {
+    @apply h-4 max-h-4 min-h-4;
+  }
+  .aw-4 {
+    @apply w-4 max-w-4 min-w-4;
+  }
+  .ah-5 {
+    @apply h-5 max-h-5 min-h-5;
+  }
+  .aw-5 {
+    @apply w-5 max-w-5 min-w-5;
+  }
+  .ah-6 {
+    @apply h-6 max-h-6 min-h-6;
+  }
+  .aw-6 {
+    @apply w-6 max-w-6 min-w-6;
+  }
+  .ah-7 {
+    @apply h-7 max-h-7 min-h-7;
+  }
+  .aw-7 {
+    @apply w-7 max-w-7 min-w-7;
+  }
+  .ah-8 {
+    @apply h-8 max-h-8 min-h-8;
+  }
+  .aw-8 {
+    @apply w-8 max-w-8 min-w-8;
+  }
+  .ah-9 {
+    @apply h-9 max-h-9 min-h-9;
+  }
+  .aw-9 {
+    @apply w-9 max-w-9 min-w-9;
+  }
+  .ah-10 {
+    @apply h-10 max-h-10 min-h-10;
+  }
+  .aw-10 {
+    @apply w-10 max-w-10 min-w-10;
+  }
+  .ah-11 {
+    @apply h-11 max-h-11 min-h-11;
+  }
+  .aw-11 {
+    @apply w-11 max-w-11 min-w-11;
+  }
+  .ah-12 {
+    @apply h-12 max-h-12 min-h-12;
+  }
+  .aw-12 {
+    @apply w-12 max-w-12 min-w-12;
+  }
+  .ah-14 {
+    @apply h-14 max-h-14 min-h-14;
+  }
+  .aw-14 {
+    @apply w-14 max-w-14 min-w-14;
+  }
+  .ah-16 {
+    @apply h-16 max-h-16 min-h-16;
+  }
+  .aw-16 {
+    @apply w-16 max-w-16 min-w-16;
+  }
+  .ah-20 {
+    @apply h-20 max-h-20 min-h-20;
+  }
+  .aw-20 {
+    @apply w-20 max-w-20 min-w-20;
+  }
+  .ah-24 {
+    @apply h-24 max-h-24 min-h-24;
+  }
+  .aw-24 {
+    @apply w-24 max-w-24 min-w-24;
+  }
+  .ah-28 {
+    @apply h-28 max-h-28 min-h-28;
+  }
+  .aw-28 {
+    @apply w-28 max-w-28 min-w-28;
+  }
+  .ah-32 {
+    @apply h-32 max-h-32 min-h-32;
+  }
+  .aw-32 {
+    @apply w-32 max-w-32 min-w-32;
+  }
+  .ah-36 {
+    @apply h-36 max-h-36 min-h-36;
+  }
+  .aw-36 {
+    @apply w-36 max-w-36 min-w-36;
+  }
+  .ah-40 {
+    @apply h-40 max-h-40 min-h-40;
+  }
+  .aw-40 {
+    @apply w-40 max-w-40 min-w-40;
+  }
+  .ah-44 {
+    @apply h-44 max-h-44 min-h-44;
+  }
+  .aw-44 {
+    @apply w-44 max-w-44 min-w-44;
+  }
+  .ah-48 {
+    @apply h-48 max-h-48 min-h-48;
+  }
+  .aw-48 {
+    @apply w-48 max-w-48 min-w-48;
+  }
+  .ah-52 {
+    @apply h-52 max-h-52 min-h-52;
+  }
+  .aw-52 {
+    @apply w-52 max-w-52 min-w-52;
+  }
+  .ah-56 {
+    @apply h-56 max-h-56 min-h-56;
+  }
+  .aw-56 {
+    @apply w-56 max-w-56 min-w-56;
+  }
+  .ah-60 {
+    @apply h-60 max-h-60 min-h-60;
+  }
+  .aw-60 {
+    @apply w-60 max-w-60 min-w-60;
+  }
+  .ah-64 {
+    @apply h-64 max-h-64 min-h-64;
+  }
+  .aw-64 {
+    @apply w-64 max-w-64 min-w-64;
+  }
+  .ah-72 {
+    @apply h-72 max-h-72 min-h-72;
+  }
+  .aw-72 {
+    @apply w-72 max-w-72 min-w-72;
+  }
+  .ah-80 {
+    @apply h-80 max-h-80 min-h-80;
+  }
+  .aw-80 {
+    @apply w-80 max-w-80 min-w-80;
+  }
+  .ah-96 {
+    @apply h-96 max-h-96 min-h-96;
+  }
+  .aw-96 {
+    @apply w-96 max-w-96 min-w-96;
+  }
+}
+
+@theme {
+  --color-*: initial;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-gray: #888;
+  --color-purple: #3f3cbb;
+  --color-midnight: #121063;
+  --color-tahiti: #3ab7bf;
+  --color-bermuda: #78dcca;
   --color-primary: #ffb42a;
+  --color-warning: #f8580e;
 }
 
 ::-webkit-scrollbar {
-  width: 0px;
+  @apply h-0 w-0;
 }
 
 body {
   @apply sticky m-0 bg-white p-0 text-black;
-  font-family: 'Merriweather', serif;
+  font-family: "Nova Round", serif;
+  /* font-family: "Merriweather", serif; */
   text-rendering: optimizeLegibility;
 }
 
@@ -19,73 +218,73 @@ main {
 }
 
 nav {
-  @apply h-[45px] fixed shadow top-0 z-100 flex w-full items-center justify-center bg-black p-0 text-white;
+  @apply fixed top-0 z-100 flex h-[45px] w-full items-center justify-center bg-black p-0 text-white shadow;
 }
 
 nav a {
-  @apply text-white h-[45px] font-bold border-l border-gray-100/10 tracking-wider flex items-center justify-center transition duration-500 no-underline px-5 py-2 hover:text-black hover:bg-[#ffb42a];
-  font-size: 0.9rem;
+  @apply border-gray/20 flex h-[45px] items-center justify-center border-l px-5 py-2 text-sm font-semibold tracking-wider text-white uppercase no-underline transition duration-500 hover:bg-[#ffb42a] hover:text-black;
 }
 
 nav a:first-child {
-  @apply uppercase font-black hover:bg-transparent tracking-normal mr-auto pl-2;
-  font-family: 'MedievalSharp', cursive;
-  color: var(--color-primary);
-  font-size: 1.2rem;
+  @apply text-primary mr-auto pl-2 text-xl font-black tracking-normal uppercase hover:bg-transparent;
+  font-family: "MedievalSharp", cursive;
 }
 
 nav a:last-child {
-  @apply text-black hover:bg-[#f8580e] bg-[#ffb42a];
+  @apply hover:bg-warning bg-primary text-black;
 }
 
-.color-primary,
 nav .router-link-exact-active {
-  color: var(--color-primary);
+  @apply text-primary;
 }
 
 h2 {
-  @apply text-2xl font-bold mb-5;
+  @apply mb-5 text-2xl font-semibold;
 }
 
 form {
-  @apply flex flex-col items-center gap-2 max-w-md my-5;
+  @apply my-5 flex max-w-md flex-col items-center gap-2;
 }
 
 button {
-  @apply bg-black text-white px-4 py-2 w-full cursor-pointer rounded-none;
+  @apply h-[36px] max-h-[36px] min-h-[36px] w-full cursor-pointer rounded-none bg-black px-4 py-2 text-sm font-semibold text-white uppercase;
 }
 
 button:disabled {
-  @apply bg-gray-300 cursor-not-allowed;
+  @apply bg-gray cursor-not-allowed;
 }
 
 input {
-  @apply border border-gray-300 rounded-none px-3 py-2 w-full ring-0 outline-none focus:border-black;
+  @apply border-gray h-[36px] max-h-[36px] min-h-[36px] w-full rounded-none border px-3 py-2 text-sm ring-0 outline-none focus:border-black;
+}
+
+input::placeholder {
+  @apply text-gray text-sm uppercase;
 }
 
 #app {
-  @apply min-h-screen h-screen flex flex-col;
+  @apply flex h-screen min-h-screen flex-col;
 }
 
 .page {
-  @apply flex flex-col text-center relative min-h-[calc(100vh-77px)];
+  @apply relative flex min-h-[calc(100vh-77px)] flex-col text-center;
 }
 
 .toast {
-  @apply fixed top-16 right-4 bg-black text-white px-4 py-2 rounded shadow-lg z-50;
+  @apply fixed top-16 right-4 z-50 rounded bg-black px-4 py-2 text-white shadow-lg;
 }
 
 .font-hero {
-  @apply uppercase font-black;
-  font-family: 'MedievalSharp', cursive;
+  @apply text-primary font-black uppercase;
+  font-family: "MedievalSharp", cursive;
   font-size: 35px;
   line-height: 0.1;
 }
 
 .font-meta {
+  @apply font-black uppercase;
   font-size: 55px;
-  font-family: 'Metamorphous', cursive;
-  font-weight: 900;
+  font-family: "Metamorphous", cursive;
   background: linear-gradient(35deg, #ffb42a, #f8580e, #ffb42a);
   background-clip: text;
   letter-spacing: -2px;
@@ -105,6 +304,19 @@ input {
   }
 }
 
-.font-merri {
-  font-family: 'Merriweather', serif;
+.password-helper {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin: 0.15rem 0 0.5rem 0;
+  align-self: flex-start;
+}
+
+.password-helper li {
+  font-size: 0.875rem;
+  color: #aaaeae;
+}
+
+.password-helper li.valid {
+  color: #22a311;
 }

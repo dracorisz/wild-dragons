@@ -5,16 +5,22 @@ const Landing = () => import("../pages/Landing.vue");
 const Academy = () => import("../pages/Academy.vue");
 const Treasure = () => import("../pages/Treasure.vue");
 const Connect = () => import("../pages/Connect.vue");
-const Hero = () => import("../pages/Hero.vue");
+const Characters = () => import("../pages/Characters.vue");
 const Game = () => import("../pages/Game.vue");
+const City = () => import("../pages/City.vue");
+const World = () => import("../pages/World.vue");
+const ResetPassword = () => import("../pages/ResetPassword.vue");
 
 const routes = [
   { path: "/", name: "Landing", component: Landing },
   { path: "/academy", name: "Academy", component: Academy },
   { path: "/treasure", name: "Treasure", component: Treasure },
   { path: "/connect", name: "Connect", component: Connect },
-  { path: "/hero", name: "Hero", component: Hero },
+  { path: "/characters", name: "Characters", component: Characters },
+  { path: "/city", name: "City", component: City },
+  { path: "/world", name: "World", component: World },
   { path: "/game", name: "Game", component: Game, meta: { requiresAuth: true } },
+  { path: "/reset-password", name: "ResetPassword", component: ResetPassword },
 ];
 
 const router = createRouter({

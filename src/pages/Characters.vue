@@ -33,7 +33,7 @@
 </template>
 
 <script setup>
-import { ref, watch, onMounted } from "vue";
+import { ref, onMounted } from "vue";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
@@ -215,31 +215,46 @@ onMounted(() => {
     { passive: false },
   );
 
+  // Cache values outside the loop to avoid recalculating
+  let lastTime = performance.now();
   function animate() {
     requestAnimationFrame(animate);
+    const now = performance.now();
+    const delta = (now - lastTime) / 1000;
+    lastTime = now;
+
+    // Only update mixer if needed
     if (mixer) {
-      mixer.update(1 / 60);
+      mixer.update(delta);
     }
 
-    if (model) {
+    // Only update model rotation if dragging or target changed
+    if (model && Math.abs(targetRotationY - currentRotationY) > 0.0001) {
       currentRotationY += (targetRotationY - currentRotationY) * 0.1;
       model.rotation.y = currentRotationY;
     }
 
-    camera.position.z += (targetZoom - camera.position.z) * 0.1;
+    // Only update camera zoom if changed
+    if (Math.abs(targetZoom - camera.position.z) > 0.0001) {
+      camera.position.z += (targetZoom - camera.position.z) * 0.1;
+    }
+
+    // Only update classPlane animation if present
     if (classPlane) {
       classPlane.rotation.z += 0.002;
-     classPlane.position.y = yPos + 0.06 + Math.sin(performance.now() * 0.002) * 0.05;
+      // Use cached time for sine calculation
+      classPlane.position.y = yPos + 0.06 + Math.sin(now * 0.002) * 0.05;
     }
+
     renderer.render(scene, camera);
   }
 
   animate();
 
   window.addEventListener("resize", () => {
-    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.aspect = window.innerWidth / (window.innerHeight - 77);
     camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(window.innerWidth, window.innerHeight - 77);
   });
 });
 

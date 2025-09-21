@@ -26,26 +26,27 @@ create extension if not exists "uuid-ossp";
 create extension if not exists "pgcrypto";
 
 -- USERS TABLE
-create table users (
-  id uuid primary key default gen_random_uuid(),
-  email text unique not null,
-  phone text,
-  address text,
-  wallets jsonb,
-  bio text,
-  avatar_url text,
-  created_at timestamp with time zone default now(),
-  updated_at timestamp with time zone default now(),
-  last_login timestamp with time zone,
-  is_active boolean default true,
-  username text unique,
-  display_name text,
-  country text,
-  city text,
-  birthdate date,
-  gender text,
-  email_verified boolean default false,
-  phone_verified boolean default false
+CREATE TABLE users (
+  id uuid PRIMARY KEY,
+  email TEXT UNIQUE NOT NULL,
+  phone TEXT,
+  address TEXT,
+  wallets JSONB,
+  bio TEXT,
+  avatar_url TEXT,
+  avatar_origin TEXT,
+  created_at TIMESTAMPTZ DEFAULT now(),
+  updated_at TIMESTAMPTZ DEFAULT now(),
+  last_login TIMESTAMPTZ,
+  is_active BOOLEAN DEFAULT true,
+  username TEXT UNIQUE,
+  display_name TEXT,
+  country TEXT,
+  city TEXT,
+  birthdate DATE,
+  gender TEXT,
+  email_verified BOOLEAN DEFAULT false,
+  phone_verified BOOLEAN DEFAULT false
 );
 
 -- HEROES TABLE
@@ -73,18 +74,6 @@ create table dragons (
   created_at timestamp with time zone default now(),
   updated_at timestamp with time zone default now()
 );
-
--- SUPABASE AUTH USERS VIEW
-create or replace view app_users as
-  select
-    u.id,
-    u.email,
-    u.username,
-    u.display_name,
-    u.avatar_url,
-    u.created_at,
-    u.is_active
-  from users u;
 
 -- POLICIES (EXAMPLES, ADJUST AS NEEDED)
 alter table users enable row level security;
