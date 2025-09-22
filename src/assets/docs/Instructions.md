@@ -17,3 +17,4 @@ This document defines the cooperation, workflow, and rules for collaboration bet
 - All changes and additions must strictly follow the rules above.
 - The Person may update or expand these rules at any time.
 - The Agent will always confirm understanding and compliance with these rules before starting new tasks.
+- Branding files (/vite.config.js, /index.html, /public/robots.txt, /public/browserconfig.xml, /public/manifest.json, /public/sitemap.xml, /public/icons/*, CSS colors in /src/assets/css/styles.css)

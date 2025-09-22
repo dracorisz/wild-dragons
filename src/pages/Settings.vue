@@ -1,7 +1,7 @@
 <template>
   <div class="page">
-    <h2>World</h2>
-    <p>Welcome to the World of Tiamat.</p>
+    <h2>Settings</h2>
+    <p>Welcome to the game. You are authenticated.</p>
   </div>
 </template>
 <script setup>

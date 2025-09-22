@@ -187,7 +187,7 @@ async function handleSignIn() {
       return;
     }
 
-    router.push("/game");
+    router.push("/world");
   } catch (e) {}
 }
 
@@ -203,7 +203,7 @@ async function handleSignUp() {
     return;
   }
 
-  router.push("/game");
+  router.push("/world");
 }
 
 async function handleGoogle() {

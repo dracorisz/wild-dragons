@@ -6,7 +6,7 @@ Allow: /play
 Allow: /academy
 
 # Sitemap location
-Sitemap: https://wildragons.game/sitemap.xml
+Sitemap: https://heroinesdragon.io/sitemap.xml
 
 # Crawl delay for politeness (1 second)
 Crawl-delay: 1

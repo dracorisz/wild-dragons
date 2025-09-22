@@ -1,0 +1,127 @@
+@import "tailwindcss";
+@import "./utils.css";
+
+@theme {
+  --color-*: initial;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-gray: #888;
+  --color-success: #05f57d;
+  --color-primary: #ffbf34;  /* #ffb42a */
+  --color-secondary: #f08205;
+  --color-warning: #f8310e;
+}
+
+::-webkit-scrollbar {
+  @apply h-0 w-0;
+}
+
+body {
+  @apply sticky m-0 bg-white p-0 text-black;
+  font-family: "Nova Round", serif;
+  text-rendering: optimizeLegibility;
+}
+
+main {
+  @apply flex-grow pt-[45px];
+}
+
+nav {
+  @apply fixed top-0 z-100 flex h-[45px] w-full items-center justify-center px-10 text-white shadow;
+}
+
+nav a {
+  @apply border-primary/20 flex h-[45px] items-center justify-center border-l px-5 py-2 text-sm font-semibold tracking-wider text-white uppercase no-underline transition duration-500 hover:bg-[#ffb42a] hover:text-black;
+}
+
+nav a:last-child {
+  @apply border-r;
+}
+
+nav .router-link-exact-active {
+  @apply text-primary;
+}
+
+.logo {
+  @apply text-primary border-0 hover:text-primary mr-auto text-2xl pl-0 font-black tracking-normal uppercase hover:bg-transparent;
+  font-family: "MedievalSharp", cursive;
+}
+
+.hero {
+  @apply mx-0 px-0 text-5xl;
+}
+
+h2 {
+  @apply mb-5 text-2xl font-semibold;
+}
+
+form {
+  @apply my-5 flex max-w-md flex-col items-center gap-2;
+}
+
+button {
+  @apply h-[36px] max-h-[36px] min-h-[36px] w-full cursor-pointer rounded-none bg-black px-4 py-2 text-sm font-semibold text-white uppercase;
+}
+
+button:disabled {
+  @apply bg-gray cursor-not-allowed;
+}
+
+input {
+  @apply border-gray h-[36px] max-h-[36px] min-h-[36px] w-full rounded-none border px-3 py-2 text-sm ring-0 outline-none focus:border-black;
+}
+
+input::placeholder {
+  @apply text-gray text-sm uppercase;
+}
+
+#app {
+  @apply flex h-screen min-h-screen flex-col;
+}
+
+.page {
+  @apply relative flex min-h-[calc(100vh-77px)] flex-col text-center;
+}
+
+.toast {
+  @apply fixed top-16 right-4 z-50 rounded bg-black px-4 py-2 text-white shadow-lg;
+}
+
+.font-zeraphiora {
+  @apply font-black uppercase text-4xl text-transparent -mt-1;
+  font-family: "Metamorphous", cursive;
+  background: linear-gradient(35deg, var(--color-primary),var(--color-secondary), var(--color-primary));
+  background-clip: text;
+  letter-spacing: -2px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  animation: shine 8s reverse infinite;
+  background-size: 200% 100%;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+.password-helper {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin: 0.15rem 0 0.5rem 0;
+  align-self: flex-start;
+}
+
+.password-helper li {
+  font-size: 0.875rem;
+  color: #aaaeae;
+}
+
+.password-helper li.valid {
+  color: #22a311;
+}

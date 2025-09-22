@@ -1,7 +1,7 @@
 {
-  "name": "Wild Dragons",
-  "short_name": "WildDragons",
-  "description": "A streamlined web-based battle game.",
+  "name": "Heroine's Dragon",
+  "short_name": "Heroine's Dragon",
+  "description": "Explore the World of Tiamat, where legends awaken, dragons soar, and every heroine shapes the fate of realms untold.",
   "theme_color": "#000000",
   "background_color": "#ffffff",
   "display": "standalone",
@@ -38,10 +38,10 @@
   "categories": ["games", "entertainment"],
   "shortcuts": [
     {
-      "name": "Play",
-      "short_name": "Play",
-      "description": "Start playing Wild Dragons",
-      "url": "/play",
+      "name": "Heroine's Dragon",
+      "short_name": "Heroine's Dragon",
+      "description": "Start playing Heroine's Dragon now!",
+      "url": "/connect",
       "icons": [{ "src": "/icons/favicon-96x96.png", "sizes": "96x96" }]
     }
   ],

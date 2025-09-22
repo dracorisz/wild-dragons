@@ -2,7 +2,7 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import pinia from './stores';
 import router from './router';
-import './styles.css';
+import './assets/css/styles.css';
 
 import { createClient } from '@supabase/supabase-js';
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;

@@ -11,9 +11,9 @@ export default defineConfig({
       registerType: "prompt",
       includeAssets: ["favicon.ico"],
       manifest: {
-        name: "Wild Dragons",
-        short_name: "WildDragons",
-        description: "A streamlined web-based dragon battle game with clean black & white design",
+        name: "Heroine's Dragon",
+        short_name: "Heroine's Dragon",
+        description: "Explore the World of Tiamat, where legends awaken, dragons soar, and every heroine shapes the fate of realms untold.",
         theme_color: "#000000",
         background_color: "#ffffff",
         display: "standalone",
