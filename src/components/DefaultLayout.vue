@@ -5,8 +5,8 @@
       
       <router-link to="/" class="logo">Heroine's Dragon</router-link>
       <router-link to="/about">About</router-link>
-      <router-link to="/web3">Web3</router-link>
       <router-link to="/how-to-play">How to Play</router-link>
+      <router-link to="/web3">Blockchain</router-link>
       <div class="relative dropdown">
         <template v-if="userStore.user">
           <div class="cursor-pointer px-5 flex items-center min-h-[45px] h-[45px] max-h-[45px] gap-2 rounded border-x border-primary/20 justify-center" @click="showDropdown = !showDropdown">
