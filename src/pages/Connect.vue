@@ -208,7 +208,7 @@ async function handleSignUp() {
 
 async function handleGoogle() {
   errorMessage.value = "";
-  const { error: err } = await supabase.auth.signInWithOAuth({ provider: "google", options: { redirectTo: window.location.origin + "/game" } });
+  const { error: err } = await supabase.auth.signInWithOAuth({ provider: "google", options: { redirectTo: window.location.origin + "/world" } });
   if (err) {
     errorMessage.value = err.message;
     return;

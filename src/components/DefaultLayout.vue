@@ -23,6 +23,7 @@
             <router-link to="/academy" class="max-h-[36px] block border-y">Academy</router-link>
             <router-link to="/treasury" class="max-h-[36px] block border-y">Treasury</router-link>
             <router-link to="/settings" class="max-h-[36px] block border-y">Settings</router-link>
+            <router-link to="/profile" class="max-h-[36px] block border-y">Profile</router-link>
             <a class="max-h-[36px] block cursor-pointer border-y" @click="logout">Logout</a>
           </div>
         </template>
@@ -65,7 +66,7 @@
             </a>
           </div>
           <div class="mt-auto flex items-center gap-2 text-xs text-white">
-            <span class="text-gray">v0.0.2</span>
+            <span class="text-gray">v0.0.3</span>
             <span class="bg-success aw-2 ah-2 animate-pulse rounded-full"></span>
             <span>All Systems Online</span>
           </div>

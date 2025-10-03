@@ -59,6 +59,10 @@ form {
   @apply my-5 flex max-w-md flex-col items-center gap-2;
 }
 
+.form-profile {
+  @apply !max-w-screen !grid-cols-2 !grid !gap-x-5 !gap-y-5;
+}
+
 button {
   @apply h-[36px] max-h-[36px] min-h-[36px] w-full cursor-pointer rounded-none bg-black px-4 py-2 text-sm font-semibold text-white uppercase;
 }

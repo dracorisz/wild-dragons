@@ -30,6 +30,7 @@
       </div>
     </div>
   </div>
+  <div class="pointer-events-none absolute bottom-0 left-0 -z-10 w-full h-full bg-[url('/images/canvar2.jpg')] bg-repeat-y bg-bottom bg-cover"></div>
 </template>
 
 <script setup>
@@ -41,33 +42,43 @@ import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
 const selectedHairColor = ref("#99ff99");
 const selectedPose = ref("idle");
 const selectedHair = ref("afro_hair");
-const yPos = 0;
-const leanRatio = 0.04;
+const yPos = -3;
+const leanRatio = -0.5;
 let model = null;
 
 onMounted(() => {
   const loader = new THREE.TextureLoader();
   // Use a fixed-size background plane instead of scene.background
-  loader.load("/images/landscape.jpg", (texture) => {
-    const bgGeometry = new THREE.PlaneGeometry(150, 100);
-    const bgMaterial = new THREE.MeshBasicMaterial({ map: texture });
-    const bgPlane = new THREE.Mesh(bgGeometry, bgMaterial);
-    bgPlane.position.set(0, 0, -45); // Position far behind everything
-    scene.add(bgPlane);
-  });
+  // loader.load("/images/canvas.jpg", (texture) => {
+  //   const bgGeometry = new THREE.PlaneGeometry(180, 100);
+  //   const bgMaterial = new THREE.MeshBasicMaterial({ map: texture });
+  //   const bgPlane = new THREE.Mesh(bgGeometry, bgMaterial);
+  //   bgPlane.position.set(-20, 0, -40); // Position far behind everything
+  //   scene.add(bgPlane);
+  // });
   const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(75, window.innerWidth / (window.innerHeight - 77), 0.1, 1000);
+  // Adjust camera position and rotation for oval cup fit
+  const camera = new THREE.PerspectiveCamera(
+    60, // narrower FOV for oval fit
+    window.innerWidth / (window.innerHeight - 77),
+    0.1,
+    1000
+  );
+  // Place camera higher and further back, slightly above center
+  camera.position.set(0, 5.5, 7.2);
+  camera.lookAt(0, yPos + 0.5, 0);
+
   const renderer = new THREE.WebGLRenderer({ antialias: true });
-  renderer.setClearColor(0x000000, 1);
+  renderer.setClearColor(0x000000, 0.1);
   renderer.setSize(window.innerWidth, window.innerHeight - 77);
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
   document.getElementById("viewer").appendChild(renderer.domElement);
 
-  const ambientLight = new THREE.AmbientLight(0xffffff, 1.8);
+  const ambientLight = new THREE.AmbientLight(0xffffff, 1.5);
   scene.add(ambientLight);
-  const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
-  directionalLight.position.set(5, 20, 10);
+  const directionalLight = new THREE.DirectionalLight(0xffffff, 1.2);
+  directionalLight.position.set(5, 25, 8);
   directionalLight.castShadow = true;
   directionalLight.shadow.mapSize.width = 1024;
   directionalLight.shadow.mapSize.height = 1024;
@@ -84,15 +95,17 @@ onMounted(() => {
   classPlane.receiveShadow = true;
   scene.add(classPlane);
 
-  const groundTexture = new THREE.TextureLoader().load("/images/ground.jpg");
-  groundTexture.wrapS = groundTexture.wrapT = THREE.RepeatWrapping;
-  groundTexture.repeat.set(15, 15);
+  // const groundTexture = new THREE.TextureLoader().load("/images/ground.jpg");
+  // groundTexture.wrapS = groundTexture.wrapT = THREE.RepeatWrapping;
+  // groundTexture.repeat.set(250, 250);
+  // groundTexture.anisotropy = renderer.capabilities.getMaxAnisotropy();
 
-  groundTexture.anisotropy = renderer.capabilities.getMaxAnisotropy();
   const groundMaterial = new THREE.MeshStandardMaterial({
-    map: groundTexture,
-    transparent: false,
-    opacity: 1,
+    // map: groundTexture,
+    transparent: true,
+    opacity: 0.25,
+    color: 0x000,
+    contrast: 1.5,
   });
 
   const groundGeometry = new THREE.PlaneGeometry(200, 200);
@@ -133,7 +146,7 @@ onMounted(() => {
     avatar.position.sub(center);
 
     const size = box.getSize(new THREE.Vector3()).length();
-    const desiredSize = 10;
+    const desiredSize = 7.33;
     const scale = desiredSize / size;
     avatar.scale.setScalar(scale);
 
@@ -154,7 +167,8 @@ onMounted(() => {
 
     scene.add(avatar);
     model = avatar;
-    model.position.set(0, yPos + 0.035, 0);
+    // Center model in oval cup
+    model.position.set(0, yPos + 0.25, 0);
     model.rotation.x = leanRatio;
     mixer = new THREE.AnimationMixer(model);
     if (gltf.animations && gltf.animations.length > 0) {
@@ -176,16 +190,14 @@ onMounted(() => {
 
   loadAvatar();
 
-  camera.position.y = 5;
-  camera.position.z = 8;
-
   let isDragging = false;
   let previousMouseX = 0;
   let targetRotationY = 0;
   let currentRotationY = 0;
   let targetZoom = camera.position.z;
-  const minZoom = 5;
-  const maxZoom = 8;
+  // Adjust zoom limits for oval fit
+  const minZoom = 6.8;
+  const maxZoom = 7.6;
 
   renderer.domElement.addEventListener("mousedown", (e) => {
     isDragging = true;
@@ -239,12 +251,15 @@ onMounted(() => {
       camera.position.z += (targetZoom - camera.position.z) * 0.1;
     }
 
+    // Always look at model's center for oval fit
+    camera.lookAt(0, yPos + 0.5, 0);
+
     // Only update classPlane animation if present
-    if (classPlane) {
-      classPlane.rotation.z += 0.002;
-      // Use cached time for sine calculation
-      classPlane.position.y = yPos + 0.06 + Math.sin(now * 0.002) * 0.05;
-    }
+    // if (classPlane) {
+    //   classPlane.rotation.z += 0.002;
+    //   // Use cached time for sine calculation
+    //   classPlane.position.y = yPos + 0.06 + Math.sin(now * 0.002) * 0.05;
+    // }
 
     renderer.render(scene, camera);
   }

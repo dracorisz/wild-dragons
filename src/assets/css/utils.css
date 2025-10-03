@@ -1,4 +1,10 @@
 @layer utilities {
+  .ah-screen {
+    @apply h-screen max-h-screen min-h-screen;
+  }
+  .aw-screen {
+    @apply w-screen max-w-screen min-w-screen;
+  }
   .ah-0 {
     @apply h-0 max-h-0 min-h-0;
   }

@@ -16,6 +16,7 @@ const About = () => import("../pages/About.vue");
 const Zeraphiora = () => import("../pages/Zeraphiora.vue");
 const Community = () => import("../pages/Community.vue");
 const ResetPassword = () => import("../pages/ResetPassword.vue");
+const Profile = () => import("../pages/Profile.vue");
 
 const routes = [
   { path: "/", name: "Landing", component: Landing },
@@ -32,6 +33,7 @@ const routes = [
   { path: "/world", name: "World", component: World, meta: { requiresAuth: true } },
   { path: "/settings", name: "Settings", component: Settings, meta: { requiresAuth: true } },
   { path: "/reset-password", name: "ResetPassword", component: ResetPassword },
+  { path: "/profile", name: "Profile", component: Profile, meta: { requiresAuth: true } },
 ];
 
 const router = createRouter({
