@@ -1,4 +1,3 @@
-
 -- DROP ALL ROUTINES, FUNCTIONS, TABLES, VIEWS, SEQUENCES
 DO $$ DECLARE
     r RECORD;
@@ -73,6 +72,21 @@ create table dragons (
   skills jsonb,
   created_at timestamp with time zone default now(),
   updated_at timestamp with time zone default now()
+);
+
+-- NFTS TABLE
+CREATE TABLE nfts (
+  id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  owner_id uuid REFERENCES users(id) ON DELETE CASCADE,
+  name TEXT NOT NULL,
+  description TEXT,
+  image_url TEXT,
+  attributes JSONB,
+  price NUMERIC,
+  royalty NUMERIC,
+  contract_address TEXT,
+  token_id TEXT,
+  minted_at TIMESTAMPTZ DEFAULT now()
 );
 
 -- POLICIES (EXAMPLES, ADJUST AS NEEDED)

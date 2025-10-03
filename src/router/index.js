@@ -17,6 +17,9 @@ const Zeraphiora = () => import("../pages/Zeraphiora.vue");
 const Community = () => import("../pages/Community.vue");
 const ResetPassword = () => import("../pages/ResetPassword.vue");
 const Profile = () => import("../pages/Profile.vue");
+const NFTMarketplace = () => import("../pages/Marketplace/Marketplace.vue");
+const Mint = () => import("../pages/Marketplace/Mint.vue");
+const MyNFTs = () => import("../pages/Marketplace/MyNFTs.vue");
 
 const routes = [
   { path: "/", name: "Landing", component: Landing },
@@ -34,6 +37,9 @@ const routes = [
   { path: "/settings", name: "Settings", component: Settings, meta: { requiresAuth: true } },
   { path: "/reset-password", name: "ResetPassword", component: ResetPassword },
   { path: "/profile", name: "Profile", component: Profile, meta: { requiresAuth: true } },
+  { path: "/nft-marketplace", name: "NFTMarketplace", component: NFTMarketplace },
+  { path: "/marketplace/mint", name: "Mint", component: Mint, meta: { requiresAuth: true } },
+  { path: "/marketplace/my", name: "MyNFTs", component: MyNFTs, meta: { requiresAuth: true } },
 ];
 
 const router = createRouter({

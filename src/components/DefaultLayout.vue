@@ -24,6 +24,7 @@
             <router-link to="/treasury" class="max-h-[36px] block border-y">Treasury</router-link>
             <router-link to="/settings" class="max-h-[36px] block border-y">Settings</router-link>
             <router-link to="/profile" class="max-h-[36px] block border-y">Profile</router-link>
+            <router-link to="/nft-marketplace" class="max-h-[36px] block border-y">Marketplace</router-link>
             <a class="max-h-[36px] block cursor-pointer border-y" @click="logout">Logout</a>
           </div>
         </template>

@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "./utils.css";
+@import "./nft.css";
 
 @theme {
   --color-*: initial;
