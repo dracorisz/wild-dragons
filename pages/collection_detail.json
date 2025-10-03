@@ -1,0 +1,25 @@
+{
+  "collection": "Wild Dragons",
+  "description": "A cosmic, neon-accented NFT collection featuring legendary dragons and fantasy creatures.",
+  "category": "Fantasy",
+  "floor_price": "4.50 ETH",
+  "total_volume": "1200 ETH",
+  "owners": 350,
+  "items": [
+    {
+      "name": "Cosmic Dragon",
+      "token_id": "dragon001",
+      "rarity": "Legendary",
+      "thumbnail": "https://i.pinimg.com/originals/7e/9c/7e9c7e2e8e8e8e8e8e8e8e8e8e8e8e8e.jpg",
+      "price": "5.00 ETH"
+    },
+    {
+      "name": "Neon Hydra",
+      "token_id": "dragon002",
+      "rarity": "Epic",
+      "thumbnail": "https://i.pinimg.com/originals/8f/2a/8f2a8f2a8f2a8f2a8f2a8f2a8f2a8f2a.jpg",
+      "price": "4.25 ETH"
+    }
+    
+  ]
+}

@@ -8,8 +8,9 @@
   --color-black: #000;
   --color-gray: #888;
   --color-success: #05f57d;
-  --color-primary: #ffbf34;  /* #ffb42a */
-  --color-secondary: #f08205;
+  --color-primary: #00fff7;  /* #ffb42a */
+  /* --color-primary: #ffbf34; */
+  --color-secondary: #ff00cc;
   --color-warning: #f8310e;
 }
 
@@ -45,7 +46,8 @@ nav .router-link-exact-active {
 
 .logo {
   @apply text-primary border-0 hover:text-primary mr-auto text-2xl pl-0 font-black tracking-normal uppercase hover:bg-transparent;
-  font-family: "MedievalSharp", cursive;
+  font-family: "Orbitron", cursive;
+  /* font-family: "MedievalSharp", cursive; */
 }
 
 .hero {
@@ -94,7 +96,8 @@ input::placeholder {
 
 .font-zeraphiora {
   @apply font-black uppercase text-4xl text-transparent -mt-1;
-  font-family: "Metamorphous", cursive;
+  font-family: "Orbitron", cursive;
+  /* font-family: "Metamorphous", cursive; */
   background: linear-gradient(35deg, var(--color-primary),var(--color-secondary), var(--color-primary));
   background-clip: text;
   letter-spacing: -2px;

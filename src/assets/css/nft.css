@@ -63,6 +63,12 @@
 .bg-grad {
   background: linear-gradient(90deg, #00fff7 60%, #ff00cc 100%);
 }
+.down {
+  background: linear-gradient(180deg, #00fff7 0%, #181828 100%);
+}
+.up {
+  background: linear-gradient(0deg, #00fff7 0%, #181828 100%);
+}
 /* Action buttons - minimal neon accent */
 .nft-actions {
   display: flex;
@@ -227,3 +233,28 @@ background: linear-gradient(0deg, #00fff700 30%, #00fff733 90%);
 /* Hide scrollbars for slider */
 /* .nft-slider::-webkit-scrollbar { display: none; } */
 /* .nft-slider { -ms-overflow-style: none; scrollbar-width: none; } */
+.resource-card {
+  background: #181828;
+  border: 1.5px solid #00fff7;
+  color: #fff;
+  border-radius: 12px;
+  padding: 0.5rem 0.75rem;
+  box-shadow: 0 0 8px #00fff733;
+  transition: border-color 0.2s;
+}
+.resource-card:hover {
+  border-color: #ff00cc;
+}
+.nft-market-link {
+  color: #00fff7;
+  text-decoration: underline;
+  font-weight: 500;
+  margin-right: 0;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.03em;
+  font-size: 0.95em;
+  padding: 0.15em 0.5em;
+  border-radius: 6px;
+  background: #23234b;
+  margin-bottom: 0.25em;
+}

@@ -1,0 +1,27 @@
+{
+  "pages": [
+    "landing",
+    "collection_detail",
+    "nft_detail",
+    "search_filter",
+    "user_profile"
+  ],
+  "api_endpoints": [
+    "/api/collections.json",
+    "/api/items.json",
+    "/api/categories.json",
+    "/api/metadata.json",
+    "/api/user_profile.json"
+  ],
+  "features": [
+    "Featured collections on landing",
+    "Collection detail with items",
+    "NFT detail with metadata and price history",
+    "Search and filter by rarity, price, collection",
+    "User profiles with owned NFTs and history",
+    "API-ready JSON endpoints",
+    "Placeholder for royalties",
+    "Multi-chain support (future)",
+    "Off-chain indexing (future)"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "user": "0xabc123",
+  "owned_nfts": [
+    {
+      "name": "Cosmic Dragon",
+      "token_id": "dragon001",
+      "collection": "Wild Dragons",
+      "rarity": "Legendary",
+      "thumbnail": "https://i.pinimg.com/originals/7e/9c/7e9c7e2e8e8e8e8e8e8e8e8e8e8e8e8e.jpg",
+      "price": "5.00 ETH"
+    }
+  ],
+  "history": [
+    {
+      "action": "Bought",
+      "token_id": "dragon001",
+      "price": "4.00 ETH",
+      "date": "2024-05-01"
+    },
+    {
+      "action": "Listed",
+      "token_id": "dragon001",
+      "price": "5.00 ETH",
+      "date": "2024-06-01"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+[
+  {
+    "name": "Cosmic Dragon",
+    "token_id": "dragon001",
+    "collection": "Wild Dragons",
+    "rarity": "Legendary",
+    "metadata": {
+      "element": "Cosmic",
+      "power": 100,
+      "traits": ["Wings", "Stardust", "Aura"]
+    },
+    "price_history": [
+      { "date": "2024-05-01", "price": "4.00 ETH" },
+      { "date": "2024-06-01", "price": "4.50 ETH" }
+    ],
+    "current_listing": {
+      "price": "5.00 ETH",
+      "seller": "0xabc123"
+    },
+    "owners": ["0xabc123", "0xdef456"],
+    "thumbnail": "https://i.pinimg.com/originals/7e/9c/7e9c7e2e8e8e8e8e8e8e8e8e8e8e8e8e.jpg"
+  },
+  {
+    "name": "Neon Hydra",
+    "token_id": "dragon002",
+    "collection": "Wild Dragons",
+    "rarity": "Epic",
+    "metadata": {
+      "element": "Neon",
+      "power": 85,
+      "traits": ["Multiple Heads", "Glow", "Venom"]
+    },
+    "price_history": [
+      { "date": "2024-05-10", "price": "3.50 ETH" },
+      { "date": "2024-06-05", "price": "4.00 ETH" }
+    ],
+    "current_listing": {
+      "price": "4.25 ETH",
+      "seller": "0x789abc"
+    },
+    "owners": ["0x789abc", "0xdef456"],
+    "thumbnail": "https://i.pinimg.com/originals/8f/2a/8f2a8f2a8f2a8f2a8f2a8f2a8f2a8f2a.jpg"
+  }
+  
+]

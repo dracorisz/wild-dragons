@@ -1,0 +1,16 @@
+{
+  "featured_collections": [
+    {
+      "name": "Wild Dragons",
+      "slug": "wild-dragons",
+      "description": "Legendary cosmic dragons and neon hydras.",
+      "thumbnail": "https://i.pinimg.com/originals/7e/9c/7e9c7e2e8e8e8e8e8e8e8e8e8e8e8e8e.jpg"
+    },
+    {
+      "name": "Mystic Beasts",
+      "slug": "mystic-beasts",
+      "description": "Mythical creatures from ancient lore.",
+      "thumbnail": "https://i.pinimg.com/originals/9a/1b/9a1b9a1b9a1b9a1b9a1b9a1b9a1b9a1b.jpg"
+    }
+  ]
+}

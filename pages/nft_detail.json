@@ -1,0 +1,21 @@
+{
+  "name": "Cosmic Dragon",
+  "token_id": "dragon001",
+  "collection": "Wild Dragons",
+  "rarity": "Legendary",
+  "metadata": {
+    "element": "Cosmic",
+    "power": 100,
+    "traits": ["Wings", "Stardust", "Aura"]
+  },
+  "price_history": [
+    { "date": "2024-05-01", "price": "4.00 ETH" },
+    { "date": "2024-06-01", "price": "4.50 ETH" }
+  ],
+  "current_listing": {
+    "price": "5.00 ETH",
+    "seller": "0xabc123"
+  },
+  "owners": ["0xabc123", "0xdef456"],
+  "thumbnail": "https://i.pinimg.com/originals/7e/9c/7e9c7e2e8e8e8e8e8e8e8e8e8e8e8e8e.jpg"
+}

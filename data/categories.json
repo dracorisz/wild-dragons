@@ -1,0 +1,22 @@
+[
+  {
+    "category": "Fantasy",
+    "collections": ["Wild Dragons", "Mystic Beasts", "Elemental Spirits"]
+  },
+  {
+    "category": "Sci-Fi",
+    "collections": ["Galactic Voyagers", "Neon Robots"]
+  },
+  {
+    "category": "Horror",
+    "collections": ["Ghostly Apparitions", "Monstrous Creatures"]
+  },
+  {
+    "category": "Adventure",
+    "collections": ["Lost Realms", "Treasure Seekers"]
+  },
+  {
+    "category": "Mythology",
+    "collections": ["Olympian Gods", "Ancient Legends"]
+  }
+]

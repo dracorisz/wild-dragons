@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Cosmic Dragon",
+    "token_id": "dragon001",
+    "collection": "Wild Dragons",
+    "rarity": "Legendary",
+    "price": "5.00 ETH",
+    "thumbnail": "https://i.pinimg.com/originals/7e/9c/7e9c7e2e8e8e8e8e8e8e8e8e8e8e8e8e.jpg"
+  },
+  {
+    "name": "Neon Hydra",
+    "token_id": "dragon002",
+    "collection": "Wild Dragons",
+    "rarity": "Epic",
+    "price": "4.25 ETH",
+    "thumbnail": "https://i.pinimg.com/originals/8f/2a/8f2a8f2a8f2a8f2a8f2a8f2a8f2a8f2a.jpg"
+  }
+]

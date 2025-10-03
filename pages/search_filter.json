@@ -1,0 +1,18 @@
+{
+  "filters": {
+    "rarity": ["Common", "Rare", "Epic", "Legendary"],
+    "price_range": ["0-1 ETH", "1-5 ETH", "5+ ETH"],
+    "collection": ["Wild Dragons", "Mystic Beasts", "Elemental Spirits"]
+  },
+  "results": [
+    {
+      "name": "Neon Hydra",
+      "token_id": "dragon002",
+      "collection": "Wild Dragons",
+      "rarity": "Epic",
+      "price": "4.25 ETH",
+      "thumbnail": "https://i.pinimg.com/originals/8f/2a/8f2a8f2a8f2a8f2a8f2a8f2a8f2a8f2a.jpg"
+    }
+    
+  ]
+}

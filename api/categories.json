@@ -1,0 +1,10 @@
+[
+  {
+    "category": "Fantasy",
+    "collections": ["Wild Dragons", "Mystic Beasts", "Elemental Spirits"]
+  },
+  {
+    "category": "Sci-Fi",
+    "collections": ["Galactic Voyagers", "Neon Robots"]
+  }
+]

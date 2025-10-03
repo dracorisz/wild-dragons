@@ -1,0 +1,40 @@
+[
+  { "id": 1, "name": "Hydrogen", "type": "Element", "category": "Periodic Table" },
+  { "id": 2, "name": "Helium", "type": "Element", "category": "Periodic Table" },
+  { "id": 3, "name": "Lithium", "type": "Element", "category": "Periodic Table" },
+  { "id": 4, "name": "Beryllium", "type": "Element", "category": "Periodic Table" },
+  { "id": 5, "name": "Boron", "type": "Element", "category": "Periodic Table" },
+  { "id": 6, "name": "Carbon", "type": "Element", "category": "Periodic Table" },
+  { "id": 7, "name": "Nitrogen", "type": "Element", "category": "Periodic Table" },
+  { "id": 8, "name": "Oxygen", "type": "Element", "category": "Periodic Table" },
+  { "id": 9, "name": "Fluorine", "type": "Element", "category": "Periodic Table" },
+  { "id": 10, "name": "Neon", "type": "Element", "category": "Periodic Table" },
+  // ...all 118 periodic elements...
+  { "id": 119, "name": "Water", "type": "Compound", "category": "Essential" },
+  { "id": 120, "name": "Salt", "type": "Compound", "category": "Essential" },
+  { "id": 121, "name": "Glucose", "type": "Compound", "category": "Organic" },
+  { "id": 122, "name": "DNA", "type": "Compound", "category": "Organic" },
+  { "id": 123, "name": "Gold", "type": "Element", "category": "Precious Metal" },
+  { "id": 124, "name": "Platinum", "type": "Element", "category": "Precious Metal" },
+  { "id": 125, "name": "Silver", "type": "Element", "category": "Precious Metal" },
+  { "id": 126, "name": "Diamond", "type": "Mineral", "category": "Gemstone" },
+  { "id": 127, "name": "Ruby", "type": "Mineral", "category": "Gemstone" },
+  { "id": 128, "name": "Sapphire", "type": "Mineral", "category": "Gemstone" },
+  // ...cosmic resources...
+  { "id": 200, "name": "Stardust", "type": "Cosmic", "category": "Generated" },
+  { "id": 201, "name": "Dark Matter", "type": "Cosmic", "category": "Generated" },
+  { "id": 202, "name": "Neutronium", "type": "Cosmic", "category": "Generated" },
+  { "id": 203, "name": "Quantum Foam", "type": "Cosmic", "category": "Generated" },
+  { "id": 204, "name": "Antimatter", "type": "Cosmic", "category": "Generated" },
+  { "id": 205, "name": "Solar Wind", "type": "Cosmic", "category": "Generated" },
+  { "id": 206, "name": "Cosmic Ray", "type": "Cosmic", "category": "Generated" },
+  // ...fantasy resources...
+  { "id": 300, "name": "Dragon Scale", "type": "Fantasy", "category": "Generated" },
+  { "id": 301, "name": "Mana Crystal", "type": "Fantasy", "category": "Generated" },
+  { "id": 302, "name": "Phoenix Feather", "type": "Fantasy", "category": "Generated" },
+  { "id": 303, "name": "Elven Leaf", "type": "Fantasy", "category": "Generated" },
+  { "id": 304, "name": "Goblin Ore", "type": "Fantasy", "category": "Generated" },
+  { "id": 305, "name": "Unicorn Horn", "type": "Fantasy", "category": "Generated" },
+  // ...more generated cosmic/fantasy resources...
+  { "id": 349, "name": "Celestial Essence", "type": "Cosmic", "category": "Generated" }
+]

@@ -1,0 +1,8 @@
+{
+  "rarity": ["Common", "Rare", "Epic", "Legendary"],
+  "elements": ["Cosmic", "Neon", "Fire", "Water", "Earth", "Air"],
+  "traits": [
+    "Wings", "Stardust", "Aura", "Multiple Heads", "Glow", "Venom",
+    "Scales", "Claws", "Tail", "Horns", "Eyes", "Breath"
+  ]
+}
