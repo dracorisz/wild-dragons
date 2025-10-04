@@ -1,0 +1,183 @@
+{
+  "name": "Heroine's Dragon - Epic Fantasy RPG",
+  "short_name": "HeroineDragon",
+  "description": "Explore the World of Tiamat, where legends awaken, dragons soar, and every heroine shapes the fate of realms untold. Battle epic creatures, mint legendary NFTs, and build your fantasy empire.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a0a2e",
+  "theme_color": "#ff6b35",
+  "orientation": "any",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["games", "entertainment", "productivity", "utilities"],
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "iarc_rating_id": "",
+  "related_applications": [],
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "icons": [
+    {
+      "src": "/icons/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-monochrome.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "monochrome"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Start New Game",
+      "short_name": "New Game",
+      "description": "Begin a new adventure",
+      "url": "/game",
+      "icons": [
+        {
+          "src": "/icons/shortcut-game.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Minting Hub",
+      "short_name": "Minting",
+      "description": "Access NFT minting features",
+      "url": "/minting",
+      "icons": [
+        {
+          "src": "/icons/shortcut-minting.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Profile & Achievements",
+      "short_name": "Profile",
+      "description": "View your progress and achievements",
+      "url": "/profile",
+      "icons": [
+        {
+          "src": "/icons/shortcut-profile.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Leaderboard",
+      "short_name": "Leaderboard",
+      "description": "See top players",
+      "url": "/leaderboard",
+      "icons": [
+        {
+          "src": "/icons/shortcut-leaderboard.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/gameplay-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Epic battle scene with heroine and dragon"
+    },
+    {
+      "src": "/screenshots/minting-narrow.png",
+      "sizes": "640x1136",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "NFT minting interface"
+    },
+    {
+      "src": "/screenshots/profile-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Player profile with achievements"
+    }
+  ],
+  "features": [
+    "Cross Platform",
+    "Fast",
+    "Works Offline"
+  ],
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
+  "handle_links": "preferred",
+  "file_handlers": [
+    {
+      "action": "/import",
+      "accept": {
+        "application/json": [".json"],
+        "text/plain": [".txt"]
+      }
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url",
+      "files": [
+        {
+          "name": "files",
+          "accept": ["image/*", ".json"]
+        }
+      ]
+    }
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+heroinedragon",
+      "url": "/protocol?url=%s"
+    }
+  ],
+  "display_override": [
+    "window-controls-overlay",
+    "standalone",
+    "minimal-ui",
+    "browser"
+  ],
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "note_taking": {
+    "new_note_url": "/notes/new"
+  }
+}

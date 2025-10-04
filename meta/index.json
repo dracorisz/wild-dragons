@@ -1,0 +1,38 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2025-10-03T17:18:02.348755",
+  "collection_count": 5,
+  "total_items": 50,
+  "collections": {
+    "dragons": {
+      "name": "Wild Dragons",
+      "item_count": 10,
+      "description": "Mythical dragons from another dimension",
+      "file_path": "/data/collections/dragons.json"
+    },
+    "cosmic": {
+      "name": "Cosmic Entities",
+      "item_count": 10,
+      "description": "Beings from the far reaches of space",
+      "file_path": "/data/collections/cosmic.json"
+    },
+    "elemental": {
+      "name": "Elemental Guardians",
+      "item_count": 10,
+      "description": "Protectors of the natural forces",
+      "file_path": "/data/collections/elemental.json"
+    },
+    "fantasy": {
+      "name": "Fantasy Heroes",
+      "item_count": 10,
+      "description": "Legendary heroes from ancient tales",
+      "file_path": "/data/collections/fantasy.json"
+    },
+    "mythical": {
+      "name": "Mythical Creatures",
+      "item_count": 10,
+      "description": "Creatures from myths and legends",
+      "file_path": "/data/collections/mythical.json"
+    }
+  }
+}

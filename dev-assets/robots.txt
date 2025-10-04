@@ -1,0 +1,68 @@
+User-agent: *
+Allow: /
+
+# Priority pages for crawling
+Allow: /play
+Allow: /academy
+
+# Sitemap location
+Sitemap: https://heroinesdragon.io/sitemap.xml
+
+# Crawl delay for politeness (1 second)
+Crawl-delay: 1
+
+# Block admin areas and API endpoints
+Disallow: /api/
+
+# Allow important static assets
+Allow: /icons/
+Allow: /assets/
+Allow: /manifest.json
+Allow: /*.css
+Allow: /*.js
+Allow: /*.svg
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.webp
+
+# Block development and build files
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /dist/
+Disallow: /dev-dist/
+Disallow: /.env*
+Disallow: /vite.config.js
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /.git/
+Disallow: /.vscode/
+Disallow: /.github/
+
+# Block backup and temporary files
+Disallow: /backup/
+Disallow: /*.tmp
+Disallow: /*.bak
+Disallow: /*.old
+
+# Search engine specific rules
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+# Block malicious bots
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /

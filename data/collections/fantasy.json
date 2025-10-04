@@ -1,0 +1,292 @@
+[
+  {
+    "id": "fantasy_1",
+    "name": "Light Fantasy Heroes #1",
+    "collection": "Fantasy Heroes",
+    "description": "A powerful uncommon light from the Fantasy Heroes collection. Legendary heroes from ancient tales.",
+    "image": {
+      "thumbnail": "/assets/fantasy/fantasy_1_thumb.png",
+      "preview": "/assets/fantasy/fantasy_1_preview.png",
+      "full": "/assets/fantasy/fantasy_1.png"
+    },
+    "traits": {
+      "rarity": "Uncommon",
+      "element": "Light",
+      "power": 73
+    },
+    "spiritual": {
+      "chakra": "heart",
+      "frequency_hz": 639,
+      "color": "green",
+      "level_unlock": 4
+    },
+    "price": {
+      "listed": "2.79 ETH",
+      "floor": "2.54 ETH",
+      "last_sale": "3.24 ETH"
+    },
+    "external_url": "https://example.com/nft/fantasy/1",
+    "created_at": "2025-10-03T17:18:02.345030"
+  },
+  {
+    "id": "fantasy_2",
+    "name": "Dark Fantasy Heroes #2",
+    "collection": "Fantasy Heroes",
+    "description": "A powerful rare dark from the Fantasy Heroes collection. Legendary heroes from ancient tales.",
+    "image": {
+      "thumbnail": "/assets/fantasy/fantasy_2_thumb.png",
+      "preview": "/assets/fantasy/fantasy_2_preview.png",
+      "full": "/assets/fantasy/fantasy_2.png"
+    },
+    "traits": {
+      "rarity": "Rare",
+      "element": "Dark",
+      "power": 80
+    },
+    "spiritual": {
+      "chakra": "throat",
+      "frequency_hz": 741,
+      "color": "blue",
+      "level_unlock": 5
+    },
+    "price": {
+      "listed": "0.61 ETH",
+      "floor": "4.18 ETH",
+      "last_sale": "2.82 ETH"
+    },
+    "external_url": "https://example.com/nft/fantasy/2",
+    "created_at": "2025-10-03T17:18:02.345047"
+  },
+  {
+    "id": "fantasy_3",
+    "name": "Cosmic Fantasy Heroes #3",
+    "collection": "Fantasy Heroes",
+    "description": "A powerful common cosmic from the Fantasy Heroes collection. Legendary heroes from ancient tales.",
+    "image": {
+      "thumbnail": "/assets/fantasy/fantasy_3_thumb.png",
+      "preview": "/assets/fantasy/fantasy_3_preview.png",
+      "full": "/assets/fantasy/fantasy_3.png"
+    },
+    "traits": {
+      "rarity": "Common",
+      "element": "Cosmic",
+      "power": 45
+    },
+    "spiritual": {
+      "chakra": "heart",
+      "frequency_hz": 639,
+      "color": "green",
+      "level_unlock": 4
+    },
+    "price": {
+      "listed": "1.07 ETH",
+      "floor": "0.59 ETH",
+      "last_sale": "0.89 ETH"
+    },
+    "external_url": "https://example.com/nft/fantasy/3",
+    "created_at": "2025-10-03T17:18:02.345057"
+  },
+  {
+    "id": "fantasy_4",
+    "name": "Water Fantasy Heroes #4",
+    "collection": "Fantasy Heroes",
+    "description": "A powerful rare water from the Fantasy Heroes collection. Legendary heroes from ancient tales.",
+    "image": {
+      "thumbnail": "/assets/fantasy/fantasy_4_thumb.png",
+      "preview": "/assets/fantasy/fantasy_4_preview.png",
+      "full": "/assets/fantasy/fantasy_4.png"
+    },
+    "traits": {
+      "rarity": "Rare",
+      "element": "Water",
+      "power": 97
+    },
+    "spiritual": {
+      "chakra": "solar_plexus",
+      "frequency_hz": 528,
+      "color": "yellow",
+      "level_unlock": 3
+    },
+    "price": {
+      "listed": "3.21 ETH",
+      "floor": "3.76 ETH",
+      "last_sale": "2.01 ETH"
+    },
+    "external_url": "https://example.com/nft/fantasy/4",
+    "created_at": "2025-10-03T17:18:02.345068"
+  },
+  {
+    "id": "fantasy_5",
+    "name": "Cosmic Fantasy Heroes #5",
+    "collection": "Fantasy Heroes",
+    "description": "A powerful uncommon cosmic from the Fantasy Heroes collection. Legendary heroes from ancient tales.",
+    "image": {
+      "thumbnail": "/assets/fantasy/fantasy_5_thumb.png",
+      "preview": "/assets/fantasy/fantasy_5_preview.png",
+      "full": "/assets/fantasy/fantasy_5.png"
+    },
+    "traits": {
+      "rarity": "Uncommon",
+      "element": "Cosmic",
+      "power": 69
+    },
+    "spiritual": {
+      "chakra": "root",
+      "frequency_hz": 396,
+      "color": "red",
+      "level_unlock": 1
+    },
+    "price": {
+      "listed": "4.96 ETH",
+      "floor": "0.35 ETH",
+      "last_sale": "4.46 ETH"
+    },
+    "external_url": "https://example.com/nft/fantasy/5",
+    "created_at": "2025-10-03T17:18:02.345079"
+  },
+  {
+    "id": "fantasy_6",
+    "name": "Light Fantasy Heroes #6",
+    "collection": "Fantasy Heroes",
+    "description": "A powerful uncommon light from the Fantasy Heroes collection. Legendary heroes from ancient tales.",
+    "image": {
+      "thumbnail": "/assets/fantasy/fantasy_6_thumb.png",
+      "preview": "/assets/fantasy/fantasy_6_preview.png",
+      "full": "/assets/fantasy/fantasy_6.png"
+    },
+    "traits": {
+      "rarity": "Uncommon",
+      "element": "Light",
+      "power": 90
+    },
+    "spiritual": {
+      "chakra": "root",
+      "frequency_hz": 396,
+      "color": "red",
+      "level_unlock": 1
+    },
+    "price": {
+      "listed": "0.51 ETH",
+      "floor": "0.98 ETH",
+      "last_sale": "2.26 ETH"
+    },
+    "external_url": "https://example.com/nft/fantasy/6",
+    "created_at": "2025-10-03T17:18:02.345089"
+  },
+  {
+    "id": "fantasy_7",
+    "name": "Mechanical Fantasy Heroes #7",
+    "collection": "Fantasy Heroes",
+    "description": "A powerful rare mechanical from the Fantasy Heroes collection. Legendary heroes from ancient tales.",
+    "image": {
+      "thumbnail": "/assets/fantasy/fantasy_7_thumb.png",
+      "preview": "/assets/fantasy/fantasy_7_preview.png",
+      "full": "/assets/fantasy/fantasy_7.png"
+    },
+    "traits": {
+      "rarity": "Rare",
+      "element": "Mechanical",
+      "power": 52
+    },
+    "spiritual": {
+      "chakra": "third_eye",
+      "frequency_hz": 852,
+      "color": "indigo",
+      "level_unlock": 6
+    },
+    "price": {
+      "listed": "0.85 ETH",
+      "floor": "2.62 ETH",
+      "last_sale": "4.19 ETH"
+    },
+    "external_url": "https://example.com/nft/fantasy/7",
+    "created_at": "2025-10-03T17:18:02.345098"
+  },
+  {
+    "id": "fantasy_8",
+    "name": "Nature Fantasy Heroes #8",
+    "collection": "Fantasy Heroes",
+    "description": "A powerful rare nature from the Fantasy Heroes collection. Legendary heroes from ancient tales.",
+    "image": {
+      "thumbnail": "/assets/fantasy/fantasy_8_thumb.png",
+      "preview": "/assets/fantasy/fantasy_8_preview.png",
+      "full": "/assets/fantasy/fantasy_8.png"
+    },
+    "traits": {
+      "rarity": "Rare",
+      "element": "Nature",
+      "power": 68
+    },
+    "spiritual": {
+      "chakra": "crown",
+      "frequency_hz": 963,
+      "color": "violet",
+      "level_unlock": 7
+    },
+    "price": {
+      "listed": "1.87 ETH",
+      "floor": "3.37 ETH",
+      "last_sale": "2.18 ETH"
+    },
+    "external_url": "https://example.com/nft/fantasy/8",
+    "created_at": "2025-10-03T17:18:02.345107"
+  },
+  {
+    "id": "fantasy_9",
+    "name": "Mechanical Fantasy Heroes #9",
+    "collection": "Fantasy Heroes",
+    "description": "A powerful uncommon mechanical from the Fantasy Heroes collection. Legendary heroes from ancient tales.",
+    "image": {
+      "thumbnail": "/assets/fantasy/fantasy_9_thumb.png",
+      "preview": "/assets/fantasy/fantasy_9_preview.png",
+      "full": "/assets/fantasy/fantasy_9.png"
+    },
+    "traits": {
+      "rarity": "Uncommon",
+      "element": "Mechanical",
+      "power": 89
+    },
+    "spiritual": {
+      "chakra": "sacral",
+      "frequency_hz": 417,
+      "color": "orange",
+      "level_unlock": 2
+    },
+    "price": {
+      "listed": "1.88 ETH",
+      "floor": "4.20 ETH",
+      "last_sale": "4.48 ETH"
+    },
+    "external_url": "https://example.com/nft/fantasy/9",
+    "created_at": "2025-10-03T17:18:02.345117"
+  },
+  {
+    "id": "fantasy_10",
+    "name": "Earth Fantasy Heroes #10",
+    "collection": "Fantasy Heroes",
+    "description": "A powerful rare earth from the Fantasy Heroes collection. Legendary heroes from ancient tales.",
+    "image": {
+      "thumbnail": "/assets/fantasy/fantasy_10_thumb.png",
+      "preview": "/assets/fantasy/fantasy_10_preview.png",
+      "full": "/assets/fantasy/fantasy_10.png"
+    },
+    "traits": {
+      "rarity": "Rare",
+      "element": "Earth",
+      "power": 70
+    },
+    "spiritual": {
+      "chakra": "sacral",
+      "frequency_hz": 417,
+      "color": "orange",
+      "level_unlock": 2
+    },
+    "price": {
+      "listed": "0.51 ETH",
+      "floor": "3.05 ETH",
+      "last_sale": "1.76 ETH"
+    },
+    "external_url": "https://example.com/nft/fantasy/10",
+    "created_at": "2025-10-03T17:18:02.345130"
+  }
+]

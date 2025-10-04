@@ -1,61 +1,158 @@
-import { createRouter, createWebHistory } from "vue-router";
-import { supabase } from "../main";
+import { createRouter, createWebHistory } from 'vue-router';
 
-// Lazy load pages
-const Landing = () => import("../pages/Landing.vue");
-const Academy = () => import("../pages/Academy.vue");
-const Treasury = () => import("../pages/Treasury.vue");
-const Connect = () => import("../pages/Connect.vue");
-const Characters = () => import("../pages/Characters.vue");
-const Settings = () => import("../pages/Settings.vue");
-const City = () => import("../pages/City.vue");
-const World = () => import("../pages/World.vue");
-const Web3 = () => import("../pages/Web3.vue");
-const HowToPlay = () => import("../pages/HowToPlay.vue");
-const About = () => import("../pages/About.vue");
-const Zeraphiora = () => import("../pages/Zeraphiora.vue");
-const Community = () => import("../pages/Community.vue");
-const ResetPassword = () => import("../pages/ResetPassword.vue");
-const Profile = () => import("../pages/Profile.vue");
-const NFTMarketplace = () => import("../pages/Marketplace/Marketplace.vue");
-const Mint = () => import("../pages/Marketplace/Mint.vue");
-const MyNFTs = () => import("../pages/Marketplace/MyNFTs.vue");
-
+// Define all application routes
 const routes = [
-  { path: "/", name: "Landing", component: Landing },
-  { path: "/connect", name: "Connect", component: Connect },
-  { path: "/web3", name: "Web3", component: Web3 },
-  { path: "/how-to-play", name: "HowToPlay", component: HowToPlay },
-  { path: "/about", name: "About", component: About },
-  { path: "/Zeraphiora", name: "Zeraphiora", component: Zeraphiora },
-  { path: "/community", name: "Community", component: Community },
-  { path: "/academy", name: "Academy", component: Academy, meta: { requiresAuth: true } },
-  { path: "/treasury", name: "Treasury", component: Treasury, meta: { requiresAuth: true } },
-  { path: "/characters", name: "Characters", component: Characters, meta: { requiresAuth: true } },
-  { path: "/city", name: "City", component: City, meta: { requiresAuth: true } },
-  { path: "/world", name: "World", component: World, meta: { requiresAuth: true } },
-  { path: "/settings", name: "Settings", component: Settings, meta: { requiresAuth: true } },
-  { path: "/reset-password", name: "ResetPassword", component: ResetPassword },
-  { path: "/profile", name: "Profile", component: Profile, meta: { requiresAuth: true } },
-  { path: "/nft-marketplace", name: "NFTMarketplace", component: NFTMarketplace },
-  { path: "/marketplace/mint", name: "Mint", component: Mint, meta: { requiresAuth: true } },
-  { path: "/marketplace/my", name: "MyNFTs", component: MyNFTs, meta: { requiresAuth: true } },
+  {
+    path: '/',
+    name: 'Home',
+    component: () => import('../views/HomePage.vue'),
+    meta: {
+      title: "Heroine's Dragon - Home"
+    }
+  },
+  {
+    path: '/marketplace',
+    name: 'Marketplace',
+    component: () => import('../views/HomePage.vue'),
+    meta: {
+      title: "Heroine's Dragon - Marketplace"
+    }
+  },
+  {
+    path: '/profile',
+    name: 'Profile',
+    component: () => import('../views/ProfilePage.vue'),
+    meta: { 
+      title: "Heroine's Dragon - Profile", 
+      requiresAuth: true 
+    }
+  },
+  {
+    path: '/leaderboard',
+    name: 'Leaderboard',
+    component: () => import('../views/LeaderboardPage.vue'),
+    meta: { 
+      title: "Heroine's Dragon - Leaderboard" 
+    }
+  },
+  {
+    path: "/landing", 
+    name: "Landing", 
+    component: () => import('../views/LandingPage.vue')
+  },
+  {
+    path: "/connect", 
+    name: "Connect", 
+    component: () => import('../views/ConnectPage.vue')
+  },
+  {
+    path: "/web3", 
+    name: "Web3", 
+    component: () => import('../views/Web3Page.vue')
+  },
+  {
+    path: "/how-to-play", 
+    name: "HowToPlay", 
+    component: () => import('../views/HowToPlayPage.vue')
+  },
+  {
+    path: "/about", 
+    name: "About", 
+    component: () => import('../views/AboutPage.vue')
+  },
+  {
+    path: "/nft-marketplace", 
+    name: "NFTMarketplace", 
+    component: () => import('../views/NFTMarketplacePage.vue')
+  },
+  {
+    path: "/marketplace/mint", 
+    name: "Mint", 
+    component: () => import('../views/MintPage.vue'), 
+    meta: { requiresAuth: true }
+  },
+  {
+    path: "/marketplace/my", 
+    name: "MyNFTs", 
+    component: () => import('../views/MyNFTsPage.vue'), 
+    meta: { requiresAuth: true }
+  },
+  {
+    path: "/game",
+    name: "Game",
+    component: () => import('../views/GamePage.vue'),
+    meta: { title: "Heroine's Dragon - Play" }
+  },
+  {
+    path: "/minting",
+    name: "Minting",
+    component: () => import('../views/MintingPage.vue'),
+    meta: { 
+      title: "Heroine's Dragon - Minting Hub", 
+      requiresAuth: true, 
+      requiresMintingMode: true 
+    }
+  }
 ];
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    }
+    return { top: 0, behavior: 'smooth' };
+  }
 });
 
-router.beforeEach(async (to, from, next) => {
-  if (to.meta.requiresAuth) {
-    const { data } = await supabase.auth.getSession();
-    if (!data.session) {
-      next({ path: "/connect" });
-      return;
-    }
-  }
+// Update document title based on route
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title || 'Heroine\'s Dragon';
   next();
 });
 
 export default router;
+  // Check authentication requirements
+  if (to.meta.requiresAuth) {
+    try {
+      // Use supabase if available, otherwise use mock authentication
+      if (typeof window.supabase !== 'undefined') {
+        const { data } = await window.supabase.auth.getSession();
+        if (!data.session) {
+          console.log('🔐 Redirecting to connect (authentication required)');
+          next({ path: "/connect" });
+          return;
+        }
+      } else {
+        // Mock authentication for development
+        const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+        if (!isLoggedIn) {
+          console.log('🔐 Redirecting to connect (mock authentication)');
+          next({ path: "/connect" });
+          return;
+        }
+      }
+    } catch (error) {
+      console.error('Authentication check failed:', error);
+      next({ path: "/connect" });
+      return;
+    }
+  }
+  
+  // Check minting mode requirements
+  if (to.meta.requiresMintingMode) {
+    const isMintingMode = localStorage.getItem('mintingMode') === 'true' || 
+                        window.location.search.includes('branch=minting');
+    if (!isMintingMode) {
+      console.log('💎 Redirecting to home (minting mode required)');
+      next('/');
+      return;
+    }
+  }
+  
+  next();
+});
+
+export default router;
+

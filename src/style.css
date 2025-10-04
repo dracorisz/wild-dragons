@@ -1,0 +1,345 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Variables */
+:root {
+  --color-primary: #1e293b;
+  --color-primary-light: #334155;
+  --color-accent: #e11d48;
+  --color-accent-hover: #f43f5e;
+  --color-dragon: #fbbf24;
+  --color-forest: #059669;
+  --color-sky: #38bdf8;
+  --color-cosmic: #8b5cf6;
+  --color-neon: #22d3ee;
+  
+  /* NFT-specific colors */
+  --nft-bg: #181828;
+  --nft-border: #00fff7;
+  --nft-hover: #ff00cc;
+  
+  /* Chakra colors for Kundalini system */
+  --chakra-root: #ff0000;
+  --chakra-sacral: #ff7700;
+  --chakra-solar: #ffff00;
+  --chakra-heart: #00ff00;
+  --chakra-throat: #00ffff;
+  --chakra-third-eye: #0000ff;
+  --chakra-crown: #8a2be2;
+}
+
+/* Base Element Styling */
+@layer base {
+  body {
+    @apply bg-primary text-white min-h-screen;
+    font-family: 'Merriweather', serif;
+    background-image: linear-gradient(to bottom, var(--color-primary), var(--color-primary-light));
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'MedievalSharp', cursive;
+  }
+  
+  a {
+    @apply text-dragon hover:text-accent transition-colors;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-primary/30 rounded;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-accent/50 rounded hover:bg-accent;
+  }
+}
+
+/* Component Styling */
+@layer components {
+  /* Button styles */
+  .btn {
+    @apply px-4 py-2 rounded-lg font-bold transition-all;
+  }
+  
+  .btn-primary {
+    @apply bg-accent text-white hover:bg-accent-hover;
+  }
+  
+  .btn-secondary {
+    @apply bg-primary-light text-white hover:bg-primary border border-accent/50;
+  }
+  
+  .btn-ghost {
+    @apply bg-transparent text-white hover:bg-white/10 border border-white/30;
+  }
+  
+  /* Card styles */
+  .nft-card {
+    @apply overflow-hidden rounded-xl transition-all cursor-pointer;
+    background: var(--nft-bg);
+    border: 1.5px solid var(--nft-border);
+    box-shadow: 0 0 8px rgba(0, 255, 247, 0.2);
+  }
+  
+  .nft-card:hover {
+    border-color: var(--nft-hover);
+    box-shadow: 0 0 16px rgba(255, 0, 204, 0.27);
+    transform: translateY(-4px);
+  }
+  
+  .nft-image {
+    @apply relative aspect-square overflow-hidden;
+  }
+  
+  .nft-info {
+    @apply p-4;
+  }
+  
+  .nft-name {
+    font-family: 'Cinzel', serif;
+    color: var(--nft-border);
+    text-shadow: 0 0 4px rgba(255, 0, 204, 0.2);
+  }
+  
+  .nft-desc {
+    @apply text-sm text-blue-200 mb-2 leading-relaxed;
+    letter-spacing: 0.02em;
+  }
+  
+  /* NFT Button styles */
+  .nft-btn {
+    background: #23234b;
+    color: var(--nft-border);
+    border: 1.5px solid var(--nft-border);
+    @apply rounded-lg px-4 py-2 cursor-pointer transition-all;
+  }
+  
+  .nft-btn:hover {
+    background: var(--nft-border);
+    color: #23234b;
+    border-color: var(--nft-hover);
+  }
+  
+  /* Badge styles */
+  .badge {
+    @apply px-2 py-1 rounded-md text-xs font-medium;
+  }
+  
+  .badge-rarity-common {
+    @apply bg-gray-500 text-white;
+  }
+  
+  .badge-rarity-uncommon {
+    @apply bg-green-500 text-white;
+  }
+  
+  .badge-rarity-rare {
+    @apply bg-blue-500 text-white;
+  }
+  
+  .badge-rarity-epic {
+    @apply bg-purple-500 text-white;
+  }
+  
+  .badge-rarity-legendary {
+    @apply bg-dragon text-black;
+  }
+  
+  .badge-rarity-mythic {
+    @apply bg-gradient-to-r from-purple-600 via-dragon to-accent text-white;
+  }
+  
+  /* Element badges */
+  .badge-element {
+    @apply badge;
+  }
+  
+  .badge-element-fire {
+    @apply bg-red-500 text-white;
+  }
+  
+  .badge-element-water {
+    @apply bg-blue-500 text-white;
+  }
+  
+  .badge-element-earth {
+    @apply bg-forest text-white;
+  }
+  
+  .badge-element-air {
+    @apply bg-sky text-white;
+  }
+  
+  .badge-element-cosmic {
+    @apply bg-cosmic text-white;
+  }
+  
+  /* Section styles */
+  .section {
+    @apply py-12 px-4;
+  }
+  
+  .section-title {
+    @apply text-3xl font-bold mb-8 text-center bg-gradient-to-r from-dragon to-accent bg-clip-text text-transparent;
+  }
+  
+  /* Marketplace grid */
+  .marketplace-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6;
+  }
+  
+  /* NFT slider and scrollbar styling */
+  .nft-slider {
+    @apply flex w-full overflow-x-auto gap-5 p-5 relative;
+    border-bottom: 1px solid var(--nft-border);
+    border-top: 1px solid var(--nft-border);
+    background: linear-gradient(90deg, 
+      rgba(0, 255, 247, 0) 0%, 
+      rgba(0, 255, 247, 0.133) 50%, 
+      rgba(0, 255, 247, 0) 100%
+    );
+  }
+  
+  .nft-slider::-webkit-scrollbar { 
+    width: 5px;
+    height: 5px;
+    background: rgba(0, 255, 247, 0.07);
+  }
+  
+  .nft-slider::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, 
+      rgba(0, 255, 247, 0) 20%, 
+      rgba(0, 255, 247, 0.33) 50%, 
+      rgba(0, 255, 247, 0) 80%
+    );
+  }
+  
+  .nft-slider::-webkit-scrollbar-track { 
+    background: linear-gradient(180deg, 
+      rgba(0, 255, 247, 0) 30%, 
+      rgba(0, 255, 247, 0.2) 90%
+    );
+  }
+  
+  .nft-slider-item {
+    @apply min-w-[260px] p-4 flex flex-col items-center;
+    background: #000000;
+    border: 2px solid var(--nft-hover);
+    box-shadow: 0 0 12px var(--nft-hover);
+    color: #fff;
+    @apply rounded-xl text-center;
+  }
+  
+  /* Modal styles */
+  .modal-backdrop {
+    @apply fixed inset-0 z-40 bg-black/80 backdrop-blur-sm;
+  }
+  
+  .modal-container {
+    @apply fixed inset-0 z-50 flex items-center justify-center p-4;
+  }
+  
+  .modal-content {
+    @apply bg-primary max-w-4xl w-full rounded-xl overflow-hidden relative
+           shadow-2xl shadow-accent/20 border border-accent/20;
+  }
+  
+  .nft-modal-content {
+    background: #23234b;
+    border: 2px solid var(--nft-border);
+    box-shadow: 0 0 32px var(--nft-hover);
+    @apply rounded-xl p-6 text-white;
+  }
+  
+  /* Loading spinner */
+  .spinner {
+    @apply w-10 h-10 border-4 border-accent/30 border-t-accent rounded-full animate-spin;
+  }
+}
+
+/* Utility classes for cosmic/neon accents */
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px var(--color-neon), 0 0 20px var(--color-neon);
+  }
+  
+  .border-glow {
+    box-shadow: 0 0 10px var(--color-accent), 0 0 20px var(--color-accent);
+  }
+  
+  .cosmic-bg {
+    background: radial-gradient(ellipse at top left, #1a1a2e 60%, #0f3460 100%);
+    min-height: 100vh;
+  }
+  
+  .neon-border {
+    border: 2px solid var(--nft-border);
+    box-shadow: 0 0 16px var(--nft-border), 0 0 32px #5f9cff inset;
+  }
+  
+  .neon-outline {
+    @apply outline outline-2 outline-neon;
+  }
+  
+  /* Chakra utility classes */
+  .chakra-color-root { color: var(--chakra-root); }
+  .chakra-color-sacral { color: var(--chakra-sacral); }
+  .chakra-color-solar { color: var(--chakra-solar); }
+  .chakra-color-heart { color: var(--chakra-heart); }
+  .chakra-color-throat { color: var(--chakra-throat); }
+  .chakra-color-third-eye { color: var(--chakra-third-eye); }
+  .chakra-color-crown { color: var(--chakra-crown); }
+  
+  .chakra-bg-root { background-color: var(--chakra-root); }
+  .chakra-bg-sacral { background-color: var(--chakra-sacral); }
+  .chakra-bg-solar { background-color: var(--chakra-solar); }
+  .chakra-bg-heart { background-color: var(--chakra-heart); }
+  .chakra-bg-throat { background-color: var(--chakra-throat); }
+  .chakra-bg-third-eye { background-color: var(--chakra-third-eye); }
+  .chakra-bg-crown { background-color: var(--chakra-crown); }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 640px) {
+  .section {
+    @apply py-6 px-3;
+  }
+  
+  .section-title {
+    @apply text-2xl mb-4;
+  }
+  
+  .nft-info {
+    @apply p-3;
+  }
+  
+  .nft-slider-item {
+    @apply min-w-[220px];
+  }
+}

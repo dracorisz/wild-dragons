@@ -1,15 +1,15 @@
-import { createApp } from 'vue';
-import App from './App.vue';
-import pinia from './stores';
-import router from './router';
-import './assets/css/styles.css';
+import { createApp } from 'vue'
+import { createPinia } from 'pinia'
+import App from './App.vue'
+import router from './router'
+import './assets/css/styles.css'
 
-import { createClient } from '@supabase/supabase-js';
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
-export const supabase = createClient(supabaseUrl, supabaseKey);
+// Create the app
+const app = createApp(App)
 
-const app = createApp(App);
-app.use(pinia);
-app.use(router);
-app.mount('#app');
+// Use plugins
+app.use(createPinia())
+app.use(router)
+
+// Mount the app
+app.mount('#app')

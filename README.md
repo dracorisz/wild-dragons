@@ -1,38 +1,53 @@
-# 🐉 Wild Dragons
+# Wild Dragons NFT Marketplace
 
-## Project Overview
-Wild Dragons is an engaging web application designed to provide users with an interactive platform to manage their heroes and dragons. The project combines modern web technologies to deliver a seamless user experience, including authentication, dynamic content, and real-time updates.
+A blockchain-based NFT marketplace for fantasy dragon collectibles with cosmic, minimal, and neon-accented UI.
 
-### Idea and Concept
-The core idea of Wild Dragons is to allow users to create, customize, and manage their heroes and dragons. Users can log in, register, and interact with their personalized content. The platform is designed to be scalable and user-friendly, with a focus on security and performance.
+## 🐉 Project Overview
 
-## Features
+Wild Dragons NFT Marketplace (also known as "Heroine's Dragon") is a Play-to-Earn fantasy RPG that allows users to:
 
-### Game Mechanics
-- **Advanced Battle System**: Status effects, critical hits, and environmental conditions.
-- **Battle Types**: Normal, Elite, Boss, Tournament, and Survival modes.
-- **Progression System**: XP, achievements, combo bonuses, and daily rewards.
-- **Dynamic Scaling**: Enemies with unique abilities and loot systems.
+- Collect, mint, and trade dragon-themed NFTs
+- Battle with legendary creatures
+- Earn rewards through gameplay
+- Participate in DAO governance
+- Progress through a chakra-based spiritual system
 
-### Modern Architecture
-- **Frontend**: Vue 3 Composition API for optimal performance.
-- **Reusable Components**: 6+ UI components for rapid development.
-- **Styling**: Tailwind CSS with centralized theming.
-- **PWA Support**: Offline capabilities and mobile optimization.
+## 📋 Features
 
-### Developer Experience
-- **Optimized Build**: Minimal bundle size and fast loading.
-- **TypeScript-Ready**: Component props with proper validation.
-- **Comprehensive Documentation**: Guides and usage examples.
+- **NFT Marketplace**: Browse, filter, and purchase dragon NFTs
+- **Collection Management**: View owned NFTs and their stats
+- **Spiritual Progression**: Level up through chakra-based system
+- **Responsive Design**: Works across desktop, tablet, and mobile
+- **PWA Support**: Install as native app experience
 
-## Tech Stack
-- **Frontend**: Vue.js
-- **Backend**: Supabase (PostgreSQL, Authentication, and APIs)
-- **Build Tool**: Vite
-- **Deployment**: Vercel
-- **Styling**: Tailwind CSS
+## 🚀 Getting Started
 
-## Folder Structure
+### Prerequisites
+
+- Node.js v16+
+- Python 3.8+ (for data generation scripts)
+
+### Installation
+
+1. Clone the repository
+   ```
+   git clone https://github.com/your-username/wild-dragons.git
+   cd wild-dragons
+   ```
+
+2. Set up the environment
+   ```
+   ./build-wild-dragons.bat
+   ```
+   
+3. Start the development server
+   ```
+   npm run dev
+   ```
+
+4. Open your browser to http://localhost:5173
+
+## 🏗️ Project Structure
 ```
 📁 src/
 ├── assets/          # Static files (images, styles, database schema)
@@ -55,32 +70,17 @@ The database is managed using Supabase and includes the following tables:
 - JSONB fields for flexible data storage (e.g., skills, wallets).
 - Row-level security policies for user-specific data access.
 
-## Getting Started
+## Useful Links
+- [Supabase Authentication Documentation](https://supabase.com/docs/guides/auth)
+- [GitHub Repository](https://github.com/dracorisz/wild-dragons)
+- [Live Application](https://wild-dragons.vercel.app/)
 
-### Prerequisites
-- Node.js 22+
-- Supabase account
-- Vercel account
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-### Setup
-1. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-2. **Configure environment**:
-   ```bash
-   cp .env.example .env
-   # Add your Supabase URL and anon key
-   ```
-3. **Set up database**:
-   - Run `supabase-schema.sql` in your Supabase SQL Editor.
-4. **Start development**:
-   ```bash
-   npm run dev
-   ```
+---
 
-### Development Commands
-```bash
+**Built with ❤️ using Vue 3, Vite, Tailwind CSS, and Supabase**
 npm run dev      # Start development server
 npm run build    # Build for production
 npm run preview  # Preview production build
