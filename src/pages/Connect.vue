@@ -138,10 +138,23 @@ const showToast = ref(false);
 const showForgot = ref(false);
 const forgotEmail = ref("");
 
+// Get the production domain from environment variables
+const productionDomain = import.meta.env.VITE_PRODUCTION_DOMAIN || "https://wild-dragons.vercel.app";
+
+// Helper function to get the correct redirect URL
+function getRedirectUrl(path = "/") {
+  // If we're in development and have a production domain, use production domain
+  // Otherwise use current origin (for local testing)
+  if (import.meta.env.NODE_ENV === "development" && productionDomain) {
+    return productionDomain + path;
+  }
+  return window.location.origin + path;
+}
+
 async function handleForgotPassword() {
   errorMessage.value = "";
   const { error } = await supabase.auth.resetPasswordForEmail(forgotEmail.value, {
-    redirectTo: window.location.origin + "/reset-password",
+    redirectTo: getRedirectUrl("/reset-password"),
   });
 
   if (error) {
@@ -208,7 +221,7 @@ async function handleSignUp() {
 
 async function handleGoogle() {
   errorMessage.value = "";
-  const { error: err } = await supabase.auth.signInWithOAuth({ provider: "google", options: { redirectTo: window.location.origin + "/world" } });
+  const { error: err } = await supabase.auth.signInWithOAuth({ provider: "google", options: { redirectTo: getRedirectUrl("/world") } });
   if (err) {
     errorMessage.value = err.message;
     return;
