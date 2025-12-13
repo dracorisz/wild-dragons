@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-col items-center justify-center min-h-screen">
-    <div class="w-full grid grid-cols-1 bg-white rounded-lg shadow-lg p-8">
+  <div class="page">
+    <div class="w-full grid grid-cols-1 bg-white rounded-lg shadow-lg px-10">
       <h2 class="text-2xl font-bold mb-6 text-center">Profile</h2>
       <form class="form-profile" @submit.prevent="saveProfile">
         <div class="flex flex-col items-center mb-5 w-full">

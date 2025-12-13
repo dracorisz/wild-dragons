@@ -13,7 +13,7 @@ export default defineConfig({
       manifest: {
         name: "Heroine's Dragon",
         short_name: "Heroine's Dragon",
-        description: "Explore the World of Tiamat, where legends awaken, dragons soar, and every heroine shapes the fate of realms untold.",
+        description: "Explore the World of Diamat, where legends awaken, dragons soar, and every heroine shapes the fate of realms untold.",
         theme_color: "#000000",
         background_color: "#ffffff",
         display: "standalone",

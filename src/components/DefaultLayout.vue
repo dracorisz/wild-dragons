@@ -1,12 +1,13 @@
 <template>
   <div class="flex h-screen w-screen items-center justify-center bg-white text-black" v-if="loading">loading...</div>
   <template v-else>
-    <nav class="border-primary/20 border-b bg-black bg-gradient-to-r from-primary/5 from-5% to-95% via-black to-primary/5">
+    <nav class="border-primary/30 border-b bg-black bg-gradient-to-r from-secondary/40 via-black to-secondary/30">
       
       <router-link to="/" class="logo">Heroine's Dragon</router-link>
       <router-link to="/about">About</router-link>
       <router-link to="/how-to-play">How to Play</router-link>
       <router-link to="/web3">Blockchain</router-link>
+      <router-link to="/market">Marketplace</router-link>
       <div class="relative dropdown">
         <template v-if="userStore.user">
           <div class="cursor-pointer px-5 flex items-center min-h-[45px] h-[45px] max-h-[45px] gap-2 rounded border-x border-primary/20 justify-center" @click="showDropdown = !showDropdown">
@@ -44,8 +45,7 @@
         <div class="flex flex-col">
           <router-link to="/" class="logo !text-xl">Heroine's Dragon</router-link>
           <p class="mt-1 mb-3 text-sm">
-            Enter the World of Tiamat, where legends awaken, creatures soar, and every resident shapes the fate<br />
-            of unfolding realms.
+            Enter the World of Diamat, where legends awaken, creatures soar, and every resident shapes the fate of unfolding realms.
           </p>
           <div class="flex items-center gap-1">
             <a href="#" aria-label="X" class="-ml-1 fill-white/80 hover:fill-white">
@@ -128,7 +128,7 @@
           </ul>
         </div>
       </div>
-      <p class="text-gray w-full text-center text-xs" :class="homePage ? 'pt-12' : 'py-2'">&copy; {{ year }} Tiamat. All rights reserved.</p>
+      <p class="text-gray w-full text-center text-xs" :class="homePage ? 'pt-12' : 'py-2'">&copy; {{ year }} Diamat. All rights reserved.</p>
     </footer>
   </template>
 </template>

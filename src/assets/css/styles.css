@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "./utils.css";
+@import './market.css';
 
 @theme {
   --color-*: initial;
@@ -63,10 +64,12 @@ form {
   @apply !max-w-screen !grid-cols-2 !grid !gap-x-5 !gap-y-5;
 }
 
+.button,
 button {
-  @apply h-[36px] max-h-[36px] min-h-[36px] w-full cursor-pointer rounded-none bg-black px-4 py-2 text-sm font-semibold text-white uppercase;
+  @apply outline-0 ring-0 h-[36px] max-h-[36px] min-h-[36px] w-full cursor-pointer rounded-none bg-black px-4 py-2 text-sm font-semibold text-white uppercase text-center border-0;
 }
 
+.button,
 button:disabled {
   @apply bg-gray cursor-not-allowed;
 }

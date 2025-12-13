@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1001,
+    "collection_slug": "guild-of-guardians",
+    "title": "Flix",
+    "desc": "Guardian from Guild of Guardians.",
+    "image": "https://gog-art-assets.s3-ap-southeast-2.amazonaws.com/Content/Thumbnails/Heroes/Flix/Thumbnail_Hero_Flix_Base.png",
+    "paymentOptions": [
+      { "currency": "USDC", "price": "12.34", "icon": "https://placehold.co/24x24?text=USDC" },
+      { "currency": "IMX", "price": "0.45", "icon": "https://placehold.co/24x24?text=IMX" },
+      { "currency": "RON", "price": "54.00", "icon": "https://placehold.co/24x24?text=RON" }
+    ]
+  },
+  {
+    "id": 1002,
+    "collection_slug": "guild-of-guardians",
+    "title": "Zole",
+    "desc": "Guardian from Guild of Guardians.",
+    "image": "https://gog-art-assets.s3-ap-southeast-2.amazonaws.com/Content/Thumbnails/Heroes/Zole/Thumbnail_Hero_Zole_Base.png",
+    "paymentOptions": [
+      { "currency": "USDC", "price": "15.67", "icon": "https://placehold.co/24x24?text=USDC" },
+      { "currency": "IMX", "price": "0.52", "icon": "https://placehold.co/24x24?text=IMX" },
+      { "currency": "RON", "price": "60.00", "icon": "https://placehold.co/24x24?text=RON" }
+    ]
+  },
+  {
+    "id": 1003,
+    "collection_slug": "guild-of-guardians",
+    "title": "Andronica",
+    "desc": "Guardian from Guild of Guardians.",
+    "image": "https://gog-art-assets.s3-ap-southeast-2.amazonaws.com/Content/Thumbnails/Heroes/Andronica/Thumbnail_Hero_Andronica_Base.png",
+    "paymentOptions": [
+      { "currency": "USDC", "price": "18.90", "icon": "https://placehold.co/24x24?text=USDC" },
+      { "currency": "IMX", "price": "0.60", "icon": "https://placehold.co/24x24?text=IMX" },
+      { "currency": "RON", "price": "65.00", "icon": "https://placehold.co/24x24?text=RON" }
+    ]
+  },
+  {
+    "id": 1004,
+    "collection_slug": "guild-of-guardians",
+    "title": "Batu",
+    "desc": "Guardian from Guild of Guardians.",
+    "image": "https://gog-art-assets.s3-ap-southeast-2.amazonaws.com/Content/Thumbnails/Heroes/Batu/Thumbnail_Hero_Batu_Base.png",
+    "paymentOptions": [
+      { "currency": "USDC", "price": "13.21", "icon": "https://placehold.co/24x24?text=USDC" },
+      { "currency": "IMX", "price": "0.48", "icon": "https://placehold.co/24x24?text=IMX" },
+      { "currency": "RON", "price": "57.00", "icon": "https://placehold.co/24x24?text=RON" }
+    ]
+  },
+  {
+    "id": 1005,
+    "collection_slug": "guild-of-guardians",
+    "title": "Okubo",
+    "desc": "Guardian from Guild of Guardians.",
+    "image": "https://gog-art-assets.s3-ap-southeast-2.amazonaws.com/Content/Thumbnails/Heroes/Okubo/Thumbnail_Hero_Okubo_Base.png",
+    "paymentOptions": [
+      { "currency": "USDC", "price": "14.56", "icon": "https://placehold.co/24x24?text=USDC" },
+      { "currency": "IMX", "price": "0.50", "icon": "https://placehold.co/24x24?text=IMX" },
+      { "currency": "RON", "price": "59.00", "icon": "https://placehold.co/24x24?text=RON" }
+    ]
+  },
+  {
+    "id": 1006,
+    "collection_slug": "guild-of-guardians",
+    "title": "Huurk",
+    "desc": "Guardian from Guild of Guardians.",
+    "image": "https://gog-art-assets.s3-ap-southeast-2.amazonaws.com/Content/Thumbnails/Heroes/Huurk/Thumbnail_Hero_Huurk_Base.png",
+    "paymentOptions": [
+      { "currency": "USDC", "price": "16.78", "icon": "https://placehold.co/24x24?text=USDC" },
+      { "currency": "IMX", "price": "0.53", "icon": "https://placehold.co/24x24?text=IMX" },
+      { "currency": "RON", "price": "62.00", "icon": "https://placehold.co/24x24?text=RON" }
+    ]
+  },
+  {
+    "id": 1007,
+    "collection_slug": "guild-of-guardians",
+    "title": "Toktun",
+    "desc": "Guardian from Guild of Guardians.",
+    "image": "https://gog-art-assets.s3-ap-southeast-2.amazonaws.com/Content/Thumbnails/Heroes/Toktun/Thumbnail_Hero_Toktun_Base.png",
+    "paymentOptions": [
+      { "currency": "USDC", "price": "17.89", "icon": "https://placehold.co/24x24?text=USDC" },
+      { "currency": "IMX", "price": "0.54", "icon": "https://placehold.co/24x24?text=IMX" },
+      { "currency": "RON", "price": "63.00", "icon": "https://placehold.co/24x24?text=RON" }
+    ]
+  },
+  {
+    "id": 1008,
+    "collection_slug": "guild-of-guardians",
+    "title": "Yalmar",
+    "desc": "Guardian from Guild of Guardians.",
+    "image": "https://gog-art-assets.s3-ap-southeast-2.amazonaws.com/Content/Thumbnails/Heroes/Yalmar/Thumbnail_Hero_Yalmar_Base.png",
+    "paymentOptions": [
+      { "currency": "USDC", "price": "19.23", "icon": "https://placehold.co/24x24?text=USDC" },
+      { "currency": "IMX", "price": "0.58", "icon": "https://placehold.co/24x24?text=IMX" },
+      { "currency": "RON", "price": "67.00", "icon": "https://placehold.co/24x24?text=RON" }
+    ]
+  },
+  {
+    "id": 1009,
+    "collection_slug": "guild-of-guardians",
+    "title": "Ferulia",
+    "desc": "Guardian from Guild of Guardians.",
+    "image": "https://gog-art-assets.s3-ap-southeast-2.amazonaws.com/Content/Thumbnails/Heroes/Ferulia/Thumbnail_Hero_Ferulia_Base.png",
+    "paymentOptions": [
+      { "currency": "USDC", "price": "15.12", "icon": "https://placehold.co/24x24?text=USDC" },
+      { "currency": "IMX", "price": "0.51", "icon": "https://placehold.co/24x24?text=IMX" },
+      { "currency": "RON", "price": "61.00", "icon": "https://placehold.co/24x24?text=RON" }
+    ]
+  }
+]

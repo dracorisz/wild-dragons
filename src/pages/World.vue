@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <h2>World</h2>
-    <p>Welcome to the World of Tiamat.</p>
+    <p>Welcome to the World of Diamat.</p>
   </div>
 </template>
 <script setup>

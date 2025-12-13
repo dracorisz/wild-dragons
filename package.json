@@ -14,7 +14,11 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.57.4",
     "@tailwindcss/vite": "^4.1.13",
+    "cheerio": "^1.1.2",
     "ethers": "^6.15.0",
+    "fs-extra": "^11.3.2",
+    "node-fetch": "^2.7.0",
+    "p-limit": "^7.1.1",
     "pinia": "^3.0.3",
     "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.6.14",

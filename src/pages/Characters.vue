@@ -11,12 +11,6 @@
         </select>
       </div>
       <div class="mb-5 flex gap-2 rounded bg-white/70 p-2">
-        <label>Pose:</label>
-        <select v-model="selectedPose">
-          <option value="idle">Idle</option>
-        </select>
-      </div>
-      <div class="mb-5 flex gap-2 rounded bg-white/70 p-2">
         <label>Hair:</label>
         <select v-model="selectedHair" @change="selectHair(selectedHair)">
           <option value="afro_hair">Afro Hair</option>
@@ -30,93 +24,102 @@
       </div>
     </div>
   </div>
-  <div class="pointer-events-none absolute bottom-0 left-0 -z-10 w-full h-full bg-[url('/images/canvar2.jpg')] bg-repeat-y bg-bottom bg-cover"></div>
+  
 </template>
 
 <script setup>
 import { ref, onMounted } from "vue";
+
+defineEmits(["authChange"]);
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
 
 const selectedHairColor = ref("#99ff99");
-const selectedPose = ref("idle");
 const selectedHair = ref("afro_hair");
-const yPos = -3;
-const leanRatio = -0.5;
+const yPos = -4;
+const leanRatio = -0.25;
+const desiredSize = 11;
+const cameraLook = 5;
 let model = null;
 
 onMounted(() => {
-  const loader = new THREE.TextureLoader();
-  // Use a fixed-size background plane instead of scene.background
-  // loader.load("/images/canvas.jpg", (texture) => {
-  //   const bgGeometry = new THREE.PlaneGeometry(180, 100);
-  //   const bgMaterial = new THREE.MeshBasicMaterial({ map: texture });
-  //   const bgPlane = new THREE.Mesh(bgGeometry, bgMaterial);
-  //   bgPlane.position.set(-20, 0, -40); // Position far behind everything
-  //   scene.add(bgPlane);
-  // });
   const scene = new THREE.Scene();
-  // Adjust camera position and rotation for oval cup fit
-  const camera = new THREE.PerspectiveCamera(
-    60, // narrower FOV for oval fit
-    window.innerWidth / (window.innerHeight - 77),
-    0.1,
-    1000
-  );
-  // Place camera higher and further back, slightly above center
-  camera.position.set(0, 5.5, 7.2);
-  camera.lookAt(0, yPos + 0.5, 0);
+  const camera = new THREE.PerspectiveCamera(60, window.innerWidth / (window.innerHeight - 77), 0.5, 1000);
+  camera.position.set(0, 5.5, 7.3);
 
   const renderer = new THREE.WebGLRenderer({ antialias: true });
-  renderer.setClearColor(0x000000, 0.1);
+  renderer.setClearColor(0x87ceef, 0.9);
   renderer.setSize(window.innerWidth, window.innerHeight - 77);
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
   document.getElementById("viewer").appendChild(renderer.domElement);
 
-  const ambientLight = new THREE.AmbientLight(0xffffff, 1.5);
-  scene.add(ambientLight);
-  const directionalLight = new THREE.DirectionalLight(0xffffff, 1.2);
-  directionalLight.position.set(5, 25, 8);
-  directionalLight.castShadow = true;
-  directionalLight.shadow.mapSize.width = 1024;
-  directionalLight.shadow.mapSize.height = 1024;
-  directionalLight.shadow.camera.near = 1;
-  directionalLight.shadow.camera.far = 80;
-  scene.add(directionalLight);
+  const loader = new THREE.TextureLoader();
+  // loader.load("/images/sky.jpg", (texture) => {
+  //   const skyGeometry = new THREE.SphereGeometry(500, 32, 32);
+  //   const skyMaterial = new THREE.MeshBasicMaterial({
+  //     map: texture,
+  //     side: THREE.BackSide,
+  //   });
+  //   const sky = new THREE.Mesh(skyGeometry, skyMaterial);
+  //   scene.add(sky);
+  // });
 
-  const classTexture = new THREE.TextureLoader().load("/images/class.png");
-  const classMaterial = new THREE.MeshBasicMaterial({ map: classTexture, transparent: true });
-  const classGeometry = new THREE.PlaneGeometry(15, 15);
-  const classPlane = new THREE.Mesh(classGeometry, classMaterial);
-  classPlane.rotation.x = -Math.PI / 2 + leanRatio;
-  classPlane.position.set(0, yPos + 0.01, 0);
-  classPlane.receiveShadow = true;
-  scene.add(classPlane);
+  for (let i = 0; i < 15; i++) {
+    loader.load("/images/cloud.png", (cloudTexture) => {
+      const cloudMaterial = new THREE.MeshLambertMaterial({
+        map: cloudTexture,
+        transparent: true,
+        opacity: 0.95,
+        depthWrite: false,
+        depthTest: false,
+      });
 
-  // const groundTexture = new THREE.TextureLoader().load("/images/ground.jpg");
-  // groundTexture.wrapS = groundTexture.wrapT = THREE.RepeatWrapping;
-  // groundTexture.repeat.set(250, 250);
-  // groundTexture.anisotropy = renderer.capabilities.getMaxAnisotropy();
+      const width = 20 + Math.random() * 4;
+      const height = 10 + Math.random() * 2;
+      const cloudGeometry = new THREE.PlaneGeometry(width, height);
+      const cloud = new THREE.Mesh(cloudGeometry, cloudMaterial);
+      const x = Math.random() * 80 - 40;
+      const y = 2 + Math.random() * 20;
+      const z = Math.random() * 4 - 20;
+      cloud.position.set(x, y, z);
+      scene.add(cloud);
+    });
+  }
 
-  const groundMaterial = new THREE.MeshStandardMaterial({
-    // map: groundTexture,
-    transparent: true,
-    opacity: 0.25,
-    color: 0x000,
-    contrast: 1.5,
+  loader.load("/images/ground.jpg", (groundTexture) => {
+    groundTexture.wrapS = groundTexture.wrapT = THREE.RepeatWrapping;
+    groundTexture.repeat.set(20, 20);
+    groundTexture.anisotropy = renderer.capabilities.getMaxAnisotropy();
+    const groundMaterial = new THREE.MeshStandardMaterial({
+      map: groundTexture,
+      color: 0x7ec850,
+      transparent: true,
+      opacity: 1,
+    });
+
+    const groundGeometry = new THREE.PlaneGeometry(80, 40);
+    const ground = new THREE.Mesh(groundGeometry, groundMaterial);
+    ground.rotation.x = -Math.PI / 2 + leanRatio;
+    ground.position.y = yPos;
+    ground.receiveShadow = true;
+    scene.add(ground);
   });
 
-  const groundGeometry = new THREE.PlaneGeometry(200, 200);
-  const ground = new THREE.Mesh(groundGeometry, groundMaterial);
-  ground.rotation.x = -Math.PI / 2 + leanRatio;
-  ground.position.y = yPos;
-  ground.receiveShadow = true;
-  scene.add(ground);
+  // Softer ambient and sunlight for natural look
+  const ambientLight = new THREE.AmbientLight(0xcceeff, 3.3);
+  scene.add(ambientLight);
+  const sunLight = new THREE.DirectionalLight(0xffffff, 1.8);
+  sunLight.position.set(20, 60, 20);
+  sunLight.castShadow = true;
+  sunLight.shadow.mapSize.width = 2048;
+  sunLight.shadow.mapSize.height = 2048;
+  sunLight.shadow.camera.near = 20;
+  sunLight.shadow.camera.far = 90;
+  scene.add(sunLight);
 
   let mixer = null;
-
   async function loadAvatar(url, color = null, pose = null) {
     if (model) {
       scene.remove(model);
@@ -146,7 +149,6 @@ onMounted(() => {
     avatar.position.sub(center);
 
     const size = box.getSize(new THREE.Vector3()).length();
-    const desiredSize = 7.33;
     const scale = desiredSize / size;
     avatar.scale.setScalar(scale);
 
@@ -167,8 +169,8 @@ onMounted(() => {
 
     scene.add(avatar);
     model = avatar;
-    // Center model in oval cup
-    model.position.set(0, yPos + 0.25, 0);
+    
+    model.position.set(0, yPos + 0.005, 0);
     model.rotation.x = leanRatio;
     mixer = new THREE.AnimationMixer(model);
     if (gltf.animations && gltf.animations.length > 0) {
@@ -188,6 +190,15 @@ onMounted(() => {
     }
   }
 
+  const classTexture = new THREE.TextureLoader().load("/images/class.png");
+  const classMaterial = new THREE.MeshBasicMaterial({ map: classTexture, transparent: true });
+  const classGeometry = new THREE.PlaneGeometry(4.4, 4.4);
+  const classPlane = new THREE.Mesh(classGeometry, classMaterial);
+  classPlane.rotation.x = -Math.PI / 2 + leanRatio;
+  classPlane.position.set(0, yPos + 0.001, 0);
+  classPlane.receiveShadow = true;
+  scene.add(classPlane);
+
   loadAvatar();
 
   let isDragging = false;
@@ -195,9 +206,9 @@ onMounted(() => {
   let targetRotationY = 0;
   let currentRotationY = 0;
   let targetZoom = camera.position.z;
-  // Adjust zoom limits for oval fit
-  const minZoom = 6.8;
-  const maxZoom = 7.6;
+  
+  const minZoom = 7;
+  const maxZoom = 8;
 
   renderer.domElement.addEventListener("mousedown", (e) => {
     isDragging = true;
@@ -227,7 +238,6 @@ onMounted(() => {
     { passive: false },
   );
 
-  // Cache values outside the loop to avoid recalculating
   let lastTime = performance.now();
   function animate() {
     requestAnimationFrame(animate);
@@ -235,31 +245,23 @@ onMounted(() => {
     const delta = (now - lastTime) / 1000;
     lastTime = now;
 
-    // Only update mixer if needed
-    if (mixer) {
-      mixer.update(delta);
-    }
+    if (mixer) mixer.update(delta);
 
-    // Only update model rotation if dragging or target changed
     if (model && Math.abs(targetRotationY - currentRotationY) > 0.0001) {
       currentRotationY += (targetRotationY - currentRotationY) * 0.1;
       model.rotation.y = currentRotationY;
     }
 
-    // Only update camera zoom if changed
     if (Math.abs(targetZoom - camera.position.z) > 0.0001) {
       camera.position.z += (targetZoom - camera.position.z) * 0.1;
     }
 
-    // Always look at model's center for oval fit
-    camera.lookAt(0, yPos + 0.5, 0);
+    camera.lookAt(0, yPos + cameraLook, 0);
 
-    // Only update classPlane animation if present
-    // if (classPlane) {
-    //   classPlane.rotation.z += 0.002;
-    //   // Use cached time for sine calculation
-    //   classPlane.position.y = yPos + 0.06 + Math.sin(now * 0.002) * 0.05;
-    // }
+    if (classPlane) {
+      classPlane.rotation.z += 0.002;
+      classPlane.position.y = yPos + 0.06 + Math.sin(now * 0.002) * 0.05;
+    }
 
     renderer.render(scene, camera);
   }

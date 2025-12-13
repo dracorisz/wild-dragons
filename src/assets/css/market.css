@@ -1,0 +1,93 @@
+.market {
+  @apply relative flex min-h-[calc(100vh-77px)] flex-col text-center;
+}
+.market-sidebar {
+    @apply w-[260px] bg-[#181a1b] p-8 pt-8 pb-8 px-4 border-r border-[#222] fixed top-0 left-[-260px] h-screen z-[1000] transition-[left] duration-300 ease-[cubic-bezier(.4,0,.2,1)];
+}
+.market-sidebar.open {
+  @apply left-0
+}
+.sidebar-anchor {
+    @apply fixed left-0 top-1/2 -translate-y-1/2 w-8 h-16 bg-[#f9d423] text-[#23272a] flex items-center justify-center rounded-r-lg z-[1100] cursor-pointer text-[1.5rem] shadow-[0_2px_8px_rgba(0,0,0,0.15)];
+}
+.market-sidebar h3 {
+    @apply mb-6 text-[1.2rem];
+}
+.filter-group {
+    @apply mb-6;
+}
+.filter-group label {
+    @apply block mb-2 font-semibold;
+}
+.filter-input, .market-sidebar select {
+    @apply w-[48%] mr-[2%] mb-2 p-2 bg-[#23272a] text-white border border-[#333] rounded;
+}
+.market-main {
+    @apply flex-1 px-8 pb-8 ml-0 transition-[margin-left] duration-300 ease-[cubic-bezier(.4,0,.2,1)];
+}
+.market-sidebar.open ~ .market-main {
+    margin-left: 260px;
+}
+.market-tabs {
+    @apply flex gap-8 mb-6;
+}
+.tab-btn {
+    @apply bg-none border-none text-white text-[1.1rem] px-4 py-2 border-b-2 border-transparent cursor-pointer;
+}
+.tab-btn.active {
+    @apply border-b-2 border-[#f9d423] text-[#f9d423];
+}
+.market-controls {
+    @apply flex items-center gap-2 max-h-5 mb-8;
+}
+.market-search {
+    @apply flex-1 px-2 py-2 text-base bg-[#23272a] text-white border border-[#333] ;
+}
+.market-sort {
+    @apply bg-[#23272a] text-white border border-[#333]  px-2 py-2;
+}
+.collections-grid {
+    @apply grid grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-8 mb-8;
+}
+.collection-card {
+    @apply bg-[#23272a]  shadow-[0_2px_8px_rgba(0,0,0,0.07)] overflow-hidden flex flex-col items-center p-4;
+}
+.collection-img {
+    @apply w-full h-[120px] object-cover bg-[#eee]  mb-4;
+}
+.collection-info h3 {
+    @apply text-[1.1rem] mb-2 mt-0 text-white;
+}
+.collection-info p {
+    @apply text-[0.95rem] text-[#bbb] mb-4 text-center;
+}
+.collection-actions {
+    @apply flex gap-2 justify-center;
+}
+.market-grid {
+    @apply grid grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-8;
+}
+.market-item {
+    @apply bg-[#23272a] overflow-hidden flex flex-col;
+}
+.market-item-img {
+    @apply w-full h-[160px] object-cover bg-[#eee];
+}
+.market-item-info {
+    @apply p-4 flex-1 flex flex-col justify-between;
+}
+.market-item-title {
+    @apply text-[1.1rem] mb-2 mt-0;
+}
+.market-item-desc {
+    @apply text-[0.95rem] text-[#bbb] mb-2;
+}
+.market-item-price {
+    @apply text-base font-semibold mb-4 flex gap-4 items-center;
+}
+.market-item-usd {
+    @apply text-[0.95rem] text-[#f9d423];
+}
+.market-item-actions {
+    @apply flex gap-2;
+}
