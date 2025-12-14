@@ -1,9 +1,9 @@
 [
   {
     "id": "elemental_1",
-    "name": "Air Elemental Guardians #1",
+    "name": "Earth Elemental Guardians #1",
     "collection": "Elemental Guardians",
-    "description": "A powerful common air from the Elemental Guardians collection. Protectors of the natural forces.",
+    "description": "A powerful common earth from the Elemental Guardians collection. Protectors of the natural forces.",
     "image": {
       "thumbnail": "/assets/elemental/elemental_1_thumb.png",
       "preview": "/assets/elemental/elemental_1_preview.png",
@@ -11,210 +11,65 @@
     },
     "traits": {
       "rarity": "Common",
-      "element": "Air",
-      "power": 37
+      "element": "Earth",
+      "power": 82
     },
     "spiritual": {
-      "chakra": "crown",
-      "frequency_hz": 963,
-      "color": "violet",
-      "level_unlock": 7
+      "chakra": "solar_plexus",
+      "frequency_hz": 528,
+      "color": "yellow",
+      "level_unlock": 3
     },
     "price": {
-      "listed": "1.58 ETH",
-      "floor": "4.06 ETH",
-      "last_sale": "1.66 ETH"
+      "listed": "3.15 ETH",
+      "floor": "2.55 ETH",
+      "last_sale": "0.63 ETH"
     },
     "external_url": "https://example.com/nft/elemental/1",
-    "created_at": "2025-12-14T01:52:38.131363"
+    "created_at": "2025-12-14T04:05:47.300253"
   },
   {
     "id": "elemental_2",
-    "name": "Water Elemental Guardians #2",
+    "name": "Dark Elemental Guardians #2",
     "collection": "Elemental Guardians",
-    "description": "A powerful uncommon water from the Elemental Guardians collection. Protectors of the natural forces.",
+    "description": "A powerful rare dark from the Elemental Guardians collection. Protectors of the natural forces.",
     "image": {
       "thumbnail": "/assets/elemental/elemental_2_thumb.png",
       "preview": "/assets/elemental/elemental_2_preview.png",
       "full": "/assets/elemental/elemental_2.png"
     },
     "traits": {
-      "rarity": "Uncommon",
-      "element": "Water",
-      "power": 81
+      "rarity": "Rare",
+      "element": "Dark",
+      "power": 97
     },
     "spiritual": {
-      "chakra": "heart",
-      "frequency_hz": 639,
-      "color": "green",
-      "level_unlock": 4
+      "chakra": "root",
+      "frequency_hz": 396,
+      "color": "red",
+      "level_unlock": 1
     },
     "price": {
-      "listed": "3.30 ETH",
-      "floor": "0.65 ETH",
-      "last_sale": "4.43 ETH"
+      "listed": "0.41 ETH",
+      "floor": "0.29 ETH",
+      "last_sale": "4.52 ETH"
     },
     "external_url": "https://example.com/nft/elemental/2",
-    "created_at": "2025-12-14T01:52:38.131380"
+    "created_at": "2025-12-14T04:05:47.300276"
   },
   {
     "id": "elemental_3",
-    "name": "Cosmic Elemental Guardians #3",
+    "name": "Earth Elemental Guardians #3",
     "collection": "Elemental Guardians",
-    "description": "A powerful epic cosmic from the Elemental Guardians collection. Protectors of the natural forces.",
+    "description": "A powerful mythic earth from the Elemental Guardians collection. Protectors of the natural forces.",
     "image": {
       "thumbnail": "/assets/elemental/elemental_3_thumb.png",
       "preview": "/assets/elemental/elemental_3_preview.png",
       "full": "/assets/elemental/elemental_3.png"
     },
     "traits": {
-      "rarity": "Epic",
-      "element": "Cosmic",
-      "power": 100
-    },
-    "spiritual": {
-      "chakra": "sacral",
-      "frequency_hz": 417,
-      "color": "orange",
-      "level_unlock": 2
-    },
-    "price": {
-      "listed": "3.45 ETH",
-      "floor": "1.79 ETH",
-      "last_sale": "3.02 ETH"
-    },
-    "external_url": "https://example.com/nft/elemental/3",
-    "created_at": "2025-12-14T01:52:38.131390"
-  },
-  {
-    "id": "elemental_4",
-    "name": "Earth Elemental Guardians #4",
-    "collection": "Elemental Guardians",
-    "description": "A powerful rare earth from the Elemental Guardians collection. Protectors of the natural forces.",
-    "image": {
-      "thumbnail": "/assets/elemental/elemental_4_thumb.png",
-      "preview": "/assets/elemental/elemental_4_preview.png",
-      "full": "/assets/elemental/elemental_4.png"
-    },
-    "traits": {
-      "rarity": "Rare",
+      "rarity": "Mythic",
       "element": "Earth",
-      "power": 95
-    },
-    "spiritual": {
-      "chakra": "throat",
-      "frequency_hz": 741,
-      "color": "blue",
-      "level_unlock": 5
-    },
-    "price": {
-      "listed": "0.45 ETH",
-      "floor": "4.62 ETH",
-      "last_sale": "3.32 ETH"
-    },
-    "external_url": "https://example.com/nft/elemental/4",
-    "created_at": "2025-12-14T01:52:38.131399"
-  },
-  {
-    "id": "elemental_5",
-    "name": "Light Elemental Guardians #5",
-    "collection": "Elemental Guardians",
-    "description": "A powerful common light from the Elemental Guardians collection. Protectors of the natural forces.",
-    "image": {
-      "thumbnail": "/assets/elemental/elemental_5_thumb.png",
-      "preview": "/assets/elemental/elemental_5_preview.png",
-      "full": "/assets/elemental/elemental_5.png"
-    },
-    "traits": {
-      "rarity": "Common",
-      "element": "Light",
-      "power": 67
-    },
-    "spiritual": {
-      "chakra": "root",
-      "frequency_hz": 396,
-      "color": "red",
-      "level_unlock": 1
-    },
-    "price": {
-      "listed": "3.36 ETH",
-      "floor": "2.94 ETH",
-      "last_sale": "2.67 ETH"
-    },
-    "external_url": "https://example.com/nft/elemental/5",
-    "created_at": "2025-12-14T01:52:38.131407"
-  },
-  {
-    "id": "elemental_6",
-    "name": "Cosmic Elemental Guardians #6",
-    "collection": "Elemental Guardians",
-    "description": "A powerful epic cosmic from the Elemental Guardians collection. Protectors of the natural forces.",
-    "image": {
-      "thumbnail": "/assets/elemental/elemental_6_thumb.png",
-      "preview": "/assets/elemental/elemental_6_preview.png",
-      "full": "/assets/elemental/elemental_6.png"
-    },
-    "traits": {
-      "rarity": "Epic",
-      "element": "Cosmic",
-      "power": 84
-    },
-    "spiritual": {
-      "chakra": "crown",
-      "frequency_hz": 963,
-      "color": "violet",
-      "level_unlock": 7
-    },
-    "price": {
-      "listed": "1.10 ETH",
-      "floor": "4.15 ETH",
-      "last_sale": "1.08 ETH"
-    },
-    "external_url": "https://example.com/nft/elemental/6",
-    "created_at": "2025-12-14T01:52:38.131415"
-  },
-  {
-    "id": "elemental_7",
-    "name": "Air Elemental Guardians #7",
-    "collection": "Elemental Guardians",
-    "description": "A powerful common air from the Elemental Guardians collection. Protectors of the natural forces.",
-    "image": {
-      "thumbnail": "/assets/elemental/elemental_7_thumb.png",
-      "preview": "/assets/elemental/elemental_7_preview.png",
-      "full": "/assets/elemental/elemental_7.png"
-    },
-    "traits": {
-      "rarity": "Common",
-      "element": "Air",
-      "power": 82
-    },
-    "spiritual": {
-      "chakra": "root",
-      "frequency_hz": 396,
-      "color": "red",
-      "level_unlock": 1
-    },
-    "price": {
-      "listed": "4.77 ETH",
-      "floor": "1.58 ETH",
-      "last_sale": "4.04 ETH"
-    },
-    "external_url": "https://example.com/nft/elemental/7",
-    "created_at": "2025-12-14T01:52:38.131424"
-  },
-  {
-    "id": "elemental_8",
-    "name": "Air Elemental Guardians #8",
-    "collection": "Elemental Guardians",
-    "description": "A powerful epic air from the Elemental Guardians collection. Protectors of the natural forces.",
-    "image": {
-      "thumbnail": "/assets/elemental/elemental_8_thumb.png",
-      "preview": "/assets/elemental/elemental_8_preview.png",
-      "full": "/assets/elemental/elemental_8.png"
-    },
-    "traits": {
-      "rarity": "Epic",
-      "element": "Air",
       "power": 100
     },
     "spiritual": {
@@ -224,56 +79,27 @@
       "level_unlock": 3
     },
     "price": {
-      "listed": "1.38 ETH",
-      "floor": "4.57 ETH",
-      "last_sale": "2.03 ETH"
+      "listed": "0.59 ETH",
+      "floor": "2.74 ETH",
+      "last_sale": "4.56 ETH"
     },
-    "external_url": "https://example.com/nft/elemental/8",
-    "created_at": "2025-12-14T01:52:38.131432"
+    "external_url": "https://example.com/nft/elemental/3",
+    "created_at": "2025-12-14T04:05:47.300290"
   },
   {
-    "id": "elemental_9",
-    "name": "Dark Elemental Guardians #9",
+    "id": "elemental_4",
+    "name": "Earth Elemental Guardians #4",
     "collection": "Elemental Guardians",
-    "description": "A powerful uncommon dark from the Elemental Guardians collection. Protectors of the natural forces.",
+    "description": "A powerful common earth from the Elemental Guardians collection. Protectors of the natural forces.",
     "image": {
-      "thumbnail": "/assets/elemental/elemental_9_thumb.png",
-      "preview": "/assets/elemental/elemental_9_preview.png",
-      "full": "/assets/elemental/elemental_9.png"
+      "thumbnail": "/assets/elemental/elemental_4_thumb.png",
+      "preview": "/assets/elemental/elemental_4_preview.png",
+      "full": "/assets/elemental/elemental_4.png"
     },
     "traits": {
-      "rarity": "Uncommon",
-      "element": "Dark",
-      "power": 64
-    },
-    "spiritual": {
-      "chakra": "root",
-      "frequency_hz": 396,
-      "color": "red",
-      "level_unlock": 1
-    },
-    "price": {
-      "listed": "0.93 ETH",
-      "floor": "3.18 ETH",
-      "last_sale": "0.93 ETH"
-    },
-    "external_url": "https://example.com/nft/elemental/9",
-    "created_at": "2025-12-14T01:52:38.131441"
-  },
-  {
-    "id": "elemental_10",
-    "name": "Nature Elemental Guardians #10",
-    "collection": "Elemental Guardians",
-    "description": "A powerful uncommon nature from the Elemental Guardians collection. Protectors of the natural forces.",
-    "image": {
-      "thumbnail": "/assets/elemental/elemental_10_thumb.png",
-      "preview": "/assets/elemental/elemental_10_preview.png",
-      "full": "/assets/elemental/elemental_10.png"
-    },
-    "traits": {
-      "rarity": "Uncommon",
-      "element": "Nature",
-      "power": 84
+      "rarity": "Common",
+      "element": "Earth",
+      "power": 45
     },
     "spiritual": {
       "chakra": "crown",
@@ -282,11 +108,185 @@
       "level_unlock": 7
     },
     "price": {
-      "listed": "0.72 ETH",
-      "floor": "0.30 ETH",
-      "last_sale": "4.75 ETH"
+      "listed": "4.51 ETH",
+      "floor": "4.93 ETH",
+      "last_sale": "1.78 ETH"
+    },
+    "external_url": "https://example.com/nft/elemental/4",
+    "created_at": "2025-12-14T04:05:47.300302"
+  },
+  {
+    "id": "elemental_5",
+    "name": "Air Elemental Guardians #5",
+    "collection": "Elemental Guardians",
+    "description": "A powerful rare air from the Elemental Guardians collection. Protectors of the natural forces.",
+    "image": {
+      "thumbnail": "/assets/elemental/elemental_5_thumb.png",
+      "preview": "/assets/elemental/elemental_5_preview.png",
+      "full": "/assets/elemental/elemental_5.png"
+    },
+    "traits": {
+      "rarity": "Rare",
+      "element": "Air",
+      "power": 100
+    },
+    "spiritual": {
+      "chakra": "sacral",
+      "frequency_hz": 417,
+      "color": "orange",
+      "level_unlock": 2
+    },
+    "price": {
+      "listed": "4.54 ETH",
+      "floor": "4.49 ETH",
+      "last_sale": "4.08 ETH"
+    },
+    "external_url": "https://example.com/nft/elemental/5",
+    "created_at": "2025-12-14T04:05:47.300314"
+  },
+  {
+    "id": "elemental_6",
+    "name": "Mechanical Elemental Guardians #6",
+    "collection": "Elemental Guardians",
+    "description": "A powerful uncommon mechanical from the Elemental Guardians collection. Protectors of the natural forces.",
+    "image": {
+      "thumbnail": "/assets/elemental/elemental_6_thumb.png",
+      "preview": "/assets/elemental/elemental_6_preview.png",
+      "full": "/assets/elemental/elemental_6.png"
+    },
+    "traits": {
+      "rarity": "Uncommon",
+      "element": "Mechanical",
+      "power": 55
+    },
+    "spiritual": {
+      "chakra": "root",
+      "frequency_hz": 396,
+      "color": "red",
+      "level_unlock": 1
+    },
+    "price": {
+      "listed": "2.42 ETH",
+      "floor": "2.31 ETH",
+      "last_sale": "1.42 ETH"
+    },
+    "external_url": "https://example.com/nft/elemental/6",
+    "created_at": "2025-12-14T04:05:47.300325"
+  },
+  {
+    "id": "elemental_7",
+    "name": "Dark Elemental Guardians #7",
+    "collection": "Elemental Guardians",
+    "description": "A powerful common dark from the Elemental Guardians collection. Protectors of the natural forces.",
+    "image": {
+      "thumbnail": "/assets/elemental/elemental_7_thumb.png",
+      "preview": "/assets/elemental/elemental_7_preview.png",
+      "full": "/assets/elemental/elemental_7.png"
+    },
+    "traits": {
+      "rarity": "Common",
+      "element": "Dark",
+      "power": 32
+    },
+    "spiritual": {
+      "chakra": "crown",
+      "frequency_hz": 963,
+      "color": "violet",
+      "level_unlock": 7
+    },
+    "price": {
+      "listed": "1.17 ETH",
+      "floor": "3.78 ETH",
+      "last_sale": "3.61 ETH"
+    },
+    "external_url": "https://example.com/nft/elemental/7",
+    "created_at": "2025-12-14T04:05:47.300337"
+  },
+  {
+    "id": "elemental_8",
+    "name": "Light Elemental Guardians #8",
+    "collection": "Elemental Guardians",
+    "description": "A powerful uncommon light from the Elemental Guardians collection. Protectors of the natural forces.",
+    "image": {
+      "thumbnail": "/assets/elemental/elemental_8_thumb.png",
+      "preview": "/assets/elemental/elemental_8_preview.png",
+      "full": "/assets/elemental/elemental_8.png"
+    },
+    "traits": {
+      "rarity": "Uncommon",
+      "element": "Light",
+      "power": 71
+    },
+    "spiritual": {
+      "chakra": "crown",
+      "frequency_hz": 963,
+      "color": "violet",
+      "level_unlock": 7
+    },
+    "price": {
+      "listed": "1.03 ETH",
+      "floor": "1.95 ETH",
+      "last_sale": "4.74 ETH"
+    },
+    "external_url": "https://example.com/nft/elemental/8",
+    "created_at": "2025-12-14T04:05:47.300348"
+  },
+  {
+    "id": "elemental_9",
+    "name": "Earth Elemental Guardians #9",
+    "collection": "Elemental Guardians",
+    "description": "A powerful common earth from the Elemental Guardians collection. Protectors of the natural forces.",
+    "image": {
+      "thumbnail": "/assets/elemental/elemental_9_thumb.png",
+      "preview": "/assets/elemental/elemental_9_preview.png",
+      "full": "/assets/elemental/elemental_9.png"
+    },
+    "traits": {
+      "rarity": "Common",
+      "element": "Earth",
+      "power": 50
+    },
+    "spiritual": {
+      "chakra": "root",
+      "frequency_hz": 396,
+      "color": "red",
+      "level_unlock": 1
+    },
+    "price": {
+      "listed": "4.47 ETH",
+      "floor": "2.11 ETH",
+      "last_sale": "1.60 ETH"
+    },
+    "external_url": "https://example.com/nft/elemental/9",
+    "created_at": "2025-12-14T04:05:47.300358"
+  },
+  {
+    "id": "elemental_10",
+    "name": "Water Elemental Guardians #10",
+    "collection": "Elemental Guardians",
+    "description": "A powerful epic water from the Elemental Guardians collection. Protectors of the natural forces.",
+    "image": {
+      "thumbnail": "/assets/elemental/elemental_10_thumb.png",
+      "preview": "/assets/elemental/elemental_10_preview.png",
+      "full": "/assets/elemental/elemental_10.png"
+    },
+    "traits": {
+      "rarity": "Epic",
+      "element": "Water",
+      "power": 61
+    },
+    "spiritual": {
+      "chakra": "root",
+      "frequency_hz": 396,
+      "color": "red",
+      "level_unlock": 1
+    },
+    "price": {
+      "listed": "0.49 ETH",
+      "floor": "4.26 ETH",
+      "last_sale": "4.79 ETH"
     },
     "external_url": "https://example.com/nft/elemental/10",
-    "created_at": "2025-12-14T01:52:38.131449"
+    "created_at": "2025-12-14T04:05:47.300369"
   }
 ]

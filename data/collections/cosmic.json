@@ -1,67 +1,67 @@
 [
   {
     "id": "cosmic_1",
-    "name": "Earth Cosmic Entities #1",
+    "name": "Mechanical Cosmic Entities #1",
     "collection": "Cosmic Entities",
-    "description": "A powerful rare earth from the Cosmic Entities collection. Beings from the far reaches of space.",
+    "description": "A powerful common mechanical from the Cosmic Entities collection. Beings from the far reaches of space.",
     "image": {
       "thumbnail": "/assets/cosmic/cosmic_1_thumb.png",
       "preview": "/assets/cosmic/cosmic_1_preview.png",
       "full": "/assets/cosmic/cosmic_1.png"
     },
     "traits": {
-      "rarity": "Rare",
-      "element": "Earth",
-      "power": 60
+      "rarity": "Common",
+      "element": "Mechanical",
+      "power": 72
     },
     "spiritual": {
-      "chakra": "third_eye",
-      "frequency_hz": 852,
-      "color": "indigo",
-      "level_unlock": 6
+      "chakra": "throat",
+      "frequency_hz": 741,
+      "color": "blue",
+      "level_unlock": 5
     },
     "price": {
-      "listed": "1.61 ETH",
-      "floor": "3.49 ETH",
-      "last_sale": "2.93 ETH"
+      "listed": "1.65 ETH",
+      "floor": "2.88 ETH",
+      "last_sale": "1.94 ETH"
     },
     "external_url": "https://example.com/nft/cosmic/1",
-    "created_at": "2025-12-14T01:52:38.126377"
+    "created_at": "2025-12-14T04:05:47.298318"
   },
   {
     "id": "cosmic_2",
-    "name": "Earth Cosmic Entities #2",
+    "name": "Nature Cosmic Entities #2",
     "collection": "Cosmic Entities",
-    "description": "A powerful rare earth from the Cosmic Entities collection. Beings from the far reaches of space.",
+    "description": "A powerful common nature from the Cosmic Entities collection. Beings from the far reaches of space.",
     "image": {
       "thumbnail": "/assets/cosmic/cosmic_2_thumb.png",
       "preview": "/assets/cosmic/cosmic_2_preview.png",
       "full": "/assets/cosmic/cosmic_2.png"
     },
     "traits": {
-      "rarity": "Rare",
-      "element": "Earth",
-      "power": 100
+      "rarity": "Common",
+      "element": "Nature",
+      "power": 82
     },
     "spiritual": {
-      "chakra": "crown",
-      "frequency_hz": 963,
-      "color": "violet",
-      "level_unlock": 7
+      "chakra": "sacral",
+      "frequency_hz": 417,
+      "color": "orange",
+      "level_unlock": 2
     },
     "price": {
-      "listed": "1.69 ETH",
-      "floor": "4.10 ETH",
-      "last_sale": "1.69 ETH"
+      "listed": "2.00 ETH",
+      "floor": "0.98 ETH",
+      "last_sale": "4.66 ETH"
     },
     "external_url": "https://example.com/nft/cosmic/2",
-    "created_at": "2025-12-14T01:52:38.126408"
+    "created_at": "2025-12-14T04:05:47.298339"
   },
   {
     "id": "cosmic_3",
-    "name": "Cosmic Cosmic Entities #3",
+    "name": "Water Cosmic Entities #3",
     "collection": "Cosmic Entities",
-    "description": "A powerful common cosmic from the Cosmic Entities collection. Beings from the far reaches of space.",
+    "description": "A powerful common water from the Cosmic Entities collection. Beings from the far reaches of space.",
     "image": {
       "thumbnail": "/assets/cosmic/cosmic_3_thumb.png",
       "preview": "/assets/cosmic/cosmic_3_preview.png",
@@ -69,57 +69,57 @@
     },
     "traits": {
       "rarity": "Common",
-      "element": "Cosmic",
-      "power": 91
+      "element": "Water",
+      "power": 88
     },
     "spiritual": {
-      "chakra": "solar_plexus",
-      "frequency_hz": 528,
-      "color": "yellow",
-      "level_unlock": 3
+      "chakra": "sacral",
+      "frequency_hz": 417,
+      "color": "orange",
+      "level_unlock": 2
     },
     "price": {
-      "listed": "1.23 ETH",
-      "floor": "1.44 ETH",
-      "last_sale": "3.31 ETH"
+      "listed": "4.57 ETH",
+      "floor": "4.94 ETH",
+      "last_sale": "1.33 ETH"
     },
     "external_url": "https://example.com/nft/cosmic/3",
-    "created_at": "2025-12-14T01:52:38.126440"
+    "created_at": "2025-12-14T04:05:47.298352"
   },
   {
     "id": "cosmic_4",
-    "name": "Earth Cosmic Entities #4",
+    "name": "Mechanical Cosmic Entities #4",
     "collection": "Cosmic Entities",
-    "description": "A powerful epic earth from the Cosmic Entities collection. Beings from the far reaches of space.",
+    "description": "A powerful uncommon mechanical from the Cosmic Entities collection. Beings from the far reaches of space.",
     "image": {
       "thumbnail": "/assets/cosmic/cosmic_4_thumb.png",
       "preview": "/assets/cosmic/cosmic_4_preview.png",
       "full": "/assets/cosmic/cosmic_4.png"
     },
     "traits": {
-      "rarity": "Epic",
-      "element": "Earth",
-      "power": 92
+      "rarity": "Uncommon",
+      "element": "Mechanical",
+      "power": 93
     },
     "spiritual": {
-      "chakra": "third_eye",
-      "frequency_hz": 852,
-      "color": "indigo",
-      "level_unlock": 6
+      "chakra": "throat",
+      "frequency_hz": 741,
+      "color": "blue",
+      "level_unlock": 5
     },
     "price": {
-      "listed": "4.03 ETH",
-      "floor": "0.89 ETH",
-      "last_sale": "0.53 ETH"
+      "listed": "3.22 ETH",
+      "floor": "1.94 ETH",
+      "last_sale": "4.19 ETH"
     },
     "external_url": "https://example.com/nft/cosmic/4",
-    "created_at": "2025-12-14T01:52:38.126455"
+    "created_at": "2025-12-14T04:05:47.298364"
   },
   {
     "id": "cosmic_5",
-    "name": "Mechanical Cosmic Entities #5",
+    "name": "Water Cosmic Entities #5",
     "collection": "Cosmic Entities",
-    "description": "A powerful common mechanical from the Cosmic Entities collection. Beings from the far reaches of space.",
+    "description": "A powerful common water from the Cosmic Entities collection. Beings from the far reaches of space.",
     "image": {
       "thumbnail": "/assets/cosmic/cosmic_5_thumb.png",
       "preview": "/assets/cosmic/cosmic_5_preview.png",
@@ -127,8 +127,8 @@
     },
     "traits": {
       "rarity": "Common",
-      "element": "Mechanical",
-      "power": 30
+      "element": "Water",
+      "power": 100
     },
     "spiritual": {
       "chakra": "throat",
@@ -137,56 +137,56 @@
       "level_unlock": 5
     },
     "price": {
-      "listed": "3.18 ETH",
-      "floor": "0.12 ETH",
-      "last_sale": "3.57 ETH"
+      "listed": "1.58 ETH",
+      "floor": "0.63 ETH",
+      "last_sale": "3.63 ETH"
     },
     "external_url": "https://example.com/nft/cosmic/5",
-    "created_at": "2025-12-14T01:52:38.126499"
+    "created_at": "2025-12-14T04:05:47.298376"
   },
   {
     "id": "cosmic_6",
-    "name": "Dark Cosmic Entities #6",
+    "name": "Mechanical Cosmic Entities #6",
     "collection": "Cosmic Entities",
-    "description": "A powerful common dark from the Cosmic Entities collection. Beings from the far reaches of space.",
+    "description": "A powerful rare mechanical from the Cosmic Entities collection. Beings from the far reaches of space.",
     "image": {
       "thumbnail": "/assets/cosmic/cosmic_6_thumb.png",
       "preview": "/assets/cosmic/cosmic_6_preview.png",
       "full": "/assets/cosmic/cosmic_6.png"
     },
     "traits": {
-      "rarity": "Common",
-      "element": "Dark",
-      "power": 46
+      "rarity": "Rare",
+      "element": "Mechanical",
+      "power": 100
     },
     "spiritual": {
-      "chakra": "throat",
-      "frequency_hz": 741,
-      "color": "blue",
-      "level_unlock": 5
+      "chakra": "sacral",
+      "frequency_hz": 417,
+      "color": "orange",
+      "level_unlock": 2
     },
     "price": {
-      "listed": "0.83 ETH",
-      "floor": "1.44 ETH",
-      "last_sale": "0.52 ETH"
+      "listed": "3.20 ETH",
+      "floor": "1.36 ETH",
+      "last_sale": "2.57 ETH"
     },
     "external_url": "https://example.com/nft/cosmic/6",
-    "created_at": "2025-12-14T01:52:38.126510"
+    "created_at": "2025-12-14T04:05:47.298392"
   },
   {
     "id": "cosmic_7",
-    "name": "Cosmic Cosmic Entities #7",
+    "name": "Water Cosmic Entities #7",
     "collection": "Cosmic Entities",
-    "description": "A powerful uncommon cosmic from the Cosmic Entities collection. Beings from the far reaches of space.",
+    "description": "A powerful common water from the Cosmic Entities collection. Beings from the far reaches of space.",
     "image": {
       "thumbnail": "/assets/cosmic/cosmic_7_thumb.png",
       "preview": "/assets/cosmic/cosmic_7_preview.png",
       "full": "/assets/cosmic/cosmic_7.png"
     },
     "traits": {
-      "rarity": "Uncommon",
-      "element": "Cosmic",
-      "power": 78
+      "rarity": "Common",
+      "element": "Water",
+      "power": 32
     },
     "spiritual": {
       "chakra": "crown",
@@ -195,18 +195,18 @@
       "level_unlock": 7
     },
     "price": {
-      "listed": "1.10 ETH",
-      "floor": "4.05 ETH",
-      "last_sale": "4.09 ETH"
+      "listed": "3.96 ETH",
+      "floor": "2.08 ETH",
+      "last_sale": "4.26 ETH"
     },
     "external_url": "https://example.com/nft/cosmic/7",
-    "created_at": "2025-12-14T01:52:38.126518"
+    "created_at": "2025-12-14T04:05:47.298403"
   },
   {
     "id": "cosmic_8",
-    "name": "Water Cosmic Entities #8",
+    "name": "Air Cosmic Entities #8",
     "collection": "Cosmic Entities",
-    "description": "A powerful common water from the Cosmic Entities collection. Beings from the far reaches of space.",
+    "description": "A powerful common air from the Cosmic Entities collection. Beings from the far reaches of space.",
     "image": {
       "thumbnail": "/assets/cosmic/cosmic_8_thumb.png",
       "preview": "/assets/cosmic/cosmic_8_preview.png",
@@ -214,8 +214,66 @@
     },
     "traits": {
       "rarity": "Common",
-      "element": "Water",
-      "power": 49
+      "element": "Air",
+      "power": 69
+    },
+    "spiritual": {
+      "chakra": "sacral",
+      "frequency_hz": 417,
+      "color": "orange",
+      "level_unlock": 2
+    },
+    "price": {
+      "listed": "2.12 ETH",
+      "floor": "3.85 ETH",
+      "last_sale": "2.54 ETH"
+    },
+    "external_url": "https://example.com/nft/cosmic/8",
+    "created_at": "2025-12-14T04:05:47.298414"
+  },
+  {
+    "id": "cosmic_9",
+    "name": "Light Cosmic Entities #9",
+    "collection": "Cosmic Entities",
+    "description": "A powerful rare light from the Cosmic Entities collection. Beings from the far reaches of space.",
+    "image": {
+      "thumbnail": "/assets/cosmic/cosmic_9_thumb.png",
+      "preview": "/assets/cosmic/cosmic_9_preview.png",
+      "full": "/assets/cosmic/cosmic_9.png"
+    },
+    "traits": {
+      "rarity": "Rare",
+      "element": "Light",
+      "power": 67
+    },
+    "spiritual": {
+      "chakra": "crown",
+      "frequency_hz": 963,
+      "color": "violet",
+      "level_unlock": 7
+    },
+    "price": {
+      "listed": "4.92 ETH",
+      "floor": "3.69 ETH",
+      "last_sale": "1.01 ETH"
+    },
+    "external_url": "https://example.com/nft/cosmic/9",
+    "created_at": "2025-12-14T04:05:47.298425"
+  },
+  {
+    "id": "cosmic_10",
+    "name": "Cosmic Cosmic Entities #10",
+    "collection": "Cosmic Entities",
+    "description": "A powerful common cosmic from the Cosmic Entities collection. Beings from the far reaches of space.",
+    "image": {
+      "thumbnail": "/assets/cosmic/cosmic_10_thumb.png",
+      "preview": "/assets/cosmic/cosmic_10_preview.png",
+      "full": "/assets/cosmic/cosmic_10.png"
+    },
+    "traits": {
+      "rarity": "Common",
+      "element": "Cosmic",
+      "power": 35
     },
     "spiritual": {
       "chakra": "root",
@@ -224,69 +282,11 @@
       "level_unlock": 1
     },
     "price": {
-      "listed": "0.68 ETH",
-      "floor": "0.77 ETH",
-      "last_sale": "1.70 ETH"
-    },
-    "external_url": "https://example.com/nft/cosmic/8",
-    "created_at": "2025-12-14T01:52:38.126527"
-  },
-  {
-    "id": "cosmic_9",
-    "name": "Light Cosmic Entities #9",
-    "collection": "Cosmic Entities",
-    "description": "A powerful common light from the Cosmic Entities collection. Beings from the far reaches of space.",
-    "image": {
-      "thumbnail": "/assets/cosmic/cosmic_9_thumb.png",
-      "preview": "/assets/cosmic/cosmic_9_preview.png",
-      "full": "/assets/cosmic/cosmic_9.png"
-    },
-    "traits": {
-      "rarity": "Common",
-      "element": "Light",
-      "power": 99
-    },
-    "spiritual": {
-      "chakra": "heart",
-      "frequency_hz": 639,
-      "color": "green",
-      "level_unlock": 4
-    },
-    "price": {
-      "listed": "3.94 ETH",
-      "floor": "3.99 ETH",
-      "last_sale": "4.91 ETH"
-    },
-    "external_url": "https://example.com/nft/cosmic/9",
-    "created_at": "2025-12-14T01:52:38.126535"
-  },
-  {
-    "id": "cosmic_10",
-    "name": "Air Cosmic Entities #10",
-    "collection": "Cosmic Entities",
-    "description": "A powerful rare air from the Cosmic Entities collection. Beings from the far reaches of space.",
-    "image": {
-      "thumbnail": "/assets/cosmic/cosmic_10_thumb.png",
-      "preview": "/assets/cosmic/cosmic_10_preview.png",
-      "full": "/assets/cosmic/cosmic_10.png"
-    },
-    "traits": {
-      "rarity": "Rare",
-      "element": "Air",
-      "power": 97
-    },
-    "spiritual": {
-      "chakra": "third_eye",
-      "frequency_hz": 852,
-      "color": "indigo",
-      "level_unlock": 6
-    },
-    "price": {
-      "listed": "1.04 ETH",
-      "floor": "1.63 ETH",
-      "last_sale": "0.27 ETH"
+      "listed": "2.21 ETH",
+      "floor": "2.36 ETH",
+      "last_sale": "0.11 ETH"
     },
     "external_url": "https://example.com/nft/cosmic/10",
-    "created_at": "2025-12-14T01:52:38.126543"
+    "created_at": "2025-12-14T04:05:47.298436"
   }
 ]

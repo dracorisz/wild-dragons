@@ -1,9 +1,9 @@
 [
   {
     "id": "dragons_1",
-    "name": "Light Wild Dragons #1",
+    "name": "Mechanical Wild Dragons #1",
     "collection": "Wild Dragons",
-    "description": "A powerful common light from the Wild Dragons collection. Mythical dragons from another dimension.",
+    "description": "A powerful common mechanical from the Wild Dragons collection. Mythical dragons from another dimension.",
     "image": {
       "thumbnail": "/assets/dragons/dragons_1_thumb.png",
       "preview": "/assets/dragons/dragons_1_preview.png",
@@ -11,28 +11,28 @@
     },
     "traits": {
       "rarity": "Common",
-      "element": "Light",
-      "power": 52
+      "element": "Mechanical",
+      "power": 46
     },
     "spiritual": {
-      "chakra": "crown",
-      "frequency_hz": 963,
-      "color": "violet",
-      "level_unlock": 7
+      "chakra": "throat",
+      "frequency_hz": 741,
+      "color": "blue",
+      "level_unlock": 5
     },
     "price": {
-      "listed": "2.22 ETH",
-      "floor": "1.12 ETH",
-      "last_sale": "1.66 ETH"
+      "listed": "1.46 ETH",
+      "floor": "4.61 ETH",
+      "last_sale": "2.39 ETH"
     },
     "external_url": "https://example.com/nft/dragons/1",
-    "created_at": "2025-12-14T01:52:38.119405"
+    "created_at": "2025-12-14T04:05:47.296060"
   },
   {
     "id": "dragons_2",
-    "name": "Cosmic Wild Dragons #2",
+    "name": "Mechanical Wild Dragons #2",
     "collection": "Wild Dragons",
-    "description": "A powerful common cosmic from the Wild Dragons collection. Mythical dragons from another dimension.",
+    "description": "A powerful common mechanical from the Wild Dragons collection. Mythical dragons from another dimension.",
     "image": {
       "thumbnail": "/assets/dragons/dragons_2_thumb.png",
       "preview": "/assets/dragons/dragons_2_preview.png",
@@ -40,66 +40,95 @@
     },
     "traits": {
       "rarity": "Common",
-      "element": "Cosmic",
-      "power": 87
+      "element": "Mechanical",
+      "power": 73
     },
     "spiritual": {
-      "chakra": "root",
-      "frequency_hz": 396,
-      "color": "red",
-      "level_unlock": 1
+      "chakra": "sacral",
+      "frequency_hz": 417,
+      "color": "orange",
+      "level_unlock": 2
     },
     "price": {
-      "listed": "3.08 ETH",
-      "floor": "4.32 ETH",
-      "last_sale": "0.96 ETH"
+      "listed": "1.46 ETH",
+      "floor": "2.96 ETH",
+      "last_sale": "4.69 ETH"
     },
     "external_url": "https://example.com/nft/dragons/2",
-    "created_at": "2025-12-14T01:52:38.119429"
+    "created_at": "2025-12-14T04:05:47.296409"
   },
   {
     "id": "dragons_3",
-    "name": "Light Wild Dragons #3",
+    "name": "Mechanical Wild Dragons #3",
     "collection": "Wild Dragons",
-    "description": "A powerful common light from the Wild Dragons collection. Mythical dragons from another dimension.",
+    "description": "A powerful epic mechanical from the Wild Dragons collection. Mythical dragons from another dimension.",
     "image": {
       "thumbnail": "/assets/dragons/dragons_3_thumb.png",
       "preview": "/assets/dragons/dragons_3_preview.png",
       "full": "/assets/dragons/dragons_3.png"
     },
     "traits": {
-      "rarity": "Common",
-      "element": "Light",
-      "power": 80
+      "rarity": "Epic",
+      "element": "Mechanical",
+      "power": 100
     },
     "spiritual": {
-      "chakra": "heart",
-      "frequency_hz": 639,
-      "color": "green",
-      "level_unlock": 4
+      "chakra": "sacral",
+      "frequency_hz": 417,
+      "color": "orange",
+      "level_unlock": 2
     },
     "price": {
-      "listed": "3.86 ETH",
-      "floor": "1.03 ETH",
-      "last_sale": "1.58 ETH"
+      "listed": "4.06 ETH",
+      "floor": "3.34 ETH",
+      "last_sale": "3.00 ETH"
     },
     "external_url": "https://example.com/nft/dragons/3",
-    "created_at": "2025-12-14T01:52:38.119441"
+    "created_at": "2025-12-14T04:05:47.296428"
   },
   {
     "id": "dragons_4",
-    "name": "Nature Wild Dragons #4",
+    "name": "Dark Wild Dragons #4",
     "collection": "Wild Dragons",
-    "description": "A powerful uncommon nature from the Wild Dragons collection. Mythical dragons from another dimension.",
+    "description": "A powerful common dark from the Wild Dragons collection. Mythical dragons from another dimension.",
     "image": {
       "thumbnail": "/assets/dragons/dragons_4_thumb.png",
       "preview": "/assets/dragons/dragons_4_preview.png",
       "full": "/assets/dragons/dragons_4.png"
     },
     "traits": {
-      "rarity": "Uncommon",
-      "element": "Nature",
-      "power": 74
+      "rarity": "Common",
+      "element": "Dark",
+      "power": 77
+    },
+    "spiritual": {
+      "chakra": "sacral",
+      "frequency_hz": 417,
+      "color": "orange",
+      "level_unlock": 2
+    },
+    "price": {
+      "listed": "1.76 ETH",
+      "floor": "2.27 ETH",
+      "last_sale": "2.52 ETH"
+    },
+    "external_url": "https://example.com/nft/dragons/4",
+    "created_at": "2025-12-14T04:05:47.296542"
+  },
+  {
+    "id": "dragons_5",
+    "name": "Fire Wild Dragons #5",
+    "collection": "Wild Dragons",
+    "description": "A powerful rare fire from the Wild Dragons collection. Mythical dragons from another dimension.",
+    "image": {
+      "thumbnail": "/assets/dragons/dragons_5_thumb.png",
+      "preview": "/assets/dragons/dragons_5_preview.png",
+      "full": "/assets/dragons/dragons_5.png"
+    },
+    "traits": {
+      "rarity": "Rare",
+      "element": "Fire",
+      "power": 92
     },
     "spiritual": {
       "chakra": "third_eye",
@@ -108,27 +137,114 @@
       "level_unlock": 6
     },
     "price": {
-      "listed": "4.42 ETH",
-      "floor": "2.44 ETH",
-      "last_sale": "0.40 ETH"
+      "listed": "3.83 ETH",
+      "floor": "3.87 ETH",
+      "last_sale": "4.92 ETH"
     },
-    "external_url": "https://example.com/nft/dragons/4",
-    "created_at": "2025-12-14T01:52:38.119451"
+    "external_url": "https://example.com/nft/dragons/5",
+    "created_at": "2025-12-14T04:05:47.296596"
   },
   {
-    "id": "dragons_5",
-    "name": "Dark Wild Dragons #5",
+    "id": "dragons_6",
+    "name": "Dark Wild Dragons #6",
     "collection": "Wild Dragons",
     "description": "A powerful uncommon dark from the Wild Dragons collection. Mythical dragons from another dimension.",
     "image": {
-      "thumbnail": "/assets/dragons/dragons_5_thumb.png",
-      "preview": "/assets/dragons/dragons_5_preview.png",
-      "full": "/assets/dragons/dragons_5.png"
+      "thumbnail": "/assets/dragons/dragons_6_thumb.png",
+      "preview": "/assets/dragons/dragons_6_preview.png",
+      "full": "/assets/dragons/dragons_6.png"
     },
     "traits": {
       "rarity": "Uncommon",
       "element": "Dark",
-      "power": 52
+      "power": 43
+    },
+    "spiritual": {
+      "chakra": "throat",
+      "frequency_hz": 741,
+      "color": "blue",
+      "level_unlock": 5
+    },
+    "price": {
+      "listed": "0.96 ETH",
+      "floor": "4.86 ETH",
+      "last_sale": "0.89 ETH"
+    },
+    "external_url": "https://example.com/nft/dragons/6",
+    "created_at": "2025-12-14T04:05:47.296614"
+  },
+  {
+    "id": "dragons_7",
+    "name": "Light Wild Dragons #7",
+    "collection": "Wild Dragons",
+    "description": "A powerful uncommon light from the Wild Dragons collection. Mythical dragons from another dimension.",
+    "image": {
+      "thumbnail": "/assets/dragons/dragons_7_thumb.png",
+      "preview": "/assets/dragons/dragons_7_preview.png",
+      "full": "/assets/dragons/dragons_7.png"
+    },
+    "traits": {
+      "rarity": "Uncommon",
+      "element": "Light",
+      "power": 92
+    },
+    "spiritual": {
+      "chakra": "root",
+      "frequency_hz": 396,
+      "color": "red",
+      "level_unlock": 1
+    },
+    "price": {
+      "listed": "2.52 ETH",
+      "floor": "1.18 ETH",
+      "last_sale": "1.28 ETH"
+    },
+    "external_url": "https://example.com/nft/dragons/7",
+    "created_at": "2025-12-14T04:05:47.296628"
+  },
+  {
+    "id": "dragons_8",
+    "name": "Air Wild Dragons #8",
+    "collection": "Wild Dragons",
+    "description": "A powerful common air from the Wild Dragons collection. Mythical dragons from another dimension.",
+    "image": {
+      "thumbnail": "/assets/dragons/dragons_8_thumb.png",
+      "preview": "/assets/dragons/dragons_8_preview.png",
+      "full": "/assets/dragons/dragons_8.png"
+    },
+    "traits": {
+      "rarity": "Common",
+      "element": "Air",
+      "power": 51
+    },
+    "spiritual": {
+      "chakra": "solar_plexus",
+      "frequency_hz": 528,
+      "color": "yellow",
+      "level_unlock": 3
+    },
+    "price": {
+      "listed": "0.66 ETH",
+      "floor": "1.76 ETH",
+      "last_sale": "2.28 ETH"
+    },
+    "external_url": "https://example.com/nft/dragons/8",
+    "created_at": "2025-12-14T04:05:47.296641"
+  },
+  {
+    "id": "dragons_9",
+    "name": "Air Wild Dragons #9",
+    "collection": "Wild Dragons",
+    "description": "A powerful uncommon air from the Wild Dragons collection. Mythical dragons from another dimension.",
+    "image": {
+      "thumbnail": "/assets/dragons/dragons_9_thumb.png",
+      "preview": "/assets/dragons/dragons_9_preview.png",
+      "full": "/assets/dragons/dragons_9.png"
+    },
+    "traits": {
+      "rarity": "Uncommon",
+      "element": "Air",
+      "power": 94
     },
     "spiritual": {
       "chakra": "sacral",
@@ -138,155 +254,39 @@
     },
     "price": {
       "listed": "3.34 ETH",
-      "floor": "2.03 ETH",
-      "last_sale": "3.83 ETH"
-    },
-    "external_url": "https://example.com/nft/dragons/5",
-    "created_at": "2025-12-14T01:52:38.119460"
-  },
-  {
-    "id": "dragons_6",
-    "name": "Air Wild Dragons #6",
-    "collection": "Wild Dragons",
-    "description": "A powerful common air from the Wild Dragons collection. Mythical dragons from another dimension.",
-    "image": {
-      "thumbnail": "/assets/dragons/dragons_6_thumb.png",
-      "preview": "/assets/dragons/dragons_6_preview.png",
-      "full": "/assets/dragons/dragons_6.png"
-    },
-    "traits": {
-      "rarity": "Common",
-      "element": "Air",
-      "power": 45
-    },
-    "spiritual": {
-      "chakra": "throat",
-      "frequency_hz": 741,
-      "color": "blue",
-      "level_unlock": 5
-    },
-    "price": {
-      "listed": "1.47 ETH",
-      "floor": "3.58 ETH",
-      "last_sale": "0.77 ETH"
-    },
-    "external_url": "https://example.com/nft/dragons/6",
-    "created_at": "2025-12-14T01:52:38.119468"
-  },
-  {
-    "id": "dragons_7",
-    "name": "Air Wild Dragons #7",
-    "collection": "Wild Dragons",
-    "description": "A powerful epic air from the Wild Dragons collection. Mythical dragons from another dimension.",
-    "image": {
-      "thumbnail": "/assets/dragons/dragons_7_thumb.png",
-      "preview": "/assets/dragons/dragons_7_preview.png",
-      "full": "/assets/dragons/dragons_7.png"
-    },
-    "traits": {
-      "rarity": "Epic",
-      "element": "Air",
-      "power": 74
-    },
-    "spiritual": {
-      "chakra": "sacral",
-      "frequency_hz": 417,
-      "color": "orange",
-      "level_unlock": 2
-    },
-    "price": {
-      "listed": "3.31 ETH",
-      "floor": "0.99 ETH",
-      "last_sale": "4.51 ETH"
-    },
-    "external_url": "https://example.com/nft/dragons/7",
-    "created_at": "2025-12-14T01:52:38.119476"
-  },
-  {
-    "id": "dragons_8",
-    "name": "Water Wild Dragons #8",
-    "collection": "Wild Dragons",
-    "description": "A powerful epic water from the Wild Dragons collection. Mythical dragons from another dimension.",
-    "image": {
-      "thumbnail": "/assets/dragons/dragons_8_thumb.png",
-      "preview": "/assets/dragons/dragons_8_preview.png",
-      "full": "/assets/dragons/dragons_8.png"
-    },
-    "traits": {
-      "rarity": "Epic",
-      "element": "Water",
-      "power": 100
-    },
-    "spiritual": {
-      "chakra": "throat",
-      "frequency_hz": 741,
-      "color": "blue",
-      "level_unlock": 5
-    },
-    "price": {
-      "listed": "1.19 ETH",
-      "floor": "3.82 ETH",
-      "last_sale": "4.38 ETH"
-    },
-    "external_url": "https://example.com/nft/dragons/8",
-    "created_at": "2025-12-14T01:52:38.119483"
-  },
-  {
-    "id": "dragons_9",
-    "name": "Air Wild Dragons #9",
-    "collection": "Wild Dragons",
-    "description": "A powerful rare air from the Wild Dragons collection. Mythical dragons from another dimension.",
-    "image": {
-      "thumbnail": "/assets/dragons/dragons_9_thumb.png",
-      "preview": "/assets/dragons/dragons_9_preview.png",
-      "full": "/assets/dragons/dragons_9.png"
-    },
-    "traits": {
-      "rarity": "Rare",
-      "element": "Air",
-      "power": 69
-    },
-    "spiritual": {
-      "chakra": "root",
-      "frequency_hz": 396,
-      "color": "red",
-      "level_unlock": 1
-    },
-    "price": {
-      "listed": "2.81 ETH",
-      "floor": "3.48 ETH",
-      "last_sale": "1.97 ETH"
+      "floor": "3.30 ETH",
+      "last_sale": "1.06 ETH"
     },
     "external_url": "https://example.com/nft/dragons/9",
-    "created_at": "2025-12-14T01:52:38.119491"
+    "created_at": "2025-12-14T04:05:47.296654"
   },
   {
     "id": "dragons_10",
-    "name": "Air Wild Dragons #10",
+    "name": "Mechanical Wild Dragons #10",
     "collection": "Wild Dragons",
-    "description": "A powerful uncommon air from the Wild Dragons collection. Mythical dragons from another dimension.",
+    "description": "A powerful common mechanical from the Wild Dragons collection. Mythical dragons from another dimension.",
     "image": {
       "thumbnail": "/assets/dragons/dragons_10_thumb.png",
       "preview": "/assets/dragons/dragons_10_preview.png",
       "full": "/assets/dragons/dragons_10.png"
     },
     "traits": {
-      "rarity": "Uncommon",
-      "element": "Air",
-      "power": 82
+      "rarity": "Common",
+      "element": "Mechanical",
+      "power": 40
     },
     "spiritual": {
-      "chakra": "crown",
-      "frequency_hz": 963,
-      "color": "violet",
-      "level_unlock": 7
+      "chakra": "throat",
+      "frequency_hz": 741,
+      "color": "blue",
+      "level_unlock": 5
     },
     "price": {
-      "listed": "1.85 ETH",
-      "floor": "2.53 ETH",
-      "last_sale": "2.22 ETH"
+      "listed": "0.27 ETH",
+      "floor": "2.27 ETH",
+      "last_sale": "1.42 ETH"
     },
     "external_url": "https://example.com/nft/dragons/10",
-    "created_at": "2025-12-14T01:52:38.119499"
+    "created_at": "2025-12-14T04:05:47.296666"
   }
 ]

@@ -1,7 +1,7 @@
 /**
  * Image Source Service
  * Dynamic image loading from multiple open-source platforms
- * Supports Pinterest, Unsplash, Pexels, Grok Imagine, and internal assets
+ * Supports Pinterest, Unsplash, Pexels, and internal assets
  */
 
 import { ref, computed } from 'vue';
@@ -49,14 +49,6 @@ export function useImageSources() {
       apiKey: import.meta.env.VITE_PEXELS_API_KEY || 'your-pexels-api-key',
       searchUrl: 'https://api.pexels.com/v1/search'
     },
-    grok: {
-      name: 'Grok Imagine',
-      baseUrl: 'https://grok.imagine/api/',
-      requiresApiKey: true,
-      description: 'AI-generated images from Grok',
-      apiKey: import.meta.env.VITE_GROK_API_KEY || 'your-grok-api-key',
-      searchUrl: 'https://grok.imagine/api/generate'
-    }
   };
   
   // Cache configuration
@@ -126,10 +118,6 @@ export function useImageSources() {
           url = `${sourceConfig.baseUrl}${collection}/${itemId}/`;
           break;
           
-        case 'grok':
-          // Grok Imagine would need API call for generation
-          url = `${sourceConfig.baseUrl}generate?prompt=${encodeURIComponent(query || collection)}&size=${width}x${height}`;
-          break;
       }
 
       // Update cache
@@ -202,10 +190,6 @@ export function useImageSources() {
           };
           break;
           
-        case 'grok':
-          // Grok would use a different approach for image generation
-          url = `${sourceConfig.searchUrl}?prompt=${encodeURIComponent(query)}&count=${perPage}`;
-          break;
       }
       
       const response = await fetch(url, { headers });
@@ -253,16 +237,6 @@ export function useImageSources() {
           }));
           break;
           
-        case 'grok':
-          images = data.images.map((url, index) => ({
-            id: `${Date.now()}_${index}`,
-            url: url,
-            thumbnail: url, // Grok might return same URL for all sizes
-            description: `AI-generated image for ${query}`,
-            source: 'grok',
-            author: 'Grok Imagine'
-          }));
-          break;
       }
       
       // Update cache
@@ -371,14 +345,13 @@ export function buildImageUrl(source, params) {
     unsplash: (q, w, h) => `https://source.unsplash.com/${w}x${h}/?${encodeURIComponent(q)}`,
     pexels: (c, i) => `https://www.pexels.com/photo/${c}-${i}/`,
     pinterest: (c, i) => `https://www.pinterest.com/resource/${c}/${i}/`,
-    grok: (q, w, h) => `https://grok.imagine/api/generate?prompt=${encodeURIComponent(q)}&size=${w}x${h}`
   };
   
   try {
     if (sourceConfigs[source]) {
       if (source === 'internal') {
         return sourceConfigs[source](collection, itemId, type);
-      } else if (source === 'unsplash' || source === 'grok') {
+      } else if (source === 'unsplash') {
         return sourceConfigs[source](query || collection, width, height);
       } else {
         return sourceConfigs[source](collection, itemId);
