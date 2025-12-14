@@ -1,19 +1,10 @@
-@import "tailwindcss";
 @import "./variables.css";
 @import "./utils.css";
 @import "./nft.css";
 
-@theme {
-  --color-*: initial;
-  --color-white: #fff;
-  --color-black: #000;
-  --color-gray: #888;
-  --color-success: #05f57d;
-  --color-primary: #00fff7;  /* #ffb42a */
-  /* --color-primary: #ffbf34; */
-  --color-secondary: #ff00cc;
-  --color-warning: #f8310e;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* ::-webkit-scrollbar {
   @apply h-0 w-0;
@@ -30,7 +21,7 @@ main {
 }
 
 nav {
-  @apply fixed top-0 z-100 flex h-[45px] w-full items-center justify-center px-10 text-white shadow;
+  @apply fixed top-0 z-50 flex h-[45px] w-full items-center justify-center px-10 text-white shadow;
 }
 
 nav a {
@@ -64,7 +55,7 @@ form {
 }
 
 .form-profile {
-  @apply !max-w-screen !grid-cols-2 !grid !gap-x-5 !gap-y-5;
+  @apply max-w-full grid grid-cols-2 gap-x-5 gap-y-5;
 }
 
 button {
@@ -72,15 +63,15 @@ button {
 }
 
 button:disabled {
-  @apply bg-gray cursor-not-allowed;
+  @apply bg-gray-500 cursor-not-allowed;
 }
 
 input {
-  @apply border-gray h-[36px] max-h-[36px] min-h-[36px] w-full rounded-none border px-3 py-2 text-sm ring-0 outline-none focus:border-black;
+  @apply border-gray-300 h-[36px] max-h-[36px] min-h-[36px] w-full rounded-none border px-3 py-2 text-sm ring-0 outline-none focus:border-black;
 }
 
 input::placeholder {
-  @apply text-gray text-sm uppercase;
+  @apply text-gray-500 text-sm uppercase;
 }
 
 #app {

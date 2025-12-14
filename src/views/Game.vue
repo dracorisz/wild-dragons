@@ -11,7 +11,10 @@
       </div>
     </header>
 
-    <GameCanvas :game-active="gameStore.isGameActive" />
+    <PlaceholderView
+      title="Battle Arena Coming Soon"
+      message="The epic battle system is under development. Train your heroines and dragons while we prepare the ultimate gaming experience!"
+    />
 
     <section class="roster">
       <article>
@@ -40,7 +43,7 @@
 <script setup>
 import { computed } from 'vue';
 import { useGameStore } from '../stores/gameStore.js';
-import GameCanvas from '../components/game/GameCanvas.vue';
+import PlaceholderView from '../components/PlaceholderView.vue';
 
 const gameStore = useGameStore();
 
