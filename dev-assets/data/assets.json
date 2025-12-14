@@ -1,0 +1,12 @@
+{
+  "payments": {
+    "USDC": "https://placehold.co/24x24?text=USDC",
+    "IMX": "https://placehold.co/24x24?text=IMX",
+    "RON": "https://placehold.co/24x24?text=RON"
+  },
+  "guild_of_guardians_examples": [
+    "https://tokentrove.com/img/collections/guild-of-guardians/1001.png",
+    "https://tokentrove.com/img/collections/guild-of-guardians/1002.png",
+    "https://tokentrove.com/img/collections/guild-of-guardians/1003.png"
+  ]
+}

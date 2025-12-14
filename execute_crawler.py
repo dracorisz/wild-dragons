@@ -324,28 +324,29 @@ Each item includes spiritual attributes for integration with the chakra-based pr
         self.log(f"Created README.md at {readme_file}")
         return True
     
-    def run(self, skip_tokentrove=False, skip_pinterest=False, skip_processing=False):
+    def run(self, skip_tokentrove=False, skip_pinterest=True, skip_processing=False):
         """Run the complete data crawler implementation."""
         self.log("=== Starting Wild Dragons Data Crawler Implementation ===")
-        
+        self.log("Note: Pinterest scraping is disabled by default to avoid 403 errors.")
+
         # Setup directories
         if not self.setup_directories():
             self.log("Failed to set up directories. Aborting.")
             return False
-        
+
         # Run TokenTrove crawler
         if not skip_tokentrove:
             if not self.run_tokentrove_crawler():
                 self.log("TokenTrove crawler failed. Continuing with other tasks.")
         else:
             self.log("Skipping TokenTrove crawler as requested.")
-        
-        # Run Pinterest scraper
+
+        # Run Pinterest scraper (disabled by default)
         if not skip_pinterest:
             if not self.run_pinterest_scraper():
                 self.log("Pinterest scraper failed. Continuing with other tasks.")
         else:
-            self.log("Skipping Pinterest scraper as requested.")
+            self.log("Skipping Pinterest scraper as requested (default behavior).")
         
         # Process images
         if not skip_processing:

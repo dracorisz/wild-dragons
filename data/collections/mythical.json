@@ -1,9 +1,9 @@
 [
   {
     "id": "mythical_1",
-    "name": "Air Mythical Creatures #1",
+    "name": "Light Mythical Creatures #1",
     "collection": "Mythical Creatures",
-    "description": "A powerful epic air from the Mythical Creatures collection. Creatures from myths and legends.",
+    "description": "A powerful epic light from the Mythical Creatures collection. Creatures from myths and legends.",
     "image": {
       "thumbnail": "/assets/mythical/mythical_1_thumb.png",
       "preview": "/assets/mythical/mythical_1_preview.png",
@@ -11,240 +11,37 @@
     },
     "traits": {
       "rarity": "Epic",
-      "element": "Air",
+      "element": "Light",
       "power": 100
     },
     "spiritual": {
-      "chakra": "root",
-      "frequency_hz": 396,
-      "color": "red",
-      "level_unlock": 1
+      "chakra": "solar_plexus",
+      "frequency_hz": 528,
+      "color": "yellow",
+      "level_unlock": 3
     },
     "price": {
-      "listed": "4.89 ETH",
-      "floor": "2.90 ETH",
-      "last_sale": "4.80 ETH"
+      "listed": "2.76 ETH",
+      "floor": "2.13 ETH",
+      "last_sale": "3.28 ETH"
     },
     "external_url": "https://example.com/nft/mythical/1",
-    "created_at": "2025-10-03T17:18:02.346345"
+    "created_at": "2025-12-14T01:52:38.144412"
   },
   {
     "id": "mythical_2",
-    "name": "Water Mythical Creatures #2",
+    "name": "Fire Mythical Creatures #2",
     "collection": "Mythical Creatures",
-    "description": "A powerful common water from the Mythical Creatures collection. Creatures from myths and legends.",
+    "description": "A powerful uncommon fire from the Mythical Creatures collection. Creatures from myths and legends.",
     "image": {
       "thumbnail": "/assets/mythical/mythical_2_thumb.png",
       "preview": "/assets/mythical/mythical_2_preview.png",
       "full": "/assets/mythical/mythical_2.png"
     },
     "traits": {
-      "rarity": "Common",
-      "element": "Water",
-      "power": 86
-    },
-    "spiritual": {
-      "chakra": "root",
-      "frequency_hz": 396,
-      "color": "red",
-      "level_unlock": 1
-    },
-    "price": {
-      "listed": "4.81 ETH",
-      "floor": "2.03 ETH",
-      "last_sale": "3.75 ETH"
-    },
-    "external_url": "https://example.com/nft/mythical/2",
-    "created_at": "2025-10-03T17:18:02.346362"
-  },
-  {
-    "id": "mythical_3",
-    "name": "Earth Mythical Creatures #3",
-    "collection": "Mythical Creatures",
-    "description": "A powerful common earth from the Mythical Creatures collection. Creatures from myths and legends.",
-    "image": {
-      "thumbnail": "/assets/mythical/mythical_3_thumb.png",
-      "preview": "/assets/mythical/mythical_3_preview.png",
-      "full": "/assets/mythical/mythical_3.png"
-    },
-    "traits": {
-      "rarity": "Common",
-      "element": "Earth",
-      "power": 52
-    },
-    "spiritual": {
-      "chakra": "crown",
-      "frequency_hz": 963,
-      "color": "violet",
-      "level_unlock": 7
-    },
-    "price": {
-      "listed": "2.90 ETH",
-      "floor": "2.32 ETH",
-      "last_sale": "1.23 ETH"
-    },
-    "external_url": "https://example.com/nft/mythical/3",
-    "created_at": "2025-10-03T17:18:02.346373"
-  },
-  {
-    "id": "mythical_4",
-    "name": "Air Mythical Creatures #4",
-    "collection": "Mythical Creatures",
-    "description": "A powerful common air from the Mythical Creatures collection. Creatures from myths and legends.",
-    "image": {
-      "thumbnail": "/assets/mythical/mythical_4_thumb.png",
-      "preview": "/assets/mythical/mythical_4_preview.png",
-      "full": "/assets/mythical/mythical_4.png"
-    },
-    "traits": {
-      "rarity": "Common",
-      "element": "Air",
-      "power": 38
-    },
-    "spiritual": {
-      "chakra": "solar_plexus",
-      "frequency_hz": 528,
-      "color": "yellow",
-      "level_unlock": 3
-    },
-    "price": {
-      "listed": "0.46 ETH",
-      "floor": "3.01 ETH",
-      "last_sale": "1.05 ETH"
-    },
-    "external_url": "https://example.com/nft/mythical/4",
-    "created_at": "2025-10-03T17:18:02.347236"
-  },
-  {
-    "id": "mythical_5",
-    "name": "Air Mythical Creatures #5",
-    "collection": "Mythical Creatures",
-    "description": "A powerful uncommon air from the Mythical Creatures collection. Creatures from myths and legends.",
-    "image": {
-      "thumbnail": "/assets/mythical/mythical_5_thumb.png",
-      "preview": "/assets/mythical/mythical_5_preview.png",
-      "full": "/assets/mythical/mythical_5.png"
-    },
-    "traits": {
       "rarity": "Uncommon",
-      "element": "Air",
-      "power": 83
-    },
-    "spiritual": {
-      "chakra": "solar_plexus",
-      "frequency_hz": 528,
-      "color": "yellow",
-      "level_unlock": 3
-    },
-    "price": {
-      "listed": "0.14 ETH",
-      "floor": "0.49 ETH",
-      "last_sale": "2.25 ETH"
-    },
-    "external_url": "https://example.com/nft/mythical/5",
-    "created_at": "2025-10-03T17:18:02.347269"
-  },
-  {
-    "id": "mythical_6",
-    "name": "Dark Mythical Creatures #6",
-    "collection": "Mythical Creatures",
-    "description": "A powerful epic dark from the Mythical Creatures collection. Creatures from myths and legends.",
-    "image": {
-      "thumbnail": "/assets/mythical/mythical_6_thumb.png",
-      "preview": "/assets/mythical/mythical_6_preview.png",
-      "full": "/assets/mythical/mythical_6.png"
-    },
-    "traits": {
-      "rarity": "Epic",
-      "element": "Dark",
-      "power": 100
-    },
-    "spiritual": {
-      "chakra": "third_eye",
-      "frequency_hz": 852,
-      "color": "indigo",
-      "level_unlock": 6
-    },
-    "price": {
-      "listed": "2.46 ETH",
-      "floor": "3.16 ETH",
-      "last_sale": "3.16 ETH"
-    },
-    "external_url": "https://example.com/nft/mythical/6",
-    "created_at": "2025-10-03T17:18:02.347287"
-  },
-  {
-    "id": "mythical_7",
-    "name": "Light Mythical Creatures #7",
-    "collection": "Mythical Creatures",
-    "description": "A powerful uncommon light from the Mythical Creatures collection. Creatures from myths and legends.",
-    "image": {
-      "thumbnail": "/assets/mythical/mythical_7_thumb.png",
-      "preview": "/assets/mythical/mythical_7_preview.png",
-      "full": "/assets/mythical/mythical_7.png"
-    },
-    "traits": {
-      "rarity": "Uncommon",
-      "element": "Light",
-      "power": 87
-    },
-    "spiritual": {
-      "chakra": "solar_plexus",
-      "frequency_hz": 528,
-      "color": "yellow",
-      "level_unlock": 3
-    },
-    "price": {
-      "listed": "0.76 ETH",
-      "floor": "0.92 ETH",
-      "last_sale": "4.39 ETH"
-    },
-    "external_url": "https://example.com/nft/mythical/7",
-    "created_at": "2025-10-03T17:18:02.347388"
-  },
-  {
-    "id": "mythical_8",
-    "name": "Earth Mythical Creatures #8",
-    "collection": "Mythical Creatures",
-    "description": "A powerful uncommon earth from the Mythical Creatures collection. Creatures from myths and legends.",
-    "image": {
-      "thumbnail": "/assets/mythical/mythical_8_thumb.png",
-      "preview": "/assets/mythical/mythical_8_preview.png",
-      "full": "/assets/mythical/mythical_8.png"
-    },
-    "traits": {
-      "rarity": "Uncommon",
-      "element": "Earth",
-      "power": 49
-    },
-    "spiritual": {
-      "chakra": "crown",
-      "frequency_hz": 963,
-      "color": "violet",
-      "level_unlock": 7
-    },
-    "price": {
-      "listed": "4.19 ETH",
-      "floor": "3.78 ETH",
-      "last_sale": "3.02 ETH"
-    },
-    "external_url": "https://example.com/nft/mythical/8",
-    "created_at": "2025-10-03T17:18:02.347410"
-  },
-  {
-    "id": "mythical_9",
-    "name": "Light Mythical Creatures #9",
-    "collection": "Mythical Creatures",
-    "description": "A powerful common light from the Mythical Creatures collection. Creatures from myths and legends.",
-    "image": {
-      "thumbnail": "/assets/mythical/mythical_9_thumb.png",
-      "preview": "/assets/mythical/mythical_9_preview.png",
-      "full": "/assets/mythical/mythical_9.png"
-    },
-    "traits": {
-      "rarity": "Common",
-      "element": "Light",
-      "power": 38
+      "element": "Fire",
+      "power": 93
     },
     "spiritual": {
       "chakra": "sacral",
@@ -253,22 +50,109 @@
       "level_unlock": 2
     },
     "price": {
-      "listed": "0.51 ETH",
-      "floor": "2.14 ETH",
-      "last_sale": "3.66 ETH"
+      "listed": "2.03 ETH",
+      "floor": "2.16 ETH",
+      "last_sale": "2.45 ETH"
     },
-    "external_url": "https://example.com/nft/mythical/9",
-    "created_at": "2025-10-03T17:18:02.347423"
+    "external_url": "https://example.com/nft/mythical/2",
+    "created_at": "2025-12-14T01:52:38.144430"
   },
   {
-    "id": "mythical_10",
-    "name": "Dark Mythical Creatures #10",
+    "id": "mythical_3",
+    "name": "Mechanical Mythical Creatures #3",
+    "collection": "Mythical Creatures",
+    "description": "A powerful uncommon mechanical from the Mythical Creatures collection. Creatures from myths and legends.",
+    "image": {
+      "thumbnail": "/assets/mythical/mythical_3_thumb.png",
+      "preview": "/assets/mythical/mythical_3_preview.png",
+      "full": "/assets/mythical/mythical_3.png"
+    },
+    "traits": {
+      "rarity": "Uncommon",
+      "element": "Mechanical",
+      "power": 83
+    },
+    "spiritual": {
+      "chakra": "root",
+      "frequency_hz": 396,
+      "color": "red",
+      "level_unlock": 1
+    },
+    "price": {
+      "listed": "3.34 ETH",
+      "floor": "1.30 ETH",
+      "last_sale": "0.46 ETH"
+    },
+    "external_url": "https://example.com/nft/mythical/3",
+    "created_at": "2025-12-14T01:52:38.144440"
+  },
+  {
+    "id": "mythical_4",
+    "name": "Light Mythical Creatures #4",
+    "collection": "Mythical Creatures",
+    "description": "A powerful common light from the Mythical Creatures collection. Creatures from myths and legends.",
+    "image": {
+      "thumbnail": "/assets/mythical/mythical_4_thumb.png",
+      "preview": "/assets/mythical/mythical_4_preview.png",
+      "full": "/assets/mythical/mythical_4.png"
+    },
+    "traits": {
+      "rarity": "Common",
+      "element": "Light",
+      "power": 71
+    },
+    "spiritual": {
+      "chakra": "root",
+      "frequency_hz": 396,
+      "color": "red",
+      "level_unlock": 1
+    },
+    "price": {
+      "listed": "4.58 ETH",
+      "floor": "4.48 ETH",
+      "last_sale": "0.10 ETH"
+    },
+    "external_url": "https://example.com/nft/mythical/4",
+    "created_at": "2025-12-14T01:52:38.144449"
+  },
+  {
+    "id": "mythical_5",
+    "name": "Cosmic Mythical Creatures #5",
+    "collection": "Mythical Creatures",
+    "description": "A powerful uncommon cosmic from the Mythical Creatures collection. Creatures from myths and legends.",
+    "image": {
+      "thumbnail": "/assets/mythical/mythical_5_thumb.png",
+      "preview": "/assets/mythical/mythical_5_preview.png",
+      "full": "/assets/mythical/mythical_5.png"
+    },
+    "traits": {
+      "rarity": "Uncommon",
+      "element": "Cosmic",
+      "power": 93
+    },
+    "spiritual": {
+      "chakra": "sacral",
+      "frequency_hz": 417,
+      "color": "orange",
+      "level_unlock": 2
+    },
+    "price": {
+      "listed": "2.11 ETH",
+      "floor": "4.64 ETH",
+      "last_sale": "1.13 ETH"
+    },
+    "external_url": "https://example.com/nft/mythical/5",
+    "created_at": "2025-12-14T01:52:38.144457"
+  },
+  {
+    "id": "mythical_6",
+    "name": "Dark Mythical Creatures #6",
     "collection": "Mythical Creatures",
     "description": "A powerful uncommon dark from the Mythical Creatures collection. Creatures from myths and legends.",
     "image": {
-      "thumbnail": "/assets/mythical/mythical_10_thumb.png",
-      "preview": "/assets/mythical/mythical_10_preview.png",
-      "full": "/assets/mythical/mythical_10.png"
+      "thumbnail": "/assets/mythical/mythical_6_thumb.png",
+      "preview": "/assets/mythical/mythical_6_preview.png",
+      "full": "/assets/mythical/mythical_6.png"
     },
     "traits": {
       "rarity": "Uncommon",
@@ -276,17 +160,133 @@
       "power": 77
     },
     "spiritual": {
-      "chakra": "solar_plexus",
-      "frequency_hz": 528,
-      "color": "yellow",
-      "level_unlock": 3
+      "chakra": "throat",
+      "frequency_hz": 741,
+      "color": "blue",
+      "level_unlock": 5
     },
     "price": {
-      "listed": "4.14 ETH",
-      "floor": "4.74 ETH",
-      "last_sale": "0.26 ETH"
+      "listed": "0.30 ETH",
+      "floor": "3.67 ETH",
+      "last_sale": "1.52 ETH"
+    },
+    "external_url": "https://example.com/nft/mythical/6",
+    "created_at": "2025-12-14T01:52:38.144465"
+  },
+  {
+    "id": "mythical_7",
+    "name": "Fire Mythical Creatures #7",
+    "collection": "Mythical Creatures",
+    "description": "A powerful rare fire from the Mythical Creatures collection. Creatures from myths and legends.",
+    "image": {
+      "thumbnail": "/assets/mythical/mythical_7_thumb.png",
+      "preview": "/assets/mythical/mythical_7_preview.png",
+      "full": "/assets/mythical/mythical_7.png"
+    },
+    "traits": {
+      "rarity": "Rare",
+      "element": "Fire",
+      "power": 74
+    },
+    "spiritual": {
+      "chakra": "throat",
+      "frequency_hz": 741,
+      "color": "blue",
+      "level_unlock": 5
+    },
+    "price": {
+      "listed": "4.55 ETH",
+      "floor": "0.63 ETH",
+      "last_sale": "4.10 ETH"
+    },
+    "external_url": "https://example.com/nft/mythical/7",
+    "created_at": "2025-12-14T01:52:38.144473"
+  },
+  {
+    "id": "mythical_8",
+    "name": "Dark Mythical Creatures #8",
+    "collection": "Mythical Creatures",
+    "description": "A powerful common dark from the Mythical Creatures collection. Creatures from myths and legends.",
+    "image": {
+      "thumbnail": "/assets/mythical/mythical_8_thumb.png",
+      "preview": "/assets/mythical/mythical_8_preview.png",
+      "full": "/assets/mythical/mythical_8.png"
+    },
+    "traits": {
+      "rarity": "Common",
+      "element": "Dark",
+      "power": 86
+    },
+    "spiritual": {
+      "chakra": "third_eye",
+      "frequency_hz": 852,
+      "color": "indigo",
+      "level_unlock": 6
+    },
+    "price": {
+      "listed": "3.35 ETH",
+      "floor": "4.14 ETH",
+      "last_sale": "4.76 ETH"
+    },
+    "external_url": "https://example.com/nft/mythical/8",
+    "created_at": "2025-12-14T01:52:38.144481"
+  },
+  {
+    "id": "mythical_9",
+    "name": "Mechanical Mythical Creatures #9",
+    "collection": "Mythical Creatures",
+    "description": "A powerful common mechanical from the Mythical Creatures collection. Creatures from myths and legends.",
+    "image": {
+      "thumbnail": "/assets/mythical/mythical_9_thumb.png",
+      "preview": "/assets/mythical/mythical_9_preview.png",
+      "full": "/assets/mythical/mythical_9.png"
+    },
+    "traits": {
+      "rarity": "Common",
+      "element": "Mechanical",
+      "power": 77
+    },
+    "spiritual": {
+      "chakra": "heart",
+      "frequency_hz": 639,
+      "color": "green",
+      "level_unlock": 4
+    },
+    "price": {
+      "listed": "2.17 ETH",
+      "floor": "0.90 ETH",
+      "last_sale": "4.35 ETH"
+    },
+    "external_url": "https://example.com/nft/mythical/9",
+    "created_at": "2025-12-14T01:52:38.144488"
+  },
+  {
+    "id": "mythical_10",
+    "name": "Air Mythical Creatures #10",
+    "collection": "Mythical Creatures",
+    "description": "A powerful epic air from the Mythical Creatures collection. Creatures from myths and legends.",
+    "image": {
+      "thumbnail": "/assets/mythical/mythical_10_thumb.png",
+      "preview": "/assets/mythical/mythical_10_preview.png",
+      "full": "/assets/mythical/mythical_10.png"
+    },
+    "traits": {
+      "rarity": "Epic",
+      "element": "Air",
+      "power": 90
+    },
+    "spiritual": {
+      "chakra": "crown",
+      "frequency_hz": 963,
+      "color": "violet",
+      "level_unlock": 7
+    },
+    "price": {
+      "listed": "0.74 ETH",
+      "floor": "2.43 ETH",
+      "last_sale": "2.61 ETH"
     },
     "external_url": "https://example.com/nft/mythical/10",
-    "created_at": "2025-10-03T17:18:02.347436"
+    "created_at": "2025-12-14T01:52:38.144498"
   }
 ]

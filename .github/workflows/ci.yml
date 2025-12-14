@@ -37,10 +37,11 @@ jobs:
         name: dist
         path: dist/
 
-  deploy:
+  staging-deploy:
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: github.event_name == 'pull_request'
+    environment: staging
 
     steps:
     - name: Download build artifacts
@@ -49,30 +50,99 @@ jobs:
         name: dist
         path: dist/
 
-    # Uncomment and configure for your deployment target:
-    
-    # Deploy to Vercel
-    # - name: Deploy to Vercel
-    #   uses: vercel/action@v1
-    #   with:
-    #     vercel-token: ${{ secrets.VERCEL_TOKEN }}
-    #     vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-    #     vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+    - name: Deploy to Vercel (Staging)
+      id: vercel-staging
+      uses: vercel/action@v1
+      with:
+        vercel-token: ${{ secrets.VERCEL_TOKEN }}
+        vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+        vercel-project-id: ${{ secrets.VERCEL_STAGING_PROJECT_ID }}
+        vercel-args: '--prod=false'
 
-    # Deploy to Netlify
-    # - name: Deploy to Netlify
-    #   uses: netlify/actions/cli@master
-    #   with:
-    #     args: deploy --dir=dist --prod
-    #   env:
-    #     NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-    #     NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+    - name: Check deployment status
+      if: failure()
+      run: echo "Staging deployment failed"
 
-    # Deploy via FTP (for traditional hosting)
-    # - name: FTP Deploy
-    #   uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-    #   with:
-    #     server: ${{ secrets.FTP_SERVER }}
-    #     username: ${{ secrets.FTP_USERNAME }}
-    #     password: ${{ secrets.FTP_PASSWORD }}
-    #     local-dir: ./dist/
+    - name: Alert on failure
+      if: failure()
+      uses: actions/github-script@v7
+      with:
+        script: |
+          github.rest.issues.create({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            title: 'Staging Deployment Failed',
+            body: `Deployment failed for PR #${context.issue.number}. Check the workflow run: ${context.payload.repository.html_url}/actions/runs/${context.runId}`,
+            labels: ['deployment-failure']
+          });
+
+  production-deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    environment: production
+    outputs:
+      deployment-url: ${{ steps.vercel-production.outputs.deployment-url }}
+
+    steps:
+    - name: Download build artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: dist
+        path: dist/
+
+    - name: Deploy to Vercel (Production)
+      id: vercel-production
+      uses: vercel/action@v1
+      with:
+        vercel-token: ${{ secrets.VERCEL_TOKEN }}
+        vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+        vercel-project-id: ${{ secrets.VERCEL_PRODUCTION_PROJECT_ID }}
+        vercel-args: '--prod=true'
+
+    - name: Check deployment status
+      run: |
+        if [ "${{ steps.vercel-production.outputs.deployment-url }}" == "" ]; then
+          echo "Production deployment failed - no URL returned"
+          exit 1
+        fi
+        echo "Production deployment successful: ${{ steps.vercel-production.outputs.deployment-url }}"
+
+    - name: Alert on failure
+      if: failure()
+      uses: actions/github-script@v7
+      with:
+        script: |
+          github.rest.issues.create({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            title: 'Production Deployment Failed',
+            body: `Production deployment failed. Check the workflow run: ${context.payload.repository.html_url}/actions/runs/${context.runId}`,
+            labels: ['deployment-failure', 'urgent']
+          });
+
+  docs-update:
+    needs: production-deploy
+    runs-on: ubuntu-latest
+    if: success()
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Update deployment documentation
+      run: |
+        echo "# Deployment History" > docs/deployment-history.md
+        echo "" >> docs/deployment-history.md
+        echo "## Latest Production Deployment" >> docs/deployment-history.md
+        echo "- Date: $(date -u +'%Y-%m-%d %H:%M:%S UTC')" >> docs/deployment-history.md
+        echo "- Commit: ${{ github.sha }}" >> docs/deployment-history.md
+        echo "- URL: ${{ needs.production-deploy.outputs.deployment-url }}" >> docs/deployment-history.md
+        echo "- Status: Success" >> docs/deployment-history.md
+
+    - name: Commit documentation update
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: "docs: update deployment history [skip ci]"
+        file_pattern: docs/deployment-history.md

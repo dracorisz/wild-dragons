@@ -1,0 +1,189 @@
+/*
+ * Wild Dragons CSS Design System
+ * Comprehensive CSS Variables for consistent theming
+ */
+
+:root {
+  /* Base Colors - Cosmic Dark Theme */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  
+  /* Primary Brand Colors */
+  --color-primary: #00fff7;      /* Cyan - Main accent */
+  --color-secondary: #ff00cc;    /* Magenta - Secondary accent */
+  --color-dragon: #ff6b35;       /* Dragon orange */
+  --color-sky: #5f9cff;         /* Sky blue */
+  
+  /* Background Colors */
+  --color-bg-primary: #181828;   /* Dark purple background */
+  --color-bg-secondary: #23234b; /* Medium purple background */
+  --color-bg-tertiary: #1a1a2e;  /* Darker purple background */
+  --color-bg-gradient: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+  
+  /* Text Colors */
+  --color-text-primary: var(--color-white);
+  --color-text-secondary: rgba(255, 255, 255, 0.8);
+  --color-text-tertiary: rgba(255, 255, 255, 0.6);
+  --color-text-disabled: rgba(255, 255, 255, 0.4);
+  
+  /* Border Colors */
+  --color-border-primary: rgba(0, 255, 255, 0.2);
+  --color-border-secondary: rgba(255, 0, 204, 0.2);
+  --color-border-active: var(--color-primary);
+  --color-border-hover: rgba(0, 255, 255, 0.4);
+  
+  /* Semantic Colors */
+  --color-success: #05f57d;
+  --color-warning: #f8310e;
+  --color-error: #ff6b6b;
+  --color-info: #5f9cff;
+  
+  /* Shadow Effects */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-neon: 0 0 8px var(--color-primary), 0 0 16px var(--color-secondary);
+  --shadow-neon-hover: 0 0 12px var(--color-primary), 0 0 24px var(--color-secondary);
+  
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+  
+  /* Spacing System */
+  --space-0: 0;
+  --space-1: 0.25rem;      /* 4px */
+  --space-2: 0.5rem;       /* 8px */
+  --space-3: 0.75rem;      /* 12px */
+  --space-4: 1rem;         /* 16px */
+  --space-5: 1.25rem;      /* 20px */
+  --space-6: 1.5rem;       /* 24px */
+  --space-8: 2rem;         /* 32px */
+  --space-10: 2.5rem;      /* 40px */
+  --space-12: 3rem;        /* 48px */
+  --space-16: 4rem;        /* 64px */
+  
+  /* Typography */
+  --font-family-base: 'Nova Round', sans-serif;
+  --font-family-heading: 'Cinzel', serif;
+  --font-family-code: 'Orbitron', monospace;
+  --font-family-fantasy: 'MedievalSharp', cursive;
+  
+  --font-size-xs: 0.75rem;     /* 12px */
+  --font-size-sm: 0.875rem;    /* 14px */
+  --font-size-base: 1rem;      /* 16px */
+  --font-size-lg: 1.125rem;    /* 18px */
+  --font-size-xl: 1.25rem;     /* 20px */
+  --font-size-2xl: 1.5rem;     /* 24px */
+  --font-size-3xl: 1.875rem;    /* 30px */
+  --font-size-4xl: 2.25rem;     /* 36px */
+  --font-size-5xl: 3rem;        /* 48px */
+  
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+  
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  
+  /* Transitions */
+  --transition-fast: all 0.1s ease;
+  --transition-normal: all 0.2s ease;
+  --transition-slow: all 0.3s ease;
+  
+  /* Z-index Layers */
+  --z-modal: 1000;
+  --z-tooltip: 1100;
+  --z-notification: 1200;
+  
+  /* Breakpoints */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  
+  /* NFT-Specific Variables */
+  --nft-card-bg: var(--color-bg-secondary);
+  --nft-card-border: var(--color-border-primary);
+  --nft-card-border-hover: var(--color-secondary);
+  --nft-card-shadow: var(--shadow-neon);
+  --nft-card-shadow-hover: var(--shadow-neon-hover);
+  
+  --nft-badge-bg: rgba(0, 0, 0, 0.7);
+  --nft-badge-text: var(--color-white);
+  
+  --nft-modal-bg: var(--color-bg-secondary);
+  --nft-modal-border: var(--color-primary);
+  
+  --nft-filter-bg: rgba(24, 24, 40, 0.5);
+  --nft-filter-border: var(--color-border-primary);
+  
+  /* Element Colors for NFT traits */
+  --element-fire: #ff4500;
+  --element-water: #1e90ff;
+  --element-earth: #8b4513;
+  --element-air: #add8e6;
+  --element-light: #fffacd;
+  --element-dark: #4b0082;
+  --element-cosmic: #9370db;
+  --element-nature: #228b22;
+  --element-mechanical: #808080;
+  
+  /* Rarity Colors */
+  --rarity-common: #a9a9a9;
+  --rarity-uncommon: #2e8b57;
+  --rarity-rare: #4169e1;
+  --rarity-epic: #800080;
+  --rarity-legendary: #ffd700;
+  --rarity-mythic: #ff69b4;
+}
+
+/* Dark theme overrides (if needed) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg-primary: #12121a;
+    --color-bg-secondary: #1e1e38;
+    --color-bg-tertiary: #141424;
+  }
+}
+
+/* Responsive breakpoints */
+@media (min-width: 640px) {
+  :root {
+    --breakpoint-current: sm;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --breakpoint-current: md;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --breakpoint-current: lg;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --breakpoint-current: xl;
+  }
+}
+
+@media (min-width: 1536px) {
+  :root {
+    --breakpoint-current: 2xl;
+  }
+}

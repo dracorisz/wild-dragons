@@ -1,0 +1,262 @@
+/*
+ * NFT Card Component - BEM Convention
+ * Standardized styling for NFT cards using CSS variables
+ */
+
+.nft-card {
+  background: var(--nft-card-bg);
+  border: 1.5px solid var(--nft-card-border);
+  border-radius: var(--radius-lg);
+  transition: var(--transition-normal);
+  cursor: pointer;
+  color: var(--color-text-primary);
+  overflow: hidden;
+}
+
+.nft-card:hover {
+  border-color: var(--nft-card-border-hover);
+  box-shadow: var(--nft-card-shadow-hover);
+  transform: translateY(-4px);
+}
+
+.nft-card__image {
+  position: relative;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+
+.nft-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.nft-card:hover .nft-card__image img {
+  transform: scale(1.05);
+}
+
+.nft-card__badge {
+  position: absolute;
+  background: var(--nft-badge-bg);
+  color: var(--nft-badge-text);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.nft-card__badge--rarity {
+  top: var(--space-2);
+  right: var(--space-2);
+}
+
+.nft-card__badge--element {
+  bottom: var(--space-2);
+  left: var(--space-2);
+}
+
+.nft-card__info {
+  padding: var(--space-4);
+}
+
+.nft-card__name {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-2);
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nft-card__description {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-3);
+  line-height: var(--line-height-normal);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.nft-card__stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.nft-card__price {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-dragon);
+}
+
+.nft-card__power {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.nft-card__power-label {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+
+.nft-card__power-value {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+}
+
+/* Element-specific styling */
+.nft-card--fire .nft-card__badge--element {
+  background: color-mix(in srgb, var(--element-fire), black 20%);
+}
+
+.nft-card--water .nft-card__badge--element {
+  background: color-mix(in srgb, var(--element-water), black 20%);
+}
+
+.nft-card--earth .nft-card__badge--element {
+  background: color-mix(in srgb, var(--element-earth), black 20%);
+}
+
+.nft-card--air .nft-card__badge--element {
+  background: color-mix(in srgb, var(--element-air), black 20%);
+}
+
+.nft-card--light .nft-card__badge--element {
+  background: color-mix(in srgb, var(--element-light), black 20%);
+}
+
+.nft-card--dark .nft-card__badge--element {
+  background: color-mix(in srgb, var(--element-dark), black 20%);
+}
+
+.nft-card--cosmic .nft-card__badge--element {
+  background: color-mix(in srgb, var(--element-cosmic), black 20%);
+}
+
+.nft-card--nature .nft-card__badge--element {
+  background: color-mix(in srgb, var(--element-nature), black 20%);
+}
+
+.nft-card--mechanical .nft-card__badge--element {
+  background: color-mix(in srgb, var(--element-mechanical), black 20%);
+}
+
+/* Rarity-specific styling */
+.nft-card--common .nft-card__badge--rarity {
+  background: color-mix(in srgb, var(--rarity-common), black 20%);
+}
+
+.nft-card--uncommon .nft-card__badge--rarity {
+  background: color-mix(in srgb, var(--rarity-uncommon), black 20%);
+}
+
+.nft-card--rare .nft-card__badge--rarity {
+  background: color-mix(in srgb, var(--rarity-rare), black 20%);
+}
+
+.nft-card--epic .nft-card__badge--rarity {
+  background: color-mix(in srgb, var(--rarity-epic), black 20%);
+}
+
+.nft-card--legendary .nft-card__badge--rarity {
+  background: color-mix(in srgb, var(--rarity-legendary), black 20%);
+}
+
+.nft-card--mythic .nft-card__badge--rarity {
+  background: color-mix(in srgb, var(--rarity-mythic), black 20%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .nft-card {
+    border-radius: var(--radius-md);
+  }
+
+  .nft-card__info {
+    padding: var(--space-2);
+  }
+
+  .nft-card__name {
+    font-size: var(--font-size-sm);
+  }
+
+  .nft-card__description {
+    font-size: var(--font-size-xs);
+    -webkit-line-clamp: 1;
+  }
+
+  .nft-card__stats {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-1);
+  }
+}
+
+@media (max-width: 640px) {
+  .nft-card {
+    border-radius: var(--radius-md);
+  }
+
+  .nft-card__info {
+    padding: var(--space-3);
+  }
+
+  .nft-card__name {
+    font-size: var(--font-size-base);
+  }
+}
+
+@media (min-width: 1024px) {
+  .nft-card {
+    border-radius: var(--radius-xl);
+  }
+
+  .nft-card__info {
+    padding: var(--space-5);
+  }
+
+  .nft-card__name {
+    font-size: var(--font-size-xl);
+  }
+}
+
+@media (min-width: 1280px) {
+  .nft-card__image {
+    aspect-ratio: 4/3;
+  }
+}
+
+@media (min-width: 1920px) {
+  .nft-card {
+    border-radius: var(--radius-2xl);
+  }
+
+  .nft-card__info {
+    padding: var(--space-6);
+  }
+
+  .nft-card__name {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+/* Animation effects */
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: var(--nft-card-shadow);
+  }
+  50% {
+    box-shadow: var(--nft-card-shadow-hover);
+  }
+}
+
+.nft-card--highlight {
+  animation: pulse 2s ease-in-out infinite;
+}

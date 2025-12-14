@@ -176,6 +176,77 @@ const formatTimeAgo = (timestamp) => {
 .empty {
   opacity: 0.6;
   font-style: italic;
+  color: white; /* Ensure empty state text is white */
+}
+
+/* Fix contrast issues - ensure white text on dark background */
+.home {
+  color: white; /* Ensure all text is white */
+}
+
+.hero {
+  color: white; /* White text in hero section */
+}
+
+.hero h1 {
+  color: white; /* White heading */
+}
+
+.hero p {
+  color: rgba(255, 255, 255, 0.85); /* Light white for subtitle */
+}
+
+.stat-card {
+  color: white; /* White text in stat cards */
+}
+
+.stat-value {
+  color: white; /* White stat values */
+}
+
+.stat-label {
+  color: rgba(255, 255, 255, 0.7); /* Light white labels */
+}
+
+.panel {
+  color: white; /* White text in panels */
+}
+
+.panel h2 {
+  color: white; /* White panel headings */
+}
+
+.panel li {
+  color: white; /* White list items */
+}
+
+/* Button styling for better visibility */
+.btn {
+  color: white; /* White button text */
+  background: rgba(24, 24, 40, 0.8);
+  border: 1px solid #00fff7;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background: #00fff7;
+  color: #23234b; /* Dark text on light background */
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: #00fff7;
+  color: #23234b; /* Dark text for primary buttons */
+}
+
+.btn-secondary {
+  background: rgba(24, 24, 40, 0.8);
+  color: white;
+  border: 1px solid #ff00cc;
 }
 
 @media (max-width: 600px) {

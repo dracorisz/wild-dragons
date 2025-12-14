@@ -8,9 +8,9 @@
     </header> 
     
     <main class="container mx-auto py-8 px-4"> 
-      <h2 class="section-title">NFT Marketplace</h2> 
-      <NFTMarketplace /> 
-    </main> 
+      <h2 class="section-title">NFT Marketplace</h2>
+      <UnifiedNFTDisplay />
+    </main>
     
     <footer class="bg-primary/30 py-6 mt-12 text-center"> 
       <p>© {{ new Date().getFullYear() }} Heroine's Dragon. All rights reserved.</p> 
@@ -19,22 +19,9 @@
 </template> 
  
 <script> 
-import NFTMarketplace from '../components/NFTMarketplace.vue' 
+
+import UnifiedNFTDisplay from '../components/nft/UnifiedNFTDisplay.vue'
  
-export default { 
-  name: 'HomePage', 
-  components: { 
-    NFTMarketplace 
-  } 
-} 
-</script>
-    <footer class="bg-primary/30 py-6 mt-12 text-center"> 
-      <p>© {{ new Date().getFullYear() }} Heroine's Dragon. All rights reserved.</p> 
-    </footer> 
-  </div> 
-</template> 
- 
-<script> 
 export default { 
   name: 'HomePage', 
   data() { 
@@ -43,6 +30,9 @@ export default {
       loading: true 
     } 
   }, 
+  components: {
+    UnifiedNFTDisplay
+  } ,
   mounted() { 
     this.fetchCollections() 
   }, 
@@ -76,3 +66,52 @@ export default {
   } 
 } 
 </script>
+
+<style scoped>
+/* Fix contrast issues - ensure white text on dark background */
+.cosmic-bg {
+  color: white; /* Ensure all text is white */
+}
+
+.cosmic-bg p {
+  color: white; /* White text for paragraphs */
+  opacity: 0.9; /* Slightly transparent for better readability */
+}
+
+.cosmic-bg header p {
+  color: white; /* Ensure header paragraph is white */
+  opacity: 0.85; /* Match original opacity but with white color */
+}
+
+footer {
+  color: white; /* White text for footer */
+  opacity: 0.8; /* Subtle transparency */
+}
+
+/* Section title with gradient */
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+  background: linear-gradient(90deg, #00fff7, #ff00cc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Navigation link styling for better UX */
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  background: rgba(0, 255, 255, 0.2);
+  color: #00fff7;
+}
+</style>

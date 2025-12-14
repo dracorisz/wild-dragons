@@ -1,0 +1,50 @@
+{
+  "total_images": 0,
+  "categories": {
+    "fire": {
+      "query": "fire fantasy art dragons",
+      "downloaded": 0,
+      "images": []
+    },
+    "water": {
+      "query": "water fantasy art dragons sea creatures",
+      "downloaded": 0,
+      "images": []
+    },
+    "earth": {
+      "query": "earth fantasy art dragons mountains",
+      "downloaded": 0,
+      "images": []
+    },
+    "air": {
+      "query": "air fantasy art dragons sky",
+      "downloaded": 0,
+      "images": []
+    },
+    "light": {
+      "query": "light fantasy art angels celestial",
+      "downloaded": 0,
+      "images": []
+    },
+    "dark": {
+      "query": "dark fantasy art dragons demons",
+      "downloaded": 0,
+      "images": []
+    },
+    "cosmic": {
+      "query": "cosmic fantasy art space dragons",
+      "downloaded": 0,
+      "images": []
+    },
+    "nature": {
+      "query": "nature fantasy art creatures",
+      "downloaded": 0,
+      "images": []
+    },
+    "mechanical": {
+      "query": "mechanical fantasy art steampunk dragons",
+      "downloaded": 0,
+      "images": []
+    }
+  }
+}

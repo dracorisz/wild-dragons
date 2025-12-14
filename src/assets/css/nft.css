@@ -1,36 +1,36 @@
 /* Cosmic dark background and neon accents */
 .cosmic-bg {
-  background: radial-gradient(ellipse at top left, #1a1a2e 60%, #0f3460 100%);
+  background: radial-gradient(ellipse at top left, var(--color-bg-tertiary) 60%, #0f3460 100%);
   min-height: 100vh;
 }
 .neon-border {
-  border: 2px solid #00fff7;
-  box-shadow: 0 0 16px #00fff7, 0 0 32px #5f9cff inset;
+  border: 2px solid var(--color-primary);
+  box-shadow: 0 0 16px var(--color-primary), 0 0 32px var(--color-sky) inset;
   /* border-radius: 16px; */
 }
 
 /* NFT Card styling */
 .nft-card {
-  background: #181828;
-  border: 1.5px solid #00fff7;
-  box-shadow: 0 0 8px #00fff733;
+  background: var(--color-bg-primary);
+  border: 1.5px solid var(--color-primary);
+  box-shadow: 0 0 8px var(--color-border-primary);
   /* border-radius: 18px; */
   padding: 2rem 1.2rem 1.2rem 1.2rem;
-  color: #fff;
+  color: var(--color-white);
   transition: box-shadow 0.2s, border-color 0.2s;
   /* min-height: 340px; */
 }
 .nft-card:hover {
-  border-color: #ff00cc;
-  box-shadow: 0 0 16px #ff00cc44;
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 16px rgba(255, 0, 204, 0.267);
 }
 .nft-card img {
   /* border-radius: 12px; */
-  box-shadow: 0 0 4px #00fff7;
+  box-shadow: 0 0 4px var(--color-primary);
   width: 160px;
   height: 160px;
   object-fit: cover;
-  background: #23234b;
+  background: var(--color-bg-secondary);
   margin-bottom: 0.5rem;
 }
 
@@ -43,8 +43,8 @@
 .nft-name {
   font-family: 'Cinzel', serif;
   font-size: 1rem;
-  color: #00fff7;
-  text-shadow: 0 0 4px #ff00cc33;
+  color: var(--color-primary);
+  text-shadow: 0 0 4px var(--color-border-secondary);
 }
 .nft-desc {
   font-size: 0.85rem;
@@ -61,13 +61,13 @@
   align-items: center;
 }
 .bg-grad {
-  background: linear-gradient(90deg, #00fff7 60%, #ff00cc 100%);
+  background: linear-gradient(90deg, var(--color-primary) 60%, var(--color-secondary) 100%);
 }
 .down {
-  background: linear-gradient(180deg, #00fff7 0%, #181828 100%);
+  background: linear-gradient(180deg, var(--color-primary) 0%, var(--color-bg-primary) 100%);
 }
 .up {
-  background: linear-gradient(0deg, #00fff7 0%, #181828 100%);
+  background: linear-gradient(0deg, var(--color-primary) 0%, var(--color-bg-primary) 100%);
 }
 /* Action buttons - minimal neon accent */
 .nft-actions {
@@ -77,9 +77,9 @@
   justify-content: center;
 }
 .nft-btn {
-  background: #23234b;
-  color: #00fff7;
-  border: 1.5px solid #00fff7;
+  background: var(--color-bg-secondary);
+  color: var(--color-primary);
+  border: 1.5px solid var(--color-primary);
   /* border-radius: 8px; */
   /* padding: 0.35rem 1rem; */
   /* font-weight: 500; */
@@ -90,17 +90,17 @@
   transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 .nft-btn:hover {
-  background: #00fff7;
-  color: #23234b;
-  border-color: #ff00cc;
+  background: var(--color-primary);
+  color: var(--color-bg-secondary);
+  border-color: var(--color-secondary);
 }
 
 /* Slider for top collections */
 .nft-slider {
     @apply flex w-full overflow-x-scroll gap-5 p-5;
 
-    border-bottom: 1px solid #00fff7;
-    border-top: 1px solid #00fff7;
+    border-bottom: 1px solid var(--color-primary);
+    border-top: 1px solid var(--color-primary);
     @apply w-full bg-gradient-to-r from-[#00fff700] from-0% via-[#00fff722] via-50% to-[#00fff700] to-100%;
 }
 .nft-slider::-webkit-scrollbar { 
@@ -108,17 +108,17 @@
 }
 .div-up {
 @apply !h-5 min-h-5 w-full absolute top-0 left-0 right-0;
-/* background: linear-gradient(90deg, #23234b 80%, #1a1a2e 100%) !important; */
-background: linear-gradient(0deg, #00fff700 30%, #00fff733 90%);
+/* background: linear-gradient(90deg, var(--color-bg-secondary) 80%, var(--color-bg-tertiary) 100%) !important; */
+background: linear-gradient(0deg, transparent 30%, var(--color-border-primary) 90%);
 }
 .nft-slider::-webkit-scrollbar-thumb {
 
-    background: linear-gradient(90deg, #00fff700 20%, #00fff755 50%, #00fff700 80%);
+    background: linear-gradient(90deg, transparent 20%, #00fff755 50%, transparent 80%);
 }
 
-.nft-slider::-webkit-scrollbar-track { 
-    background: linear-gradient(180deg, #00fff700 30%, #00fff733 90%);
-    /* background: linear-gradient(90deg, #23234b 80%, #1a1a2e 100%); */
+.nft-slider::-webkit-scrollbar-track {
+    background: linear-gradient(180deg, transparent 30%, var(--color-border-primary) 90%);
+    /* background: linear-gradient(90deg, var(--color-bg-secondary) 80%, var(--color-bg-tertiary) 100%); */
     @apply !w-5 !h-5
  }
 /* .nft-slider { -ms-overflow-style: none; scrollbar-width: none; } */
@@ -126,11 +126,11 @@ background: linear-gradient(0deg, #00fff700 30%, #00fff733 90%);
   min-width: 320px;
   max-width: 320px;
   width: 320px;
-  background: #000000;
-  border: 2px solid #ff00cc;
+  background: var(--color-black);
+  border: 2px solid var(--color-secondary);
   /* border-radius: 14px; */
-  box-shadow: 0 0 12px #ff00cc;
-  color: #fff;
+  box-shadow: 0 0 12px var(--color-secondary);
+  color: var(--color-white);
   text-align: center;
   /* padding: 0.8rem; */
   /* font-family: 'Cinzel', serif; */
@@ -144,9 +144,9 @@ background: linear-gradient(0deg, #00fff700 30%, #00fff733 90%);
   justify-content: center;
 }
 .nft-tab {
-  background: #23234b;
-  color: #00fff7;
-  border: 2px solid #ff00cc;
+  background: var(--color-bg-secondary);
+  color: var(--color-primary);
+  border: 2px solid var(--color-secondary);
   /* border-radius: 10px; */
   padding: 0.5rem 1.2rem;
   font-family: 'Orbitron', sans-serif;
@@ -154,8 +154,8 @@ background: linear-gradient(0deg, #00fff700 30%, #00fff733 90%);
   transition: background 0.2s, color 0.2s;
 }
 .nft-tab.active, .nft-tab:hover {
-  background: #ff00cc;
-  color: #fff;
+  background: var(--color-secondary);
+  color: var(--color-white);
 }
 
 /* Modals */
@@ -169,14 +169,14 @@ background: linear-gradient(0deg, #00fff700 30%, #00fff733 90%);
   justify-content: center;
 }
 .nft-modal-content {
-  background: #23234b;
-  border: 2px solid #00fff7;
+  background: var(--color-bg-secondary);
+  border: 2px solid var(--color-primary);
   /* border-radius: 18px; */
-  box-shadow: 0 0 32px #ff00cc;
+  box-shadow: 0 0 32px var(--color-secondary);
   padding: 2rem;
   min-width: 320px;
   max-width: 90vw;
-  color: #fff;
+  color: var(--color-white);
 }
 
 /* Toast notifications */
@@ -184,13 +184,13 @@ background: linear-gradient(0deg, #00fff700 30%, #00fff733 90%);
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  background: linear-gradient(90deg, #00fff7 60%, #ff00cc 100%);
-  color: #23234b;
+  background: linear-gradient(90deg, var(--color-primary) 60%, var(--color-secondary) 100%);
+  color: var(--color-bg-secondary);
   /* border-radius: 10px; */
   padding: 1rem 2rem;
   font-family: 'Orbitron', sans-serif;
   font-weight: bold;
-  box-shadow: 0 0 16px #ff00cc;
+  box-shadow: 0 0 16px var(--color-secondary);
   z-index: 2000;
   animation: fadeIn 0.5s;
 }
@@ -213,12 +213,12 @@ background: linear-gradient(0deg, #00fff700 30%, #00fff733 90%);
   max-height: 24px;
   margin-right: 0.5rem;
   vertical-align: middle;
-  filter: drop-shadow(0 0 2px #00fff7);
+  filter: drop-shadow(0 0 2px var(--color-primary));
 }
 
 /* Faucet/external links */
 .nft-faucet-link, .nft-market-link {
-  color: #00fff7;
+  color: var(--color-primary);
   text-decoration: underline;
   font-weight: 500;
   margin-right: 0;
@@ -226,27 +226,27 @@ background: linear-gradient(0deg, #00fff700 30%, #00fff733 90%);
   letter-spacing: 0.03em;
 }
 .nft-faucet-link:hover, .nft-market-link:hover {
-  color: #ff00cc;
-  text-shadow: 0 0 4px #ff00cc;
+  color: var(--color-secondary);
+  text-shadow: 0 0 4px var(--color-secondary);
 }
 
 /* Hide scrollbars for slider */
 /* .nft-slider::-webkit-scrollbar { display: none; } */
 /* .nft-slider { -ms-overflow-style: none; scrollbar-width: none; } */
 .resource-card {
-  background: #181828;
-  border: 1.5px solid #00fff7;
-  color: #fff;
+  background: var(--color-bg-primary);
+  border: 1.5px solid var(--color-primary);
+  color: var(--color-white);
   border-radius: 12px;
   padding: 0.5rem 0.75rem;
-  box-shadow: 0 0 8px #00fff733;
+  box-shadow: 0 0 8px var(--color-border-primary);
   transition: border-color 0.2s;
 }
 .resource-card:hover {
-  border-color: #ff00cc;
+  border-color: var(--color-secondary);
 }
 .nft-market-link {
-  color: #00fff7;
+  color: var(--color-primary);
   text-decoration: underline;
   font-weight: 500;
   margin-right: 0;
@@ -255,6 +255,6 @@ background: linear-gradient(0deg, #00fff700 30%, #00fff733 90%);
   font-size: 0.95em;
   padding: 0.15em 0.5em;
   border-radius: 6px;
-  background: #23234b;
+  background: var(--color-bg-secondary);
   margin-bottom: 0.25em;
 }

@@ -1,0 +1,25 @@
+{
+  "total_images": 0,
+  "categories": {
+    "dragons": {
+      "downloaded": 0,
+      "images": []
+    },
+    "cosmic": {
+      "downloaded": 0,
+      "images": []
+    },
+    "elemental": {
+      "downloaded": 0,
+      "images": []
+    },
+    "fantasy": {
+      "downloaded": 0,
+      "images": []
+    },
+    "mythical": {
+      "downloaded": 0,
+      "images": []
+    }
+  }
+}

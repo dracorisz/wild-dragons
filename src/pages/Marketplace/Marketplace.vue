@@ -74,38 +74,7 @@
       </a>
     </div>
     <!-- NFT Grid -->
-    <NFTGrid :nfts="filteredNFTs" @buy="openModal('buy', $event)" @mint="openModal('mint', $event)" @list="openModal('list', $event)" @transfer="openModal('transfer', $event)" @view="openModal('view', $event)">
-      <template #toast>
-        <div v-if="toastMsg" class="nft-toast">{{ toastMsg }}</div>
-      </template>
-      <template #modals>
-        <div v-if="modalType" class="nft-modal" @click.self="closeModal">
-          <div class="nft-modal-content">
-            <h2 class="nft-name mb-2 text-center uppercase">{{ modalType }} NFT</h2>
-            <div v-if="modalNFT">
-              <img :src="modalNFT.image" class="nft-icon mb-2" />
-              <div class="nft-details">
-                <div class="nft-name">{{ modalNFT.name }}</div>
-                <div class="nft-desc">{{ modalNFT.description }}</div>
-                <div class="nft-meta">
-                  <span>Chain: {{ modalNFT.chain }}</span>
-                  <span>Price: {{ modalNFT.price }}</span>
-                  <span>Royalty: {{ modalNFT.royalty }}</span>
-                  <span>Owner: {{ modalNFT.owner }}</span>
-                </div>
-              </div>
-              <div class="nft-actions mt-4">
-                <button v-if="modalType === 'buy'" class="nft-btn" @click="doAction('buy')">Buy</button>
-                <button v-if="modalType === 'mint'" class="nft-btn" @click="doAction('mint')">Mint</button>
-                <button v-if="modalType === 'list'" class="nft-btn" @click="doAction('list')">List</button>
-                <button v-if="modalType === 'transfer'" class="nft-btn" @click="doAction('transfer')">Transfer</button>
-                <button v-if="modalType === 'view'" class="nft-btn" @click="closeModal">Close</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </template>
-    </NFTGrid>
+    <UnifiedNFTDisplay :externalData="{ nfts: filteredNFTs }" @mint="openModal('mint', $event)" />
     <!-- Resource Preview & DAO Connection -->
     <div class="bg-black/60 rounded-lg p-4 mb-8 flex flex-wrap gap-4 items-center">
       <div v-for="res in resources.slice(0,10)" :key="res.id" class="flex flex-col items-center justify-center w-28 h-28 bg-[#181828] border border-[#00fff7] rounded-lg p-2">
@@ -125,7 +94,7 @@
 
 <script setup>
 import { ref, computed, onMounted } from "vue";
-import NFTGrid from "./NFTGrid.vue";
+import UnifiedNFTDisplay from "../../components/nft/UnifiedNFTDisplay.vue";
 
 // Sample data for demo
 const topCollections = [

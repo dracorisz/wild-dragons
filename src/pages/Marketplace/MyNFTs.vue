@@ -1,7 +1,7 @@
 <template>
   <div class="max-w-5xl mx-auto py-10">
     <h2 class="text-2xl font-bold mb-6 text-center">My NFTs</h2>
-    <NFTGrid :nfts="myNFTs" :showActions="true" @list="openListModal" @transfer="openTransferModal" />
+    <UnifiedNFTDisplay :externalData="{ nfts: myNFTs }" />
     <div v-if="showListModal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
       <div class="bg-white rounded-lg p-8 shadow-lg w-full max-w-md">
         <h3 class="text-xl font-bold mb-4">List NFT for Sale</h3>
@@ -25,7 +25,7 @@
 </template>
 <script setup>
 import { ref, onMounted } from 'vue'
-import NFTGrid from './NFTGrid.vue'
+import UnifiedNFTDisplay from '../../components/nft/UnifiedNFTDisplay.vue'
 import { fetchMyNFTs, listNFT, transferNFT } from '../../web3/nft'
 import Toast from '../../components/Toast.vue'
 

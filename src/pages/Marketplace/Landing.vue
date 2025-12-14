@@ -1,5 +1,5 @@
 <template>
-  <div class="cosmic-bg min-h-screen flex flex-col items-center justify-center px-10 py-10">
+  <div class="cosmic-bg min-h-screen flex flex-col items-center justify-center px-10 py-10 overflow-scroll">
     <h1 class="text-4xl font-bold text-white mb-6">Wild Dragons Marketplace</h1>
     <div class="nft-slider mb-8 overflow-x-scroll">
       <div v-for="img in cc0Images" :key="img.src" class="nft-slider-item flex flex-col items-center justify-center p-6 gap-2" style="min-width:320px;max-width:320px;">
@@ -20,9 +20,12 @@
         <a href="/resources.json" target="_blank" class="nft-market-link text-xs">All Resources</a>
       </div>
     </div>
+    <UnifiedNFTDisplay />
   </div>
 </template>
 <script setup>
+import UnifiedNFTDisplay from '../../components/nft/UnifiedNFTDisplay.vue'
+
 const cc0Images = [
   {
     src: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",

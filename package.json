@@ -2,31 +2,35 @@
   "name": "wild-dragons",
   "private": true,
   "version": "0.0.3",
-  "type": "module",
   "description": "A re-themeable Play2Earn fantasy dragon game built with Vue 3",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "echo \"No tests specified yet\" && exit 0",
+    "test": "vitest",
+    "test:run": "vitest run",
     "lint": "echo \"No linting configured yet\" && exit 0"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.57.4",
-    "@tailwindcss/vite": "^4.1.13",
     "ethers": "^6.15.0",
     "pinia": "^3.0.3",
     "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.6.14",
-    "tailwindcss": "^4.1.13",
+    "tailwindcss": "^3.4.17",
     "three": "^0.180.0",
     "vue": "^3.5.18",
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/test-utils": "^2.4.6",
+    "autoprefixer": "^10.4.20",
+    "jsdom": "^27.3.0",
+    "postcss": "^8.5.3",
     "vite": "^7.1.2",
     "vite-plugin-pwa": "^1.0.3",
+    "vitest": "^4.0.15",
     "workbox-window": "^7.3.0"
   },
   "keywords": [

@@ -1,100 +1,65 @@
-# Wild Dragons NFT Marketplace
+# Wild Dragons NFT Marketplace Data
 
-A blockchain-based NFT marketplace for fantasy dragon collectibles with cosmic, minimal, and neon-accented UI.
+## Directory Structure
 
-## 🐉 Project Overview
+- `/data/`
+  - `/collections/` - JSON files for each collection
+  - `/resources/` - Additional NFT-inspired resources
+- `/assets/`
+  - `/pinterest-thumbs/` - Scraped art pool
+  - `/{collection_name}/` - Processed NFT images for each collection
+- `/meta/`
+  - `index.json` - Master index linking all datasets
 
-Wild Dragons NFT Marketplace (also known as "Heroine's Dragon") is a Play-to-Earn fantasy RPG that allows users to:
+## JSON Schema
 
-- Collect, mint, and trade dragon-themed NFTs
-- Battle with legendary creatures
-- Earn rewards through gameplay
-- Participate in DAO governance
-- Progress through a chakra-based spiritual system
-
-## 📋 Features
-
-- **NFT Marketplace**: Browse, filter, and purchase dragon NFTs
-- **Collection Management**: View owned NFTs and their stats
-- **Spiritual Progression**: Level up through chakra-based system
-- **Responsive Design**: Works across desktop, tablet, and mobile
-- **PWA Support**: Install as native app experience
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js v16+
-- Python 3.8+ (for data generation scripts)
-
-### Installation
-
-1. Clone the repository
-   ```
-   git clone https://github.com/your-username/wild-dragons.git
-   cd wild-dragons
-   ```
-
-2. Set up the environment
-   ```
-   ./build-wild-dragons.bat
-   ```
-   
-3. Start the development server
-   ```
-   npm run dev
-   ```
-
-4. Open your browser to http://localhost:5173
-
-## 🏗️ Project Structure
-```
-📁 src/
-├── assets/          # Static files (images, styles, database schema)
-├── components/      # Reusable Vue components
-├── pages/           # Route pages (e.g., Connect, Game, Landing)
-├── router/          # Vue Router configuration
-├── stores/          # Pinia state management
-└── main.js          # Application entry point
+```json
+{
+  "id": "unique-token-id",
+  "name": "Asset Name",
+  "collection": "Collection Name",
+  "description": "Asset description",
+  "image": {
+    "thumbnail": "/assets/{collection}/{id}_thumb.png",
+    "preview": "/assets/{collection}/{id}_preview.png",
+    "full": "/assets/{collection}/{id}.png"
+  },
+  "traits": {
+    "rarity": "Epic",
+    "element": "Fire",
+    "power": 87
+  },
+  "price": {
+    "listed": "1.25 ETH",
+    "floor": "1.00 ETH",
+    "last_sale": "0.90 ETH"
+  },
+  "external_url": "https://tokentrove.com/asset/{id}",
+  "spiritual": {
+    "chakra": "root",
+    "frequency_hz": 396,
+    "color": "red",
+    "level_unlock": 3
+  }
+}
 ```
 
-## Database Schema
-The database is managed using Supabase and includes the following tables:
+## Integration Guide
 
-- **users**: Stores user information such as email, username, and metadata.
-- **heroes**: Stores hero data linked to users.
-- **dragons**: Stores dragon data linked to users.
+To integrate the data into your application:
 
-### Key Features
-- UUIDs for primary keys.
-- JSONB fields for flexible data storage (e.g., skills, wallets).
-- Row-level security policies for user-specific data access.
+1. Load the master index from `/meta/index.json`
+2. Iterate through the collections and load each collection's JSON file
+3. For each NFT, the image paths follow the naming convention:
+   - Thumbnail: `/assets/{collection}/{id}_thumb.png`
+   - Preview: `/assets/{collection}/{id}_preview.png`
+   - Full: `/assets/{collection}/{id}.png`
 
-## Useful Links
-- [Supabase Authentication Documentation](https://supabase.com/docs/guides/auth)
-- [GitHub Repository](https://github.com/dracorisz/wild-dragons)
-- [Live Application](https://wild-dragons.vercel.app/)
+## Data Sources
 
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+- NFT data: TokenTrove
+- Images: Pinterest (with attribution)
 
----
+## Kundalini Awakening Extension
 
-**Built with ❤️ using Vue 3, Vite, Tailwind CSS, and Supabase**
-npm run dev      # Start development server
-npm run build    # Build for production
-npm run preview  # Preview production build
-```
-
-## Useful Links
-- [Supabase Authentication Documentation](https://supabase.com/docs/guides/auth)
-- [GitHub Repository](https://github.com/dracorisz/wild-dragons)
-- [Live Application](https://wild-dragons.vercel.app/)
-
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-**Built with ❤️ using Vue 3, Vite, Tailwind CSS, and Supabase**
-
+Each item includes spiritual attributes for integration with the chakra-based progression system.

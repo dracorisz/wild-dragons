@@ -1,7 +1,10 @@
 // Basic service worker registration for PWA
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js').then(registration => {
+    navigator.serviceWorker.register('/src/serviceWorker.js', {
+      scope: '/src/',
+      updateViaCache: 'none'
+    }).then(registration => {
       console.log('ServiceWorker registration successful:', registration);
     }).catch(error => {
       console.log('ServiceWorker registration failed:', error);
@@ -433,27 +436,4 @@ async function getImprovementData() {
   return data ? JSON.parse(data) : null;
 }
 
-// Auto-register service worker if not already registered
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/src/serviceWorker.js', {
-    scope: '/',
-    updateViaCache: 'none'
-  })
-  .then(registration => {
-    console.log('🔧 Service Worker registered:', registration);
-    
-    // Auto-request notification permission
-    if ('Notification' in window && Notification.permission === 'default') {
-      Notification.requestPermission();
-    }
-    
-    // Auto-setup background sync
-    if ('serviceWorker' in navigator && 'sync' in window.ServiceWorkerRegistration) {
-      // Auto-register sync for minting
-      registration.sync.register('background-sync-minting');
-    }
-  })
-  .catch(error => {
-    console.error('🔧 Service Worker registration failed:', error);
-  });
-}
+// Service worker registration is handled at the top of the file

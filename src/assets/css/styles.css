@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./variables.css";
 @import "./utils.css";
 @import "./nft.css";
 
@@ -14,9 +15,9 @@
   --color-warning: #f8310e;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   @apply h-0 w-0;
-}
+} */
 
 body {
   @apply sticky m-0 bg-white p-0 text-black;
@@ -132,4 +133,89 @@ input::placeholder {
 
 .password-helper li.valid {
   color: #22a311;
+}
+
+/* Responsive Design - Mobile First */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  nav {
+    height: 50px;
+    padding: 0 1rem;
+  }
+
+  nav a {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .hero {
+    font-size: 2rem;
+  }
+
+  .page {
+    min-height: calc(100vh - 50px);
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    height: 55px;
+    padding: 0 1.5rem;
+  }
+
+  nav a {
+    padding: 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  .hero {
+    font-size: 2.5rem;
+  }
+
+  .page {
+    min-height: calc(100vh - 55px);
+  }
+}
+
+@media (min-width: 1024px) {
+  nav {
+    height: 50px;
+    padding: 0 2rem;
+  }
+
+  nav a {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .hero {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  nav {
+    padding: 0 3rem;
+  }
+
+  .hero {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  nav {
+    padding: 0 4rem;
+  }
+
+  .hero {
+    font-size: 5rem;
+  }
+
+  body {
+    font-size: 18px;
+  }
 }

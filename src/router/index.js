@@ -13,7 +13,7 @@ const routes = [
   {
     path: '/marketplace',
     name: 'Marketplace',
-    component: () => import('../views/HomePage.vue'),
+    component: () => import('../views/MarketplacePage.vue'),
     meta: {
       title: "Heroine's Dragon - Marketplace"
     }
@@ -38,55 +38,50 @@ const routes = [
   {
     path: "/landing", 
     name: "Landing", 
-    component: () => import('../views/LandingPage.vue')
+    component: () => import('../pages/Landing.vue')
   },
   {
     path: "/connect", 
     name: "Connect", 
-    component: () => import('../views/ConnectPage.vue')
+    component: () => import('../pages/Connect.vue')
   },
   {
     path: "/web3", 
     name: "Web3", 
-    component: () => import('../views/Web3Page.vue')
+    component: () => import('../pages/Web3.vue')
   },
   {
     path: "/how-to-play", 
     name: "HowToPlay", 
-    component: () => import('../views/HowToPlayPage.vue')
+    component: () => import('../pages/HowToPlay.vue')
   },
   {
     path: "/about", 
     name: "About", 
-    component: () => import('../views/AboutPage.vue')
-  },
-  {
-    path: "/nft-marketplace", 
-    name: "NFTMarketplace", 
-    component: () => import('../views/NFTMarketplacePage.vue')
+    component: () => import('../pages/About.vue')
   },
   {
     path: "/marketplace/mint", 
     name: "Mint", 
-    component: () => import('../views/MintPage.vue'), 
+    component: () => import('../pages/Marketplace/Mint.vue'), 
     meta: { requiresAuth: true }
   },
   {
     path: "/marketplace/my", 
     name: "MyNFTs", 
-    component: () => import('../views/MyNFTsPage.vue'), 
+    component: () => import('../pages/Marketplace/MyNFTs.vue'), 
     meta: { requiresAuth: true }
   },
   {
     path: "/game",
     name: "Game",
-    component: () => import('../views/GamePage.vue'),
+    component: () => import('../views/Game.vue'),
     meta: { title: "Heroine's Dragon - Play" }
   },
   {
     path: "/minting",
     name: "Minting",
-    component: () => import('../views/MintingPage.vue'),
+    component: () => import('../views/Minting.vue'),
     meta: { 
       title: "Heroine's Dragon - Minting Hub", 
       requiresAuth: true, 
@@ -107,12 +102,10 @@ const router = createRouter({
 });
 
 // Update document title based on route
-router.beforeEach((to, from, next) => {
+router.beforeEach(async (to, from, next) => {
+  // Update document title
   document.title = to.meta.title || 'Heroine\'s Dragon';
-  next();
-});
-
-export default router;
+  
   // Check authentication requirements
   if (to.meta.requiresAuth) {
     try {
@@ -142,7 +135,7 @@ export default router;
   
   // Check minting mode requirements
   if (to.meta.requiresMintingMode) {
-    const isMintingMode = localStorage.getItem('mintingMode') === 'true' || 
+    const isMintingMode = localStorage.getItem('mintingMode') === 'true' ||
                         window.location.search.includes('branch=minting');
     if (!isMintingMode) {
       console.log('💎 Redirecting to home (minting mode required)');
@@ -155,4 +148,3 @@ export default router;
 });
 
 export default router;
-
