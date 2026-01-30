@@ -122,7 +122,7 @@ c13.898,10.031,23.998,20.177,29.681,26.457C267.162,137.527,257.063,147.672,243.1
 <script setup>
 import { ref, watch, computed } from "vue";
 import { useRouter } from "vue-router";
-import { supabase } from "../main";
+// import { supabase } from "../main";
 import Toast from "../components/Toast.vue";
 
 const router = useRouter();
@@ -153,9 +153,9 @@ function getRedirectUrl(path = "/") {
 
 async function handleForgotPassword() {
   errorMessage.value = "";
-  const { error } = await supabase.auth.resetPasswordForEmail(forgotEmail.value, {
-    redirectTo: getRedirectUrl("/reset-password"),
-  });
+  // const { error } = await supabase.auth.resetPasswordForEmail(forgotEmail.value, {
+  //   redirectTo: getRedirectUrl("/reset-password"),
+  // });
 
   if (error) {
     errorMessage.value = error.message;
@@ -193,39 +193,39 @@ watch(errorMessage, (val) => {
 
 async function handleSignIn() {
   errorMessage.value = "";
-  try {
-    const { error: err } = await supabase.auth.signInWithPassword({ email: email.value, password: password.value });
-    if (err) {
-      errorMessage.value = err.message + ".";
-      return;
-    }
+  // try {
+  //   const { error: err } = await supabase.auth.signInWithPassword({ email: email.value, password: password.value });
+  //   if (err) {
+  //     errorMessage.value = err.message + ".";
+  //     return;
+  //   }
 
-    router.push("/world");
-  } catch (e) {}
+  //   router.push("/world");
+  // } catch (e) {}
 }
 
 async function handleSignUp() {
   errorMessage.value = "";
-  const { error: err } = await supabase.auth.signUp({ email: newEmail.value, password: newPassword.value });
-  if (err) {
-    if (err.message && err.message.toLowerCase().includes("already registered")) {
-      errorMessage.value = "An account with this email already exists.";
-      return;
-    }
-    errorMessage.value = err.message;
-    return;
-  }
+  // const { error: err } = await supabase.auth.signUp({ email: newEmail.value, password: newPassword.value });
+  // if (err) {
+  //   if (err.message && err.message.toLowerCase().includes("already registered")) {
+  //     errorMessage.value = "An account with this email already exists.";
+  //     return;
+  //   }
+  //   errorMessage.value = err.message;
+  //   return;
+  // }
 
   router.push("/world");
 }
 
 async function handleGoogle() {
   errorMessage.value = "";
-  const { error: err } = await supabase.auth.signInWithOAuth({ provider: "google", options: { redirectTo: getRedirectUrl("/world") } });
-  if (err) {
-    errorMessage.value = err.message;
-    return;
-  }
+  // const { error: err } = await supabase.auth.signInWithOAuth({ provider: "google", options: { redirectTo: getRedirectUrl("/world") } });
+  // if (err) {
+  //   errorMessage.value = err.message;
+  //   return;
+  // }
 }
 
 async function handleEvm() {

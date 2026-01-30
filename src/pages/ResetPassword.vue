@@ -30,7 +30,7 @@
 
 <script setup>
 import { ref, watch, onMounted } from "vue";
-import { supabase } from "../main";
+// import { supabase } from "../main";
 import Toast from "../components/Toast.vue";
 import { useRouter } from "vue-router";
 const router = useRouter();
@@ -49,14 +49,14 @@ const isFormValid = ref(false);
 
 const sessionValid = ref(false);
 
-onMounted(async () => {
-  const { data } = await supabase.auth.getSession();
-  sessionValid.value = !!data.session;
-  if (!sessionValid.value) {
-    router.push("/connect");
-    // errorMessage.value = "This page is only accessible via a valid password reset link.";
-  }
-});
+// onMounted(async () => {
+//   const { data } = await supabase.auth.getSession();
+//   sessionValid.value = !!data.session;
+//   if (!sessionValid.value) {
+//     router.push("/connect");
+//     // errorMessage.value = "This page is only accessible via a valid password reset link.";
+//   }
+// });
 
 function validatePassword() {
   const password = newPassword.value;
@@ -70,16 +70,16 @@ function validatePassword() {
 
 async function handleReset() {
   errorMessage.value = "";
-  if (!sessionValid.value) {
-    errorMessage.value = "Session missing. Please use the password reset link from your email.";
-    return;
-  }
-  const { error } = await supabase.auth.updateUser({ password: newPassword.value });
-  if (error) {
-    errorMessage.value = error.message;
-  } else {
-    errorMessage.value = "Password updated!";
-  }
+  // if (!sessionValid.value) {
+  //   errorMessage.value = "Session missing. Please use the password reset link from your email.";
+  //   return;
+  // }
+  // const { error } = await supabase.auth.updateUser({ password: newPassword.value });
+  // if (error) {
+  //   errorMessage.value = error.message;
+  // } else {
+  //   errorMessage.value = "Password updated!";
+  // }
 }
 
 watch(errorMessage, (val) => {

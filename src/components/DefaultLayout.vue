@@ -9,14 +9,14 @@
       <router-link to="/web3">Blockchain</router-link>
       <router-link to="/market">Marketplace</router-link>
       <div class="relative dropdown">
-        <template v-if="userStore.user">
-          <div class="cursor-pointer px-5 flex items-center min-h-[45px] h-[45px] max-h-[45px] gap-2 rounded border-x border-primary/20 justify-center" @click="showDropdown = !showDropdown">
+        <template>
+          <!-- <div class="cursor-pointer px-5 flex items-center min-h-[45px] h-[45px] max-h-[45px] gap-2 rounded border-x border-primary/20 justify-center" @click="showDropdown = !showDropdown">
             <img v-if="avatarOrigin == 'custom'" :src="userStore.user.avatar_url" alt="Custom Avatar" class="aw-8 ah-10 rounded-full bg-black" />
             <img v-if="avatarOrigin == 'default'" src="/icons/icon.png" alt="Default Avatar" class="aw-8 ah-8 rounded-full bg-black" />
             <img v-if="avatarOrigin == 'google'" :src="googleAvatarUrl" alt="Google Avatar" class="aw-8 ah-8 rounded-full bg-black" />
             <span class="text-sm">{{ userStore.user.email }}</span>
             <svg class="h-5 w-5" fill="#fff" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" /></svg>
-          </div>
+          </div> -->
           <div v-if="showDropdown" class="absolute right-0 -mt-px z-50 w-full bg-black border border-primary/20">
             <router-link to="/world" class="max-h-[36px] block border-y">World</router-link>
             <router-link to="/city" class="max-h-[36px] block border-y group">City [<span class="text-primary group-hover:text-black">{{ currentCity }}</span>]</router-link>
@@ -28,7 +28,7 @@
             <a class="max-h-[36px] block cursor-pointer border-y" @click="logout">Logout</a>
           </div>
         </template>
-        <template v-else>
+        <template>
           <router-link to="/connect">Play</router-link>
         </template>
       </div>
@@ -136,10 +136,10 @@
 <script setup>
 import { onMounted, onUnmounted, watch, ref, computed } from "vue";
 import { useRouter } from "vue-router";
-import { useUserStore } from "../stores/user";
+// import { useUserStore } from "../stores/user";
 
 const router = useRouter();
-const userStore = useUserStore();
+// const userStore = useUserStore();
 const avatarOrigin = ref("default");
 const loading = ref(true);
 const year = new Date().getFullYear();
@@ -154,31 +154,31 @@ function handleClickOutside(event) {
   }
 }
 
-const googleAvatarUrl = computed(() => {
-  if (userStore.user && Array.isArray(userStore.user.identities)) {
-    const googleIdentity = userStore.user.identities.find((id) => id.provider === "google");
-    if (googleIdentity && googleIdentity.identity_data && googleIdentity.identity_data.avatar_url) {
-      return googleIdentity.identity_data.avatar_url;
-    }
-  }
-  return "";
-});
+// const googleAvatarUrl = computed(() => {
+//   if (userStore.user && Array.isArray(userStore.user.identities)) {
+//     const googleIdentity = userStore.user.identities.find((id) => id.provider === "google");
+//     if (googleIdentity && googleIdentity.identity_data && googleIdentity.identity_data.avatar_url) {
+//       return googleIdentity.identity_data.avatar_url;
+//     }
+//   }
+//   return "";
+// });
 
-function getAvatarOrigin(user) {
-  if (user && user.avatar_url && user.avatar_url.trim() !== "") {
-    return "custom";
-  }
+// function getAvatarOrigin(user) {
+//   if (user && user.avatar_url && user.avatar_url.trim() !== "") {
+//     return "custom";
+//   }
 
-  if (user && Array.isArray(user.identities) && user.identities.some((id) => id.provider === "google") && (!user.avatar_url || user.avatar_url.trim() === "")) {
-    return "google";
-  }
+//   if (user && Array.isArray(user.identities) && user.identities.some((id) => id.provider === "google") && (!user.avatar_url || user.avatar_url.trim() === "")) {
+//     return "google";
+//   }
 
-  return "default";
-}
+//   return "default";
+// }
 
 onMounted(async () => {
-  await userStore.fetchUser();
-  avatarOrigin.value = getAvatarOrigin(userStore.user);
+  // await userStore.fetchUser();
+  // avatarOrigin.value = getAvatarOrigin(userStore.user);
   // console.log("User fetched:", userStore.user);
   loading.value = false;
   homePage.value = router.currentRoute.value.path === "/";
@@ -189,10 +189,10 @@ onUnmounted(() => {
   document.removeEventListener("click", handleClickOutside);
 });
 
-async function logout() {
-  await userStore.logout();
-  router.push("/");
-}
+// async function logout() {
+//   await userStore.logout();
+//   router.push("/");
+// }
 
 watch(
   () => router.currentRoute.value.path,

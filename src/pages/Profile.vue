@@ -78,11 +78,11 @@
 </template>
 <script setup>
 import { ref, onMounted } from 'vue'
-import { useUserStore } from '../stores/user'
-import { supabase } from '../main'
+// import { useUserStore } from '../stores/user'
+// import { supabase } from '../main'
 import Toast from '../components/Toast.vue'
 
-const userStore = useUserStore()
+// const userStore = useUserStore()
 const defaultAvatar = '/default-avatar.png'
 const countryCodes = [
   { name: 'United States', code: '+1' },
@@ -121,22 +121,22 @@ const walletsString = ref('{}')
 const toast = ref({ show: false, type: 'success', message: '' })
 
 onMounted(async () => {
-  await userStore.fetchUser()
-  const user = userStore.user
-  if (!user) return
-  const { data } = await supabase.from('users').select('*').eq('id', user.id).single()
-  if (data) {
-    Object.assign(form.value, data)
-    walletsString.value = JSON.stringify(data.wallets || {}, null, 2)
-    // Try to split phone into country code and number if possible
-    if (data.phone) {
-      const match = data.phone.match(/^(\+\d+)\s*(.*)$/)
-      if (match) {
-        form.value.phone_country = match[1]
-        form.value.phone = match[2]
-      }
-    }
-  }
+  // await userStore.fetchUser()
+  // const user = userStore.user
+  // if (!user) return
+  // const { data } = await supabase.from('users').select('*').eq('id', user.id).single()
+  // if (data) {
+  //   Object.assign(form.value, data)
+  //   walletsString.value = JSON.stringify(data.wallets || {}, null, 2)
+  //   // Try to split phone into country code and number if possible
+  //   if (data.phone) {
+  //     const match = data.phone.match(/^(\+\d+)\s*(.*)$/)
+  //     if (match) {
+  //       form.value.phone_country = match[1]
+  //       form.value.phone = match[2]
+  //     }
+  //   }
+  // }
 })
 
 function onWalletsInput() {
@@ -154,12 +154,12 @@ async function onAvatarChange(e) {
   const fileExt = file.name.split('.').pop()
   const fileName = `${form.value.id || 'profile'}-${Date.now()}.${fileExt}`
   const filePath = `avatars/${fileName}`
-  const { error } = await supabase.storage.from('avatars').upload(filePath, file, { upsert: true })
-  if (!error) {
-    const { data } = supabase.storage.from('avatars').getPublicUrl(filePath)
-    form.value.avatar_url = data.publicUrl
-    form.value.avatar_origin = 'custom'
-  }
+  // const { error } = await supabase.storage.from('avatars').upload(filePath, file, { upsert: true })
+  // if (!error) {
+  //   const { data } = supabase.storage.from('avatars').getPublicUrl(filePath)
+  //   form.value.avatar_url = data.publicUrl
+  //   form.value.avatar_origin = 'custom'
+  // }
 }
 
 async function saveProfile() {
@@ -171,26 +171,26 @@ async function saveProfile() {
   }
   // Combine phone country code and number
   const phoneFull = form.value.phone_country ? `${form.value.phone_country} ${form.value.phone}` : form.value.phone
-  const { error } = await supabase.from('users').update({
-    email: form.value.email,
-    username: form.value.username,
-    display_name: form.value.display_name,
-    phone: phoneFull,
-    address: form.value.address,
-    country: form.value.country,
-    city: form.value.city,
-    birthdate: form.value.birthdate,
-    gender: form.value.gender,
-    bio: form.value.bio,
-    wallets: form.value.wallets,
-    avatar_url: form.value.avatar_url,
-    avatar_origin: form.value.avatar_origin
-  }).eq('id', form.value.id)
-  if (!error) {
-    await userStore.fetchUser()
-    toast.value = { show: true, type: 'success', message: 'Profile saved!' }
-  } else {
-    toast.value = { show: true, type: 'error', message: 'Error saving profile' }
-  }
+  // const { error } = await supabase.from('users').update({
+  //   email: form.value.email,
+  //   username: form.value.username,
+  //   display_name: form.value.display_name,
+  //   phone: phoneFull,
+  //   address: form.value.address,
+  //   country: form.value.country,
+  //   city: form.value.city,
+  //   birthdate: form.value.birthdate,
+  //   gender: form.value.gender,
+  //   bio: form.value.bio,
+  //   wallets: form.value.wallets,
+  //   avatar_url: form.value.avatar_url,
+  //   avatar_origin: form.value.avatar_origin
+  // }).eq('id', form.value.id)
+  // if (!error) {
+  //   await userStore.fetchUser()
+  //   toast.value = { show: true, type: 'success', message: 'Profile saved!' }
+  // } else {
+  //   toast.value = { show: true, type: 'error', message: 'Error saving profile' }
+  // }
 }
 </script>
