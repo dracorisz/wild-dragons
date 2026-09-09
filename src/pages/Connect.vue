@@ -1,13 +1,15 @@
 <template>
   <div class="page">
-    <h2>Connect</h2>
+    <h2>Connect to WildDragons</h2>
+    <p class="mx-auto mb-5 max-w-md px-4">Dragon Arena · Enter the Ember Vault. Every choice begins a new chapter.</p>
+    <p v-if="errorMessage" role="status" class="mx-auto mb-4 max-w-md px-4">{{ errorMessage }}</p>
     <div class="flex w-full flex-col items-center">
-      <div class="flex max-w-md min-w-md">
+      <div class="flex max-w-md w-full px-4">
         <button @click="tab = 'login'">Login</button>
         <button @click="tab = 'register'">Register</button>
       </div>
-      <div v-if="tab === 'login'" class="max-w-md min-w-md">
-        <form @submit.prevent="handleSignIn">
+      <div v-if="tab === 'login'" class="max-w-md w-full px-4">
+        <form @submit.prevent="handleSignIn"><fieldset :disabled="pending" class="flex w-full flex-col gap-2">
           <input v-model="email" type="email" placeholder="Email" autocomplete="email" />
           <div class="relative flex w-full items-center">
             <!-- Password input -->
@@ -66,14 +68,14 @@ c13.898,10.031,23.998,20.177,29.681,26.457C267.162,137.527,257.063,147.672,243.1
               <a @click="showForgot = false" class="ah-5 aw-5 absolute top-2 right-2 flex cursor-pointer items-center justify-center bg-black pl-px text-white">&times;</a>
               <p class="mt-6 leading-normal mb-3 ml-px text-left">We got you covered. Just enter your email—our magic link will log you in and allow you to reset your password.</p>
               <input v-model="forgotEmail" type="email" placeholder="Email" required class="mb-2 w-full" />
-              <button @click="handleForgotPassword" :disabled="!isValidEmail(forgotEmail)" class="w-full rounded bg-blue-600 py-2 text-white">Send Reset Link</button>
+              <button type="button" @click="handleForgotPassword" :disabled="pending || !isValidEmail(forgotEmail)" class="w-full rounded bg-blue-600 py-2 text-white">Send Reset Link</button>
             </div>
           </div>
           <button type="submit" :disabled="!email || !isValidEmail(email) || !password || email.length === 0 || password.length === 0">Login</button>
-        </form>
+        </fieldset></form>
       </div>
-      <div v-else class="max-w-md min-w-md">
-        <form @submit.prevent="handleSignUp">
+      <div v-else class="max-w-md w-full px-4">
+        <form @submit.prevent="handleSignUp"><fieldset :disabled="pending" class="flex w-full flex-col gap-2">
           <input v-model="newEmail" type="email" placeholder="Email" required autocomplete="email" />
           <div class="relative flex w-full items-center">
             <input :type="showNewPassword ? 'text' : 'password'" v-model="newPassword" placeholder="Password" required autocomplete="current-password" @input="validatePassword" />
@@ -94,14 +96,14 @@ c13.898,10.031,23.998,20.177,29.681,26.457C267.162,137.527,257.063,147.672,243.1
             <li :class="{ valid: passwordCriteria.specialChar }">At least 1 special character</li>
           </ul>
           <button type="submit" :disabled="!isRegisterFormValid || !isValidEmail(newEmail)">Register</button>
-        </form>
+        </fieldset></form>
       </div>
       <div class="flex w-full max-w-md flex-col">
         <div class="bg-gray/30 mt-3 mb-8 flex h-px w-full items-center justify-center">
           <span class="text-gray mb-px bg-white px-3 text-sm">or continue with</span>
         </div>
         <div class="flex w-full gap-2">
-          <button @click="handleGoogle" type="button" class="flex items-center justify-center">
+          <button :disabled="pending" @click="handleGoogle" type="button" class="flex items-center justify-center">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 30 30" fill="#fff">
               <path d="M 15.003906 3 C 8.3749062 3 3 8.373 3 15 C 3 21.627 8.3749062 27 15.003906 27 C 25.013906 27 27.269078 17.707 26.330078 13 L 25 13 L 22.732422 13 L 15 13 L 15 17 L 22.738281 17 C 21.848702 20.448251 18.725955 23 15 23 C 10.582 23 7 19.418 7 15 C 7 10.582 10.582 7 15 7 C 17.009 7 18.839141 7.74575 20.244141 8.96875 L 23.085938 6.1289062 C 20.951937 4.1849063 18.116906 3 15.003906 3 z"></path>
             </svg>
@@ -120,12 +122,17 @@ c13.898,10.031,23.998,20.177,29.681,26.457C267.162,137.527,257.063,147.672,243.1
   </div>
 </template>
 <script setup>
-import { ref, watch, computed } from "vue";
-import { useRouter } from "vue-router";
-// import { supabase } from "../main";
+import { ref, computed } from "vue";
+import { useRoute, useRouter } from "vue-router";
+import { requireSupabase } from "../lib/supabase";
+import { safeDestination } from "../lib/auth";
+import { useUserStore } from "../stores/user";
 import Toast from "../components/Toast.vue";
 
 const router = useRouter();
+const route = useRoute();
+const userStore = useUserStore();
+const pending = ref(false);
 const tab = ref("login");
 const email = ref("");
 const password = ref("");
@@ -138,30 +145,29 @@ const showToast = ref(false);
 const showForgot = ref(false);
 const forgotEmail = ref("");
 
-// Get the production domain from environment variables
-const productionDomain = import.meta.env.VITE_PRODUCTION_DOMAIN || "https://wild-dragons.vercel.app";
+function getRedirectUrl(path = "/world") {
+  return new URL(path, window.location.origin).href;
+}
 
-// Helper function to get the correct redirect URL
-function getRedirectUrl(path = "/") {
-  // If we're in development and have a production domain, use production domain
-  // Otherwise use current origin (for local testing)
-  if (import.meta.env.NODE_ENV === "development" && productionDomain) {
-    return productionDomain + path;
-  }
-  return window.location.origin + path;
+async function runAuth(action) {
+  if (pending.value) return;
+  pending.value = true;
+  errorMessage.value = "";
+  try { await action(requireSupabase()); }
+  catch (error) { errorMessage.value = error.message || "Unable to connect. Please try again."; }
+  finally { pending.value = false; }
 }
 
 async function handleForgotPassword() {
-  errorMessage.value = "";
-  // const { error } = await supabase.auth.resetPasswordForEmail(forgotEmail.value, {
-  //   redirectTo: getRedirectUrl("/reset-password"),
-  // });
-
-  if (error) {
-    errorMessage.value = error.message;
-  } else {
-    errorMessage.value = "Password reset email sent!";
-  }
+  if (!isValidEmail(forgotEmail.value)) return;
+  await runAuth(async (client) => {
+    const { error } = await client.auth.resetPasswordForEmail(forgotEmail.value.trim(), {
+      redirectTo: getRedirectUrl("/reset-password"),
+    });
+    if (error) throw error;
+    showForgot.value = false;
+    errorMessage.value = "If an account exists, a password reset link will arrive by email.";
+  });
 }
 
 const isValidEmail = (email) => {
@@ -181,51 +187,40 @@ const isRegisterFormValid = computed(() => {
   return newEmail.value && Object.values(passwordCriteria.value).every((criterion) => criterion);
 });
 
-watch(errorMessage, (val) => {
-  if (val) {
-    showToast.value = true;
-    setTimeout(() => {
-      showToast.value = false;
-      errorMessage.value = "";
-    }, 2000);
-  }
-});
-
 async function handleSignIn() {
-  errorMessage.value = "";
-  // try {
-  //   const { error: err } = await supabase.auth.signInWithPassword({ email: email.value, password: password.value });
-  //   if (err) {
-  //     errorMessage.value = err.message + ".";
-  //     return;
-  //   }
-
-  //   router.push("/world");
-  // } catch (e) {}
+  if (!isValidEmail(email.value) || !password.value) return;
+  await runAuth(async (client) => {
+    const { data, error } = await client.auth.signInWithPassword({ email: email.value.trim(), password: password.value });
+    if (error) throw error;
+    userStore.setUser(data.user);
+    await router.replace(safeDestination(route.query.next));
+  });
 }
 
 async function handleSignUp() {
-  errorMessage.value = "";
-  // const { error: err } = await supabase.auth.signUp({ email: newEmail.value, password: newPassword.value });
-  // if (err) {
-  //   if (err.message && err.message.toLowerCase().includes("already registered")) {
-  //     errorMessage.value = "An account with this email already exists.";
-  //     return;
-  //   }
-  //   errorMessage.value = err.message;
-  //   return;
-  // }
-
-  router.push("/world");
+  if (!isRegisterFormValid.value || !isValidEmail(newEmail.value)) return;
+  await runAuth(async (client) => {
+    const { data, error } = await client.auth.signUp({
+      email: newEmail.value.trim(), password: newPassword.value,
+      options: { emailRedirectTo: getRedirectUrl(safeDestination(route.query.next)) },
+    });
+    if (error) throw error;
+    if (data.session) {
+      userStore.setUser(data.user);
+      await router.replace(safeDestination(route.query.next));
+    } else {
+      errorMessage.value = "Check your email to confirm your account before signing in.";
+    }
+  });
 }
 
 async function handleGoogle() {
-  errorMessage.value = "";
-  // const { error: err } = await supabase.auth.signInWithOAuth({ provider: "google", options: { redirectTo: getRedirectUrl("/world") } });
-  // if (err) {
-  //   errorMessage.value = err.message;
-  //   return;
-  // }
+  await runAuth(async (client) => {
+    const { error } = await client.auth.signInWithOAuth({
+      provider: "google", options: { redirectTo: getRedirectUrl(safeDestination(route.query.next)) },
+    });
+    if (error) throw error;
+  });
 }
 
 async function handleEvm() {

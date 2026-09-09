@@ -9,6 +9,12 @@
       <p class="italic mt-10 text-primary z-10">Long ago, the city was known as Zerathos-Valen, the Flame Unbound — a citadel built around the Heartforge, a mystical core of energy that once gave life and power to dragons. Mountains cradle the city on three sides, and a wide river flows through its southern reaches. Over centuries, Zerathos-Valen became Zeraphiora, a hub of trade, innovation, and learning, yet the Heartforge still pulses faintly beneath its streets.</p>
     </div>
     <div class="flex flex-grow flex-col pt-36 pb-40 px-20 gap-5 relative z-10">
+      <aside class="mb-10 border border-primary/30 p-6">
+        <p class="text-sm uppercase">WildDragons · Dragon Arena</p>
+        <h2>Enter the Ember Vault</h2>
+        <p class="mb-5">Discover the next chapter of your dragon story. Your journey into WildDragons starts here.</p>
+        <router-link to="/connect?source=dragon-arena" class="inline-block bg-black px-6 py-3 text-primary">Connect to WildDragons →</router-link>
+      </aside>
       <h1 class="font-zeraphiora z-10">Diamat's Story</h1>
       <p>
         The ever-expansive world of Diamat was once a tapestry of countless civilizations, each thriving in isolation across vast continents and wild frontiers. Ancient tribes wandered the forests and deserts, forging their own legends beneath the watchful gaze of dragons and spirits. In those days, the land was wild and untamed, shaped by the ambitions and fears of its earliest peoples.
