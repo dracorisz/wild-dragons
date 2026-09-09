@@ -9,7 +9,8 @@
       <router-link to="/web3">Blockchain</router-link>
       <router-link to="/market">Marketplace</router-link>
       <div class="relative dropdown">
-        <template>
+        <template v-if="userStore.user">
+          <button type="button" :aria-expanded="showDropdown" @click="showDropdown = !showDropdown">Account</button>
           <!-- <div class="cursor-pointer px-5 flex items-center min-h-[45px] h-[45px] max-h-[45px] gap-2 rounded border-x border-primary/20 justify-center" @click="showDropdown = !showDropdown">
             <img v-if="avatarOrigin == 'custom'" :src="userStore.user.avatar_url" alt="Custom Avatar" class="aw-8 ah-10 rounded-full bg-black" />
             <img v-if="avatarOrigin == 'default'" src="/icons/icon.png" alt="Default Avatar" class="aw-8 ah-8 rounded-full bg-black" />
@@ -28,7 +29,7 @@
             <a class="max-h-[36px] block cursor-pointer border-y" @click="logout">Logout</a>
           </div>
         </template>
-        <template>
+        <template v-else>
           <router-link to="/connect">Play</router-link>
         </template>
       </div>
@@ -136,10 +137,10 @@
 <script setup>
 import { onMounted, onUnmounted, watch, ref, computed } from "vue";
 import { useRouter } from "vue-router";
-// import { useUserStore } from "../stores/user";
+import { useUserStore } from "../stores/user";
 
 const router = useRouter();
-// const userStore = useUserStore();
+const userStore = useUserStore();
 const avatarOrigin = ref("default");
 const loading = ref(true);
 const year = new Date().getFullYear();
@@ -189,10 +190,10 @@ onUnmounted(() => {
   document.removeEventListener("click", handleClickOutside);
 });
 
-// async function logout() {
-//   await userStore.logout();
-//   router.push("/");
-// }
+async function logout() {
+  try { await userStore.logout(); await router.push("/"); }
+  catch { window.alert("Unable to sign out. Please try again."); }
+}
 
 watch(
   () => router.currentRoute.value.path,

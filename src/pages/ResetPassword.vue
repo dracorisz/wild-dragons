@@ -1,5 +1,7 @@
 <template>
-  <div v-if="sessionValid" class="page">
+  <div class="page">
+    <p v-if="errorMessage" role="status">{{ errorMessage }}</p>
+    <router-link v-if="!sessionValid" to="/connect">Return to sign in</router-link>
     <h2 class="!mb-0">Reset Password</h2>
     <div class="flex w-full flex-col items-center">
       <form v-if="sessionValid" @submit.prevent="handleReset" class="max-w-md min-w-md">
@@ -21,7 +23,7 @@
           <li :class="{ valid: passwordCriteria.digit }">At least 1 digit</li>
           <li :class="{ valid: passwordCriteria.specialChar }">At least 1 special character</li>
         </ul>
-        <button type="submit" :disabled="!isFormValid">Set New Password</button>
+        <button type="submit" :disabled="pending || !isFormValid">Set New Password</button>
       </form>
     </div>
     <Toast :message="errorMessage" :show="showToast" />
@@ -30,7 +32,7 @@
 
 <script setup>
 import { ref, watch, onMounted } from "vue";
-// import { supabase } from "../main";
+import { requireSupabase } from "../lib/supabase";
 import Toast from "../components/Toast.vue";
 import { useRouter } from "vue-router";
 const router = useRouter();
@@ -49,14 +51,15 @@ const isFormValid = ref(false);
 
 const sessionValid = ref(false);
 
-// onMounted(async () => {
-//   const { data } = await supabase.auth.getSession();
-//   sessionValid.value = !!data.session;
-//   if (!sessionValid.value) {
-//     router.push("/connect");
-//     // errorMessage.value = "This page is only accessible via a valid password reset link.";
-//   }
-// });
+onMounted(async () => {
+  try {
+    const { data, error } = await requireSupabase().auth.getUser();
+    if (error) throw error;
+    sessionValid.value = !!data.user;
+    if (!sessionValid.value) errorMessage.value = "Open a valid password reset link from your email.";
+  } catch (error) { errorMessage.value = error.message; }
+});
+const pending = ref(false);
 
 function validatePassword() {
   const password = newPassword.value;
@@ -69,27 +72,18 @@ function validatePassword() {
 }
 
 async function handleReset() {
+  if (pending.value || !isFormValid.value || !sessionValid.value) return;
+  pending.value = true;
   errorMessage.value = "";
-  // if (!sessionValid.value) {
-  //   errorMessage.value = "Session missing. Please use the password reset link from your email.";
-  //   return;
-  // }
-  // const { error } = await supabase.auth.updateUser({ password: newPassword.value });
-  // if (error) {
-  //   errorMessage.value = error.message;
-  // } else {
-  //   errorMessage.value = "Password updated!";
-  // }
+  try {
+    const { error } = await requireSupabase().auth.updateUser({ password: newPassword.value });
+    if (error) throw error;
+    newPassword.value = "";
+    isFormValid.value = false;
+    errorMessage.value = "Password updated. You can now return to sign in.";
+  } catch (error) { errorMessage.value = error.message; }
+  finally { pending.value = false; }
 }
 
-watch(errorMessage, (val) => {
-  if (val) {
-    showToast.value = true;
-    setTimeout(() => {
-      showToast.value = false;
-      errorMessage.value = "";
-    }, 2000);
-  }
-});
 
 </script>

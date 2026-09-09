@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
-// import { supabase } from "../main";
+import { supabase } from "../lib/supabase";
+import { protectRoute } from "../lib/auth";
 
 // Lazy load pages
 const Landing = () => import("../pages/Landing.vue");
@@ -47,15 +48,6 @@ const router = createRouter({
   routes,
 });
 
-// router.beforeEach(async (to, from, next) => {
-//   if (to.meta.requiresAuth) {
-//     const { data } = await supabase.auth.getSession();
-//     if (!data.session) {
-//       next({ path: "/connect" });
-//       return;
-//     }
-//   }
-//   next();
-// });
+router.beforeEach((to) => protectRoute(to, supabase));
 
 export default router;

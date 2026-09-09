@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import { supabase } from '../main';
+import { supabase, requireSupabase } from '../lib/supabase';
 
 export const useUserStore = defineStore('user', {
   state: () => ({
@@ -7,6 +7,7 @@ export const useUserStore = defineStore('user', {
   }),
   actions: {
     async fetchUser() {
+      if (!supabase) { this.user = null; return false; }
       const { data } = await supabase.auth.getUser();
       this.user = data.user;
       return !!this.user;
@@ -67,7 +68,8 @@ export const useUserStore = defineStore('user', {
       }
     },
     async logout() {
-      await supabase.auth.signOut();
+      const { error } = await requireSupabase().auth.signOut();
+      if (error) throw error;
       this.user = null;
     },
   },
